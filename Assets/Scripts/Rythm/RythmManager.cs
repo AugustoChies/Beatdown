@@ -1,0 +1,101 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class RythmManager : MonoBehaviour
+{
+    public static RythmManager instance;
+
+    public float score;
+    public bool canPlay; //test variable
+
+    public RythmMove RythmToPlay;
+
+    public Text scoreText;
+    public GameObject RythmKeyPrefab;
+    public GameObject CenterPoint;
+    public GameObject UpPoint;
+    public GameObject DownPoint;
+    public GameObject RightPoint;
+    public GameObject LeftPoint;
+    public GameObject RythmPanel;
+
+    private void Awake()
+    {
+        instance = this;
+        Application.targetFrameRate = 60;
+        UpdateScore(0);
+    }
+
+    private void Update()
+    {
+        if(canPlay)
+        {
+            canPlay = false;
+            PlayMove(RythmToPlay);
+        }
+    }
+
+    public void UpdateScore(float value)
+    {
+        score += value;
+        scoreText.text = "Score: " + score;
+    }
+
+    public void PlayMove(RythmMove move)
+    {
+        StartCoroutine(PlayRythm());
+    }
+
+    public void CreateKey(int index)
+    {
+        int side = Random.Range(0, 4);
+
+        Key temp = null;
+
+        switch(side)
+        {
+            case 0:
+                temp = Instantiate(RythmKeyPrefab, UpPoint.transform.position, Quaternion.Euler(0, 0, 0), RythmPanel.transform).GetComponent<Key>();
+                temp.rythmKey = RythmKey.Up;
+                break;
+            case 1:
+                temp = Instantiate(RythmKeyPrefab, DownPoint.transform.position, Quaternion.Euler(0, 0, 180), RythmPanel.transform).GetComponent<Key>();
+                temp.rythmKey = RythmKey.Down;
+                break;
+            case 2:
+                temp = Instantiate(RythmKeyPrefab, LeftPoint.transform.position, Quaternion.Euler(0, 0, 90), RythmPanel.transform).GetComponent<Key>();
+                temp.rythmKey = RythmKey.Left;
+                break;
+            case 3:
+                temp = Instantiate(RythmKeyPrefab, RightPoint.transform.position, Quaternion.Euler(0, 0, -90), RythmPanel.transform).GetComponent<Key>();
+                temp.rythmKey = RythmKey.Right;
+                break;
+            default:
+                print("Error");
+                break;
+        }
+
+        if(temp)
+        {
+            temp.speed = RythmToPlay.rythmData[index].keySpeed;
+            temp.score = RythmToPlay.rythmData[index].score;
+            temp.centerPoint = CenterPoint.transform;
+        }
+    }
+
+    public IEnumerator PlayRythm()
+    {
+        int currentIndex = 0;
+
+        while(currentIndex < RythmToPlay.rythmData.Length)
+        {
+            CreateKey(currentIndex);
+            yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote);
+            //currentIndex++;
+        }
+
+        yield return null;
+    }
+}
