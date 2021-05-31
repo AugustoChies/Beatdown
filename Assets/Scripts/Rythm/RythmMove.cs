@@ -13,6 +13,7 @@ public class RythmMove : ScriptableObject
         public float score;
     }
 
+    public string moveName;
     public AudioClip moveClip;
     public RythmData[] rythmData;
 }

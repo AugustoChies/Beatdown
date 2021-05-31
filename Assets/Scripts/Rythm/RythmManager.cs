@@ -8,7 +8,6 @@ public class RythmManager : MonoBehaviour
     public static RythmManager instance;
 
     public float score;
-    public bool canPlay; //test variable
 
     public RythmMove RythmToPlay;
 
@@ -28,15 +27,6 @@ public class RythmManager : MonoBehaviour
         UpdateScore(0);
     }
 
-    private void Update()
-    {
-        if(canPlay)
-        {
-            canPlay = false;
-            PlayMove(RythmToPlay);
-        }
-    }
-
     public void UpdateScore(float value)
     {
         score += value;
@@ -45,6 +35,8 @@ public class RythmManager : MonoBehaviour
 
     public void PlayMove(RythmMove move)
     {
+        RythmToPlay = move;
+
         StartCoroutine(PlayRythm());
     }
 
@@ -93,7 +85,7 @@ public class RythmManager : MonoBehaviour
         {
             CreateKey(currentIndex);
             yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote);
-            //currentIndex++;
+            currentIndex++;
         }
 
         yield return null;
