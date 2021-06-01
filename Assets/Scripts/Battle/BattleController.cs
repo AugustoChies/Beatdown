@@ -24,7 +24,6 @@ public class BattleController : MonoBehaviour
 
         Singleton = this;
         DontDestroyOnLoad(this);
-        SetBattleStage(EBattleStage.Intro);
     }
 
     public void SetBattleStage(EBattleStage nextStage)
@@ -34,21 +33,27 @@ public class BattleController : MonoBehaviour
         switch (_currentBattleStage)
         {
             case EBattleStage.Intro:
+                Debug.Log("Battle Intro");
                 OnIntro?.Invoke();
                 break;
             case EBattleStage.PlayerTurn:
+                Debug.Log("Player Turn");
                 OnPlayerTurn?.Invoke();
                 break;
             case EBattleStage.PlayeMove:
+                Debug.Log("Player Move");
                 OnPlayerMove?.Invoke();
                 break;
             case EBattleStage.EnemyTurn:
+                Debug.Log("Enemy Turn");
                 OnEnemyTurn?.Invoke();
                 break;
             case EBattleStage.EnemyMove:
+                Debug.Log("Enemy Move");
                 OnEnemyMove?.Invoke();
                 break;
             case EBattleStage.Conclusion:
+                Debug.Log("Battle End");
                 OnConclusion?.Invoke();
                 break;
             default:
