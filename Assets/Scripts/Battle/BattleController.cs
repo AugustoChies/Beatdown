@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum EBattleStage {Intro, PlayerTurn, PlayeMove, EnemyTurn, EnemyMove, Conclusion }
+public enum EBattleStage {Intro, PlayerTurn, PlayerMove, EnemyTurn, EnemyMove, Conclusion }
 
 //Battle Controller works as a global event triggerer for battle scene
 public class BattleController : MonoBehaviour
 {
     public static BattleController Singleton { get; private set; }
     private EBattleStage _currentBattleStage;
+    public EBattleStage GetCurrentBattleStage() => _currentBattleStage;
 
     public event Action OnIntro;
     public event Action OnPlayerTurn;
@@ -40,17 +41,19 @@ public class BattleController : MonoBehaviour
                 Debug.Log("Player Turn");
                 OnPlayerTurn?.Invoke();
                 break;
-            case EBattleStage.PlayeMove:
+            case EBattleStage.PlayerMove:
                 Debug.Log("Player Move");
                 OnPlayerMove?.Invoke();
                 break;
             case EBattleStage.EnemyTurn:
                 Debug.Log("Enemy Turn");
                 OnEnemyTurn?.Invoke();
+                StartCoroutine(WaitToChangeStage(EBattleStage.EnemyMove));
                 break;
             case EBattleStage.EnemyMove:
                 Debug.Log("Enemy Move");
                 OnEnemyMove?.Invoke();
+                StartCoroutine(WaitToChangeStage(EBattleStage.PlayerTurn));
                 break;
             case EBattleStage.Conclusion:
                 Debug.Log("Battle End");
@@ -70,6 +73,12 @@ public class BattleController : MonoBehaviour
         OnEnemyTurn = null;
         OnEnemyMove = null;
         OnConclusion = null;
+    }
+
+    IEnumerator WaitToChangeStage(EBattleStage newStage, float time = 3)
+    {
+        yield return new WaitForSeconds(time);
+        SetBattleStage(newStage);
     }
 
     
