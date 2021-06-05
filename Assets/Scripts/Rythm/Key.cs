@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -80,11 +78,6 @@ public class Key : MonoBehaviour
             RythmManager.instance.RightKeysQueue.Dequeue();
             Destroy(this.gameObject);
         }
-    }
-
-    private void LateUpdate()
-    {
-        canPlayKeyThisFrame = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

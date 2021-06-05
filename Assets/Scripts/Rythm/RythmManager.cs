@@ -32,6 +32,11 @@ public class RythmManager : MonoBehaviour
         UpdateScore(0);
     }
 
+    private void LateUpdate()
+    {
+        Key.canPlayKeyThisFrame = true;
+    }
+
     public void UpdateScore(float value)
     {
         score += value;

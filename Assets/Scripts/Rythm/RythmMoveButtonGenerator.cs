@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class RythmMoveButtonGenerator : MonoBehaviour
 {
     public GameObject moveSelectPanel;
@@ -15,7 +13,7 @@ public class RythmMoveButtonGenerator : MonoBehaviour
         {
             tempMove = Instantiate(rythmMoveButtonPrefab, firstPos.position, Quaternion.identity, moveSelectPanel.transform).GetComponent<RythmButton>();
             tempMove.move = RythmList.instance.rythmMovesList[i];
-            tempMove.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = tempMove.move.moveName;
+            tempMove.gameObject.GetComponentInChildren<Text>().text = tempMove.move.moveName;
         }
     }
 }
