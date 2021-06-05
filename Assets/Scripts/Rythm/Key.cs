@@ -13,6 +13,8 @@ public class Key : MonoBehaviour
 
     public bool canPlayKey;
 
+    public static bool canPlayKeyThisFrame = true;
+
     private void Update()
     {
         if(centerPoint) transform.position = Vector2.MoveTowards(transform.position, centerPoint.transform.position, speed * Time.deltaTime);
@@ -22,7 +24,7 @@ public class Key : MonoBehaviour
 
     public void HandleKey()
     {
-        if(Input.GetKeyDown(KeyCode.W) && rythmKey == RythmKey.Up)
+        if(Input.GetKeyDown(KeyCode.W) && rythmKey == RythmKey.Up && this == RythmManager.instance.UpKeysQueue.Peek() && canPlayKeyThisFrame)
         {
             if (canPlayKey)
             {
@@ -32,9 +34,11 @@ public class Key : MonoBehaviour
             {
                 RythmManager.instance.UpdateScore(-score);
             }
+            canPlayKeyThisFrame = false;
+            RythmManager.instance.UpKeysQueue.Dequeue();
             Destroy(this.gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.S) && rythmKey == RythmKey.Down)
+        if (Input.GetKeyDown(KeyCode.S) && rythmKey == RythmKey.Down && this == RythmManager.instance.DownKeysQueue.Peek() && canPlayKeyThisFrame)
         {
             if (canPlayKey)
             {
@@ -44,9 +48,11 @@ public class Key : MonoBehaviour
             {
                 RythmManager.instance.UpdateScore(-score);
             }
+            canPlayKeyThisFrame = false;
+            RythmManager.instance.DownKeysQueue.Dequeue();
             Destroy(this.gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.A) && rythmKey == RythmKey.Left)
+        if (Input.GetKeyDown(KeyCode.A) && rythmKey == RythmKey.Left && this == RythmManager.instance.LeftKeysQueue.Peek() && canPlayKeyThisFrame)
         {
             if (canPlayKey)
             {
@@ -56,9 +62,11 @@ public class Key : MonoBehaviour
             {
                 RythmManager.instance.UpdateScore(-score);
             }
+            canPlayKeyThisFrame = false;
+            RythmManager.instance.LeftKeysQueue.Dequeue();
             Destroy(this.gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.D) && rythmKey == RythmKey.Right)
+        if (Input.GetKeyDown(KeyCode.D) && rythmKey == RythmKey.Right && this == RythmManager.instance.RightKeysQueue.Peek() && canPlayKeyThisFrame)
         {
             if (canPlayKey)
             {
@@ -68,8 +76,15 @@ public class Key : MonoBehaviour
             {
                 RythmManager.instance.UpdateScore(-score);
             }
+            canPlayKeyThisFrame = false;
+            RythmManager.instance.RightKeysQueue.Dequeue();
             Destroy(this.gameObject);
         }
+    }
+
+    private void LateUpdate()
+    {
+        canPlayKeyThisFrame = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
