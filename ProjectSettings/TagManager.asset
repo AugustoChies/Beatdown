@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Center
   - Key
+  - InnerCenter
   layers:
   - Default
   - TransparentFX

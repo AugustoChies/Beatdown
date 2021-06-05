@@ -24,80 +24,58 @@ public class Key : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.W) && rythmKey == RythmKey.Up && this == RythmManager.Instance.UpKeysQueue.Peek() && canPlayKeyThisFrame)
         {
-            if (canPlayKey)
-            {
-                RythmManager.Instance.UpdateScore(score);
-            }
-            else
-            {
-                RythmManager.Instance.UpdateScore(-score);
-            }
-            canPlayKeyThisFrame = false;
-            RythmManager.Instance.UpKeysQueue.Dequeue();
-            RythmManager.Instance.CurrentMoveCount++;
-            if(RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
-            {
-                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
-            }
-            Destroy(this.gameObject);
+            HandleRythmKey(true, rythmKey);
         }
         if (Input.GetKeyDown(KeyCode.S) && rythmKey == RythmKey.Down && this == RythmManager.Instance.DownKeysQueue.Peek() && canPlayKeyThisFrame)
         {
-            if (canPlayKey)
-            {
-                RythmManager.Instance.UpdateScore(score);
-            }
-            else
-            {
-                RythmManager.Instance.UpdateScore(-score);
-            }
-            canPlayKeyThisFrame = false;
-            RythmManager.Instance.DownKeysQueue.Dequeue();
-            RythmManager.Instance.CurrentMoveCount++;
-            if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
-            {
-                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
-            }
-            Destroy(this.gameObject);
+            HandleRythmKey(true, rythmKey);
         }
         if (Input.GetKeyDown(KeyCode.A) && rythmKey == RythmKey.Left && this == RythmManager.Instance.LeftKeysQueue.Peek() && canPlayKeyThisFrame)
         {
-            if (canPlayKey)
-            {
-                RythmManager.Instance.UpdateScore(score);
-            }
-            else
-            {
-                RythmManager.Instance.UpdateScore(-score);
-            }
-            canPlayKeyThisFrame = false;
-            RythmManager.Instance.LeftKeysQueue.Dequeue();
-            RythmManager.Instance.CurrentMoveCount++;
-            if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
-            {
-                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
-            }
-            Destroy(this.gameObject);
+            HandleRythmKey(true, rythmKey);
         }
         if (Input.GetKeyDown(KeyCode.D) && rythmKey == RythmKey.Right && this == RythmManager.Instance.RightKeysQueue.Peek() && canPlayKeyThisFrame)
         {
-            if (canPlayKey)
-            {
-                RythmManager.Instance.UpdateScore(score);
-            }
-            else
-            {
-                RythmManager.Instance.UpdateScore(-score);
-            }
-            canPlayKeyThisFrame = false;
-            RythmManager.Instance.RightKeysQueue.Dequeue();
-            RythmManager.Instance.CurrentMoveCount++;
-            if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
-            {
-                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
-            }
-            Destroy(this.gameObject);
+            HandleRythmKey(true, rythmKey);
         }
+    }
+
+    public void HandleRythmKey(bool wasPressed, RythmKey side)
+    {
+        canPlayKeyThisFrame = false;
+
+        switch(side)
+        {
+            case RythmKey.Up:
+                RythmManager.Instance.UpKeysQueue.Dequeue();
+                break;
+            case RythmKey.Down:
+                RythmManager.Instance.DownKeysQueue.Dequeue();
+                break;
+            case RythmKey.Left:
+                RythmManager.Instance.LeftKeysQueue.Dequeue();
+                break;
+            case RythmKey.Right:
+                RythmManager.Instance.RightKeysQueue.Dequeue();
+                break;
+        }
+
+        if (canPlayKey && wasPressed)
+        {
+            print("Acertou");
+            RythmManager.Instance.UpdateScore(score);
+        }
+        else
+        {
+            print("Errou");
+            RythmManager.Instance.UpdateScore(-score);
+        }
+        RythmManager.Instance.CurrentMoveCount++;
+        if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
+        {
+            BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
+        }
+        Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -106,6 +84,11 @@ public class Key : MonoBehaviour
         {
             canPlayKey = true;
             GetComponent<Image>().color = Color.red;
+        }
+
+        if (collision.CompareTag("InnerCenter"))
+        {
+            HandleRythmKey(false, rythmKey);
         }
     }
 }
