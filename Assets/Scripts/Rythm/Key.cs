@@ -22,60 +22,80 @@ public class Key : MonoBehaviour
 
     public void HandleKey()
     {
-        if(Input.GetKeyDown(KeyCode.W) && rythmKey == RythmKey.Up && this == RythmManager.instance.UpKeysQueue.Peek() && canPlayKeyThisFrame)
+        if(Input.GetKeyDown(KeyCode.W) && rythmKey == RythmKey.Up && this == RythmManager.Instance.UpKeysQueue.Peek() && canPlayKeyThisFrame)
         {
             if (canPlayKey)
             {
-                RythmManager.instance.UpdateScore(score);
+                RythmManager.Instance.UpdateScore(score);
             }
             else
             {
-                RythmManager.instance.UpdateScore(-score);
+                RythmManager.Instance.UpdateScore(-score);
             }
             canPlayKeyThisFrame = false;
-            RythmManager.instance.UpKeysQueue.Dequeue();
+            RythmManager.Instance.UpKeysQueue.Dequeue();
+            RythmManager.Instance.CurrentMoveCount++;
+            if(RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
+            {
+                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
+            }
             Destroy(this.gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.S) && rythmKey == RythmKey.Down && this == RythmManager.instance.DownKeysQueue.Peek() && canPlayKeyThisFrame)
+        if (Input.GetKeyDown(KeyCode.S) && rythmKey == RythmKey.Down && this == RythmManager.Instance.DownKeysQueue.Peek() && canPlayKeyThisFrame)
         {
             if (canPlayKey)
             {
-                RythmManager.instance.UpdateScore(score);
+                RythmManager.Instance.UpdateScore(score);
             }
             else
             {
-                RythmManager.instance.UpdateScore(-score);
+                RythmManager.Instance.UpdateScore(-score);
             }
             canPlayKeyThisFrame = false;
-            RythmManager.instance.DownKeysQueue.Dequeue();
+            RythmManager.Instance.DownKeysQueue.Dequeue();
+            RythmManager.Instance.CurrentMoveCount++;
+            if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
+            {
+                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
+            }
             Destroy(this.gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.A) && rythmKey == RythmKey.Left && this == RythmManager.instance.LeftKeysQueue.Peek() && canPlayKeyThisFrame)
+        if (Input.GetKeyDown(KeyCode.A) && rythmKey == RythmKey.Left && this == RythmManager.Instance.LeftKeysQueue.Peek() && canPlayKeyThisFrame)
         {
             if (canPlayKey)
             {
-                RythmManager.instance.UpdateScore(score);
+                RythmManager.Instance.UpdateScore(score);
             }
             else
             {
-                RythmManager.instance.UpdateScore(-score);
+                RythmManager.Instance.UpdateScore(-score);
             }
             canPlayKeyThisFrame = false;
-            RythmManager.instance.LeftKeysQueue.Dequeue();
+            RythmManager.Instance.LeftKeysQueue.Dequeue();
+            RythmManager.Instance.CurrentMoveCount++;
+            if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
+            {
+                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
+            }
             Destroy(this.gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.D) && rythmKey == RythmKey.Right && this == RythmManager.instance.RightKeysQueue.Peek() && canPlayKeyThisFrame)
+        if (Input.GetKeyDown(KeyCode.D) && rythmKey == RythmKey.Right && this == RythmManager.Instance.RightKeysQueue.Peek() && canPlayKeyThisFrame)
         {
             if (canPlayKey)
             {
-                RythmManager.instance.UpdateScore(score);
+                RythmManager.Instance.UpdateScore(score);
             }
             else
             {
-                RythmManager.instance.UpdateScore(-score);
+                RythmManager.Instance.UpdateScore(-score);
             }
             canPlayKeyThisFrame = false;
-            RythmManager.instance.RightKeysQueue.Dequeue();
+            RythmManager.Instance.RightKeysQueue.Dequeue();
+            RythmManager.Instance.CurrentMoveCount++;
+            if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
+            {
+                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
+            }
             Destroy(this.gameObject);
         }
     }

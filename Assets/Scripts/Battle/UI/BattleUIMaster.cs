@@ -11,11 +11,13 @@ public class BattleUIMaster : MonoBehaviour
 
     private void Start()
     {
-        BattleController.Singleton.OnPlayerTurn += _skillNames.Hide;
-        BattleController.Singleton.OnPlayerTurn += _actionMenu.Show;
-        BattleController.Singleton.OnPlayerMove += _actionMenu.Hide;
-        BattleController.Singleton.OnPlayerMove += _skillNames.Show;
-        BattleController.Singleton.OnEnemyTurn += _skillNames.Hide;
-        BattleController.Singleton.OnEnemyMove += _skillNames.Show;
+        BattleController.Instance.OnPlayerTurn += _skillNames.Hide;
+        BattleController.Instance.OnPlayerTurn += _actionMenu.Show;
+
+        BattleController.Instance.OnPlayerMove += _actionMenu.Hide;
+        BattleController.Instance.OnPlayerMove += _skillNames.Show;
+
+        BattleController.Instance.OnEnemyTurn += _skillNames.Hide;
+        BattleController.Instance.OnEnemyMove += _skillNames.Show;
     }
 }

@@ -17,10 +17,10 @@ public class BattleCam : MonoBehaviour
 
     private void Start()
     {
-        BattleController.Singleton.OnPlayerTurn += PlayPlayerTurnAnim;
-        BattleController.Singleton.OnPlayerMove += PlayPlayerMoveAnim;
-        BattleController.Singleton.OnEnemyTurn += PlayPlayerTurnAnim;
-        BattleController.Singleton.SetBattleStage(EBattleStage.Intro);
+        BattleController.Instance.OnPlayerTurn += PlayPlayerTurnAnim;
+        BattleController.Instance.OnPlayerMove += PlayPlayerMoveAnim;
+        BattleController.Instance.OnEnemyTurn += PlayPlayerTurnAnim;
+        BattleController.Instance.SetBattleStage(EBattleStage.Intro);
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class BattleCam : MonoBehaviour
 
     private void EndIntro()
     {
-        BattleController.Singleton.SetBattleStage(EBattleStage.PlayerTurn);
+        BattleController.Instance.SetBattleStage(EBattleStage.PlayerTurn);
     }
 
     private void PlayPlayerTurnAnim()

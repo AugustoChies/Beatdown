@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RythmManager : MonoBehaviour
 {
-    public static RythmManager instance;
+    public static RythmManager Instance;
 
     public float score;
 
@@ -25,9 +25,12 @@ public class RythmManager : MonoBehaviour
     public Queue<Key> RightKeysQueue = new Queue<Key>();
     public Queue<Key> DownKeysQueue = new Queue<Key>();
 
+    public int CurrentMoveCount = 0;
+    
+
     private void Awake()
     {
-        instance = this;
+        Instance = this;
         Application.targetFrameRate = 60;
         UpdateScore(0);
     }
@@ -35,6 +38,7 @@ public class RythmManager : MonoBehaviour
     private void LateUpdate()
     {
         Key.canPlayKeyThisFrame = true;
+        Debug.Log("Upq " +  UpKeysQueue.Count);
     }
 
     public void UpdateScore(float value)
@@ -46,7 +50,8 @@ public class RythmManager : MonoBehaviour
     public void PlayMove(RythmMove move)
     {
         RythmToPlay = move;
-
+        CurrentMoveCount = 0;
+        BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove);
         StartCoroutine(PlayRythm());
     }
 

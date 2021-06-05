@@ -6,6 +6,6 @@ public class RythmButton : MonoBehaviour
     
     public void OnClick()
     {
-        RythmManager.instance.PlayMove(move);
+        RythmManager.Instance.PlayMove(move);
     }
 }

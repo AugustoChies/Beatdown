@@ -6,7 +6,12 @@ public class KeyInner : MonoBehaviour
     {
         if (collision.CompareTag("Center"))
         {
-            RythmManager.instance.UpdateScore(-GetComponentInParent<Key>().score);
+            RythmManager.Instance.UpdateScore(-GetComponentInParent<Key>().score);
+            RythmManager.Instance.CurrentMoveCount++;
+            if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
+            {
+                BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
+            }
             Destroy(transform.parent.gameObject);
         }
     }

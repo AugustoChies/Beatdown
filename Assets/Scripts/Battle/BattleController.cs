@@ -8,7 +8,7 @@ public enum EBattleStage {Intro, PlayerTurn, PlayerMove, EnemyTurn, EnemyMove, C
 //Battle Controller works as a global event triggerer for battle scene
 public class BattleController : MonoBehaviour
 {
-    public static BattleController Singleton { get; private set; }
+    public static BattleController Instance { get; private set; }
     private EBattleStage _currentBattleStage;
     public EBattleStage GetCurrentBattleStage() => _currentBattleStage;
 
@@ -21,9 +21,9 @@ public class BattleController : MonoBehaviour
 
     private void Awake()
     {
-        if (Singleton != null) Destroy(this.gameObject);
+        if (Instance != null) Destroy(this.gameObject);
 
-        Singleton = this;
+        Instance = this;
         DontDestroyOnLoad(this);
     }
 
