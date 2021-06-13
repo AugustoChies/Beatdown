@@ -51,7 +51,7 @@ public class RythmManager : MonoBehaviour
     {
         RythmToPlay = move;
         CurrentMoveCount = 0;
-        BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove);
+        BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove, move);
         StartCoroutine(PlayRythm());
     }
 

@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba78590a7dd70a46b5c195de450d49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
+  hypeBarValue: 0
+  correctInputCombo: 0

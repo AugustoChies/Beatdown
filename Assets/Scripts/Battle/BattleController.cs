@@ -19,18 +19,32 @@ public class BattleController : MonoBehaviour
     public event Action OnEnemyMove;
     public event Action OnConclusion;
 
+    [Header("BATTLE INFORMATION")]
+    public float hypeBarValue = 0;
+    public int correctInputCombo = 0;
+
+    //LATER WILL ALSO GET PLAYER AND ENEMY MAX HEALTH FROM SCRIPTABLE OBJECTS AND APPLY CURRENT HEALTH TO THEM ON START
+    public float playercurrenthealth = 100;
+    public float enemycurrenthealth = 100;
+    /////////////////
+    public event Action OnUIUpdate;
+
+    [HideInInspector]
+    public RythmMove currentMove = null;
     private void Awake()
     {
         if (Instance != null) Destroy(this.gameObject);
 
         Instance = this;
-        DontDestroyOnLoad(this);
     }
 
-    public void SetBattleStage(EBattleStage nextStage)
+    public void SetBattleStage(EBattleStage nextStage, RythmMove move = null)
     {
         _currentBattleStage = nextStage;
-
+        if(move != null)
+        {
+            currentMove = move;
+        }
         switch (_currentBattleStage)
         {
             case EBattleStage.Intro:
@@ -39,19 +53,23 @@ public class BattleController : MonoBehaviour
                 break;
             case EBattleStage.PlayerTurn:
                 Debug.Log("Player Turn");
+                OnUIUpdate?.Invoke();
                 OnPlayerTurn?.Invoke();
                 break;
             case EBattleStage.PlayerMove:
                 Debug.Log("Player Move");
+                correctInputCombo = 0;                
                 OnPlayerMove?.Invoke();
                 break;
             case EBattleStage.EnemyTurn:
                 Debug.Log("Enemy Turn");
+                OnUIUpdate?.Invoke();
                 OnEnemyTurn?.Invoke();
                 StartCoroutine(WaitToChangeStage(EBattleStage.EnemyMove));
                 break;
             case EBattleStage.EnemyMove:
                 Debug.Log("Enemy Move");
+                correctInputCombo = 0;               
                 OnEnemyMove?.Invoke();
                 StartCoroutine(WaitToChangeStage(EBattleStage.PlayerTurn));
                 break;
@@ -63,6 +81,52 @@ public class BattleController : MonoBehaviour
                 Debug.LogWarning("COWABUNGA IT IS!");//Something very wrong just happened
                 break;
         }
+    }
+
+    public void UpdateHype(bool playerTurn, bool hit)
+    {
+        if(playerTurn)
+        {
+            if(hit)
+            {
+                if(correctInputCombo > 4)
+                {
+                    hypeBarValue += 0.02f;
+                }
+                else
+                {
+                    hypeBarValue+= 0.01f;
+                }
+                correctInputCombo++;
+            }
+            else
+            {
+                hypeBarValue -= 0.05f;
+                correctInputCombo = 0;
+            }
+        }
+        else//enemy attack
+        {
+            if (hit)
+            {
+                if (correctInputCombo > 4)
+                {
+                    hypeBarValue -= 0.02f;
+                }
+                else
+                {
+                    hypeBarValue -= 0.01f;
+                }
+                correctInputCombo++;
+            }
+            else
+            {
+                hypeBarValue += 0.05f;
+                correctInputCombo = 0;
+            }
+        }
+        hypeBarValue = Mathf.Clamp(hypeBarValue, 0f, 1f);
+        OnUIUpdate?.Invoke();
     }
 
     public void RemoveEvents()

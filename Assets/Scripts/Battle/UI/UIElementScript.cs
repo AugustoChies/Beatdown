@@ -6,7 +6,7 @@ public class UIElementScript : MonoBehaviour
 {
     protected Canvas _mycanvas;
 
-    protected void Awake()
+    protected virtual void Awake()
     {
         _mycanvas = GetComponent<Canvas>();
     }
