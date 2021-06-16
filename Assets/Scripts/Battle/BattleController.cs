@@ -26,11 +26,14 @@ public class BattleController : MonoBehaviour
     //LATER WILL ALSO GET PLAYER AND ENEMY MAX HEALTH FROM SCRIPTABLE OBJECTS AND APPLY CURRENT HEALTH TO THEM ON START
     public float playercurrenthealth = 100;
     public float enemycurrenthealth = 100;
-    /////////////////
-    public event Action OnUIUpdate;
+    /////////////////   
 
+    public int currentmoveScore = 0;
     [HideInInspector]
     public RythmMove currentMove = null;
+
+    public event Action<bool,bool> OnUIUpdate;
+
     private void Awake()
     {
         if (Instance != null) Destroy(this.gameObject);
@@ -53,7 +56,7 @@ public class BattleController : MonoBehaviour
                 break;
             case EBattleStage.PlayerTurn:
                 Debug.Log("Player Turn");
-                OnUIUpdate?.Invoke();
+                OnUIUpdate?.Invoke(true,true);
                 OnPlayerTurn?.Invoke();
                 break;
             case EBattleStage.PlayerMove:
@@ -63,7 +66,7 @@ public class BattleController : MonoBehaviour
                 break;
             case EBattleStage.EnemyTurn:
                 Debug.Log("Enemy Turn");
-                OnUIUpdate?.Invoke();
+                OnUIUpdate?.Invoke(true,false);
                 OnEnemyTurn?.Invoke();
                 StartCoroutine(WaitToChangeStage(EBattleStage.EnemyMove));
                 break;
@@ -126,7 +129,22 @@ public class BattleController : MonoBehaviour
             }
         }
         hypeBarValue = Mathf.Clamp(hypeBarValue, 0f, 1f);
-        OnUIUpdate?.Invoke();
+        OnUIUpdate?.Invoke(false, false);
+    }
+
+    public void ApplyDamage()
+    {
+        //Include actual damage formula later
+        float damage = (currentMove.baseDamage + 10 * (currentmoveScore / currentMove.rythmData.Length));
+        Debug.Log(damage + " damage dealt");
+        if (_currentBattleStage == EBattleStage.PlayerMove)
+        {
+            enemycurrenthealth -= damage;
+        }
+        else
+        {
+            playercurrenthealth -= damage;
+        }
     }
 
     public void RemoveEvents()

@@ -38,7 +38,7 @@ public class RythmManager : MonoBehaviour
     private void LateUpdate()
     {
         Key.canPlayKeyThisFrame = true;
-        Debug.Log("Upq " +  UpKeysQueue.Count);
+        //Debug.Log("Upq " +  UpKeysQueue.Count);
     }
 
     public void UpdateScore(float value)
@@ -52,6 +52,7 @@ public class RythmManager : MonoBehaviour
         RythmToPlay = move;
         CurrentMoveCount = 0;
         BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove, move);
+        BattleController.Instance.currentmoveScore = 0; //reset current move score
         StartCoroutine(PlayRythm());
     }
 

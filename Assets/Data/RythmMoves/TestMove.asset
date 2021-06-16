@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: TestMove
   m_EditorClassIdentifier: 
   moveName: TestMove
-  moveClip: {fileID: 0}
+  moveAudioClip: {fileID: 0}
+  moveAnimationName: 
+  baseDamage: 10
   rythmData:
   - WaitTimeToNextNote: 1
     keySpeed: 100

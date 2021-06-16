@@ -12,6 +12,8 @@ public class RythmMove : ScriptableObject
     }
 
     public string moveName;
-    public AudioClip moveClip;
+    public AudioClip moveAudioClip;
+    public string moveAnimationName;
+    public float baseDamage;
     public RythmData[] rythmData;
 }

@@ -64,6 +64,7 @@ public class Key : MonoBehaviour
         {
             print("Acertou");
             BattleController.Instance.UpdateHype(true, true);
+            BattleController.Instance.currentmoveScore++;
             RythmManager.Instance.UpdateScore(score);
         }
         else
@@ -75,6 +76,7 @@ public class Key : MonoBehaviour
         RythmManager.Instance.CurrentMoveCount++;
         if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
         {
+            BattleController.Instance.ApplyDamage();
             BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
         }
         Destroy(this.gameObject);

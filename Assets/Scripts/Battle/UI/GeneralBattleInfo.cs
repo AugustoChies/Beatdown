@@ -32,7 +32,7 @@ public class GeneralBattleInfo : UIElementScript
         }
     }
 
-    private void UpdateGUI()
+    private void UpdateGUI(bool updateHealth,bool isPlayer = true)//Check for which health bar to update
     {
         _hypeBar.fillAmount = BattleController.Instance.hypeBarValue;
         int combo = BattleController.Instance.correctInputCombo;
@@ -47,7 +47,26 @@ public class GeneralBattleInfo : UIElementScript
             _comboText.enabled = false;
         }
 
-        _playerHealth.fillAmount = BattleController.Instance.playercurrenthealth / 100;
-        _playerHealth.fillAmount = BattleController.Instance.enemycurrenthealth / 100;
+        if (!updateHealth) return;
+
+        if(isPlayer)
+        {           
+            StartCoroutine(HealthScroll(0.5f, BattleController.Instance.playercurrenthealth / 100, _playerHealth));
+        }
+        else
+        {
+            StartCoroutine(HealthScroll(0.5f, BattleController.Instance.enemycurrenthealth / 100, _enemyHealth));
+        }
+    }
+
+    IEnumerator HealthScroll(float scrolltime, float newfillAmount, Image imageToFill)
+    {
+        float oldFill = imageToFill.fillAmount;
+        for (float i = 0; i < scrolltime; i+= Time.deltaTime)
+        {
+            imageToFill.fillAmount = Mathf.Lerp(oldFill, newfillAmount, i/scrolltime);
+            yield return null;
+        }
+        imageToFill.fillAmount = newfillAmount;
     }
 }
