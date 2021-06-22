@@ -19,6 +19,9 @@ public class BattleController : MonoBehaviour
     public event Action OnEnemyMove;
     public event Action OnConclusion;
 
+    [SerializeField]
+    private PauseController pauseController = null;
+
     [Header("BATTLE INFORMATION")]
     public float hypeBarValue = 0;
     public int correctInputCombo = 0;
@@ -52,10 +55,12 @@ public class BattleController : MonoBehaviour
         {
             case EBattleStage.Intro:
                 Debug.Log("Battle Intro");
+                pauseController.CanPause = false;
                 OnIntro?.Invoke();
                 break;
             case EBattleStage.PlayerTurn:
                 Debug.Log("Player Turn");
+                pauseController.CanPause = true;
                 OnUIUpdate?.Invoke(true,true);
                 OnPlayerTurn?.Invoke();
                 break;
@@ -66,6 +71,7 @@ public class BattleController : MonoBehaviour
                 break;
             case EBattleStage.EnemyTurn:
                 Debug.Log("Enemy Turn");
+                pauseController.CanPause = true;
                 OnUIUpdate?.Invoke(true,false);
                 OnEnemyTurn?.Invoke();
                 StartCoroutine(WaitToChangeStage(EBattleStage.EnemyMove));
@@ -78,6 +84,7 @@ public class BattleController : MonoBehaviour
                 break;
             case EBattleStage.Conclusion:
                 Debug.Log("Battle End");
+                pauseController.CanPause = false;
                 OnConclusion?.Invoke();
                 break;
             default:
