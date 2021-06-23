@@ -10,6 +10,8 @@ public class BattleUIMaster : MonoBehaviour
     private SkillNamesScript _uiSkillNames = null;
     [SerializeField]
     private GeneralBattleInfo _uiBattleInfo = null;
+    [SerializeField]
+    private ConclusionBattleCanvas _conclusionBattleInfo = null;
 
     private void Start()
     {
@@ -24,5 +26,7 @@ public class BattleUIMaster : MonoBehaviour
         BattleController.Instance.OnEnemyMove += _uiSkillNames.Show;
 
         BattleController.Instance.OnConclusion += _uiBattleInfo.Hide;
+        BattleController.Instance.OnConclusion += _uiSkillNames.Hide;
+        BattleController.Instance.OnConclusion += _conclusionBattleInfo.Show;
     }
 }

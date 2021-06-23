@@ -20,6 +20,7 @@ public class BattleCam : MonoBehaviour
         BattleController.Instance.OnPlayerTurn += PlayPlayerTurnAnim;
         BattleController.Instance.OnPlayerMove += PlayPlayerMoveAnim;
         BattleController.Instance.OnEnemyTurn += PlayPlayerTurnAnim;
+        BattleController.Instance.OnConclusion += PlayConclusionAnim;
         BattleController.Instance.SetBattleStage(EBattleStage.Intro);
     }
 
@@ -55,5 +56,10 @@ public class BattleCam : MonoBehaviour
     {
         _animator.Play("PlayerMoveCam");
         _animator.SetBool("PlayerTurn", false);
+    }
+
+    private void PlayConclusionAnim()
+    {
+        _animator.Play("ConclusionCam");
     }
 }

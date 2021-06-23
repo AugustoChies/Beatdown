@@ -77,7 +77,6 @@ public class Key : MonoBehaviour
         if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
         {
             BattleController.Instance.ApplyDamage();
-            BattleController.Instance.SetBattleStage(EBattleStage.EnemyTurn);
         }
         Destroy(this.gameObject);
     }

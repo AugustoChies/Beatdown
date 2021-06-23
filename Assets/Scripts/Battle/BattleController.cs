@@ -30,7 +30,7 @@ public class BattleController : MonoBehaviour
     public float playercurrenthealth = 100;
     public float enemycurrenthealth = 100;
     /////////////////   
-
+    public bool battleWinnerPlayer = false;
     public int currentmoveScore = 0;
     [HideInInspector]
     public RythmMove currentMove = null;
@@ -147,11 +147,34 @@ public class BattleController : MonoBehaviour
         if (_currentBattleStage == EBattleStage.PlayerMove)
         {
             enemycurrenthealth -= damage;
+            if (enemycurrenthealth <= 0)
+            {
+                BattleEnd(true);
+            }
+            else
+            {
+                SetBattleStage(EBattleStage.EnemyTurn);
+            }
         }
         else
         {
             playercurrenthealth -= damage;
+            if (playercurrenthealth <= 0)
+            {
+                BattleEnd(false);
+            }
+            else
+            {
+                SetBattleStage(EBattleStage.PlayerTurn);
+            }
         }
+    }
+
+    public void BattleEnd(bool winnerIsPlayer)
+    {
+        //do battle end stuff
+        battleWinnerPlayer = winnerIsPlayer;
+        SetBattleStage(EBattleStage.Conclusion);
     }
 
     public void RemoveEvents()
