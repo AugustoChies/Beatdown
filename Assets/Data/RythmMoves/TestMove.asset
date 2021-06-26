@@ -17,9 +17,66 @@ MonoBehaviour:
   moveAnimationName: 
   baseDamage: 10
   rythmData:
-  - WaitTimeToNextNote: 1
+  - WaitTimeToNextNote: 2.5
     keySpeed: 100
-    score: 10
-  - WaitTimeToNextNote: 1
+    score: 1
+  - WaitTimeToNextNote: 0.25
     keySpeed: 100
-    score: 10
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 1.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 1.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 3.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 100
+    score: 1
