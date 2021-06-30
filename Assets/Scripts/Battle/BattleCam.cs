@@ -8,6 +8,8 @@ public class BattleCam : MonoBehaviour
     [SerializeField]
     private float _introTime = 3;
     private float _timer;
+
+    public static bool endedTime = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -42,8 +44,9 @@ public class BattleCam : MonoBehaviour
     }
 
     private void EndIntro()
-    {
+    {   
         BattleController.Singleton.SetBattleStage(EBattleStage.PlayerTurn);
+        endedTime = true;
     }
 
     private void PlayPlayerTurnAnim()
