@@ -23,3 +23,45 @@ MonoBehaviour:
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 1
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 1
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 1
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 1
+    keySpeed: 200
+    score: 20
