@@ -27,7 +27,6 @@ public class RythmManager : MonoBehaviour
 
     public int CurrentMoveCount = 0;
     
-
     private void Awake()
     {
         Instance = this;

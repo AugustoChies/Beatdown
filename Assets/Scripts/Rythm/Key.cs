@@ -71,7 +71,7 @@ public class Key : MonoBehaviour
         {
             print("Errou");
             BattleController.Instance.UpdateHype(true, false);
-            RythmManager.Instance.UpdateScore(-score);
+            RythmManager.Instance.UpdateScore(0);
         }
         RythmManager.Instance.CurrentMoveCount++;
         if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
