@@ -63,15 +63,14 @@ public class Key : MonoBehaviour
         if (canPlayKey && wasPressed)
         {
             print("Acertou");
-            BattleController.Instance.UpdateHype(true, true);
+            BattleController.Instance.UpdateHype(true);
             BattleController.Instance.currentmoveScore++;
             RythmManager.Instance.UpdateScore(score);
         }
         else
         {
             print("Errou");
-            BattleController.Instance.UpdateHype(true, false);
-            RythmManager.Instance.UpdateScore(0);
+            BattleController.Instance.UpdateHype(false);
         }
         RythmManager.Instance.CurrentMoveCount++;
         if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)

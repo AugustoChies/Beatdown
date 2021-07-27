@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestMove2
   m_EditorClassIdentifier: 
   moveName: TestMove2
-  moveAudioClip: {fileID: 0}
+  moveAudioClip: {fileID: 8300000, guid: 04aa35493c2454440914dceaf0649de0, type: 3}
   moveAnimationName: 
   baseDamage: 20
   rythmData:

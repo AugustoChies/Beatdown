@@ -46,11 +46,19 @@ public class RythmManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    public void PlayMove(RythmMove move)
+    public void PlayMove(RythmMove move, bool isPlayer)
     {
         RythmToPlay = move;
         CurrentMoveCount = 0;
-        BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove, move);
+        BattleAudioController.Instance.PlayMoveTrack(move.moveAudioClip);
+        if (isPlayer)
+        {
+            BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove, move);
+        }
+        else
+        {
+            BattleController.Instance.SetBattleStage(EBattleStage.EnemyMove, move);
+        }
         BattleController.Instance.currentmoveScore = 0; //reset current move score
         StartCoroutine(PlayRythm());
     }

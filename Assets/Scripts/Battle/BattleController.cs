@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum EBattleStage {Intro, PlayerTurn, PlayerMove, EnemyTurn, EnemyMove, Conclusion }
+public enum EBattleStage {Intro, PlayerTurn, PlayerMove, EnemyTurn, EnemyMove, Conclusion, DamageStep }
 
 //Battle Controller works as a global event triggerer for battle scene
 public class BattleController : MonoBehaviour
@@ -17,6 +17,7 @@ public class BattleController : MonoBehaviour
     public event Action OnPlayerMove;
     public event Action OnEnemyTurn;
     public event Action OnEnemyMove;
+    public event Action OnDamage;
     public event Action OnConclusion;
 
     [SerializeField]
@@ -32,6 +33,7 @@ public class BattleController : MonoBehaviour
     /////////////////   
     public bool battleWinnerPlayer = false;
     public int currentmoveScore = 0;
+    public RythmMove enemyMove = null;
     [HideInInspector]
     public RythmMove currentMove = null;
 
@@ -74,13 +76,16 @@ public class BattleController : MonoBehaviour
                 pauseController.CanPause = true;
                 OnUIUpdate?.Invoke(true,false);
                 OnEnemyTurn?.Invoke();
-                StartCoroutine(WaitToChangeStage(EBattleStage.EnemyMove));
+                StartCoroutine(WaitToEnemyMove());
                 break;
             case EBattleStage.EnemyMove:
                 Debug.Log("Enemy Move");
                 correctInputCombo = 0;               
                 OnEnemyMove?.Invoke();
-                StartCoroutine(WaitToChangeStage(EBattleStage.PlayerTurn));
+                break;
+            case EBattleStage.DamageStep:
+                Debug.Log("DamageStep");                
+                OnDamage?.Invoke();
                 break;
             case EBattleStage.Conclusion:
                 Debug.Log("Battle End");
@@ -93,8 +98,9 @@ public class BattleController : MonoBehaviour
         }
     }
 
-    public void UpdateHype(bool playerTurn, bool hit)
+    public void UpdateHype(bool hit)
     {
+        bool playerTurn = _currentBattleStage == EBattleStage.PlayerMove;
         if(playerTurn)
         {
             if(hit)
@@ -168,6 +174,7 @@ public class BattleController : MonoBehaviour
                 SetBattleStage(EBattleStage.PlayerTurn);
             }
         }
+        BattleAudioController.Instance.FadeBackToMain();
     }
 
     public void BattleEnd(bool winnerIsPlayer)
@@ -184,13 +191,14 @@ public class BattleController : MonoBehaviour
         OnPlayerMove = null;
         OnEnemyTurn = null;
         OnEnemyMove = null;
+        OnDamage = null;
         OnConclusion = null;
     }
 
-    IEnumerator WaitToChangeStage(EBattleStage newStage, float time = 3)
+    IEnumerator WaitToEnemyMove(float time = 3)
     {
         yield return new WaitForSeconds(time);
-        SetBattleStage(newStage);
+        RythmManager.Instance.PlayMove(enemyMove, false);
     }
 
     
