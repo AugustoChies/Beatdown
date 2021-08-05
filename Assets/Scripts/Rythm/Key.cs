@@ -11,6 +11,8 @@ public class Key : MonoBehaviour
 
     public bool canPlayKey;
 
+    public Sprite activeSprite; 
+
     public static bool canPlayKeyThisFrame = true;
 
     private void Update()
@@ -84,8 +86,9 @@ public class Key : MonoBehaviour
     {
         if(collision.CompareTag("Center"))
         {
+            GetComponent<Image>().sprite = activeSprite;
             canPlayKey = true;
-            GetComponent<Image>().color = Color.red;
+            //GetComponent<Image>().color = Color.red;
         }
 
         if (collision.CompareTag("InnerCenter"))

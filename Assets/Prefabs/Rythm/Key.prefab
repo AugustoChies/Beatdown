@@ -144,7 +144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -3347461339917238124, guid: 42fa8ee8d0a6cc14f8a12b1cdbe1c244, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -167,7 +167,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2.3199158, y: -1.8981171}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -178,7 +178,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 100}
+  m_Size: {x: 82.706116, y: 91.14212}
   m_EdgeRadius: 0
 --- !u!114 &1310397321
 MonoBehaviour:
@@ -194,7 +194,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rythmKey: 0
   speed: 0
+  score: 0
   centerPoint: {fileID: 0}
+  canPlayKey: 0
+  activeSprite: {fileID: -547665329950711206, guid: acb194335b504bb4e820e66766f1048c, type: 3}
 --- !u!50 &2674191744267013640
 Rigidbody2D:
   serializedVersion: 4
