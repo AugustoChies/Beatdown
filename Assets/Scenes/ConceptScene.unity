@@ -1320,10 +1320,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3067083968752246951, guid: bcdb41a6ce05a2346bb2cd2c44ea77c7, type: 3}
-      propertyPath: enemyMove
-      value: 
-      objectReference: {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
-    - target: {fileID: 3067083968752246951, guid: bcdb41a6ce05a2346bb2cd2c44ea77c7, type: 3}
       propertyPath: pauseController
       value: 
       objectReference: {fileID: 1283484796}

@@ -9,10 +9,15 @@ public class RythmMoveButtonGenerator : MonoBehaviour
     private RythmButton tempMove;
     private void Start()
     {
-        foreach(int i in RythmList.instance.unlockedRythmIDs)
+        RythmList.Instance.Generator = this;
+    }
+
+    public void GenerateButtons()
+    {
+        foreach (RythmMove i in RythmList.Instance.rythmMovesList)
         {
             tempMove = Instantiate(rythmMoveButtonPrefab, firstPos.position, Quaternion.identity, moveSelectPanel.transform).GetComponent<RythmButton>();
-            tempMove.move = RythmList.instance.rythmMovesList[i];
+            tempMove.move = i;
             tempMove.gameObject.GetComponentInChildren<Text>().text = tempMove.move.moveName;
         }
     }

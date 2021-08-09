@@ -915,10 +915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd13ab1814874a4897c769c89a9758a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rythmMovesList:
-  - {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
-  - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
-  unlockedRythmIDs: 0000000001000000
+  Generator: {fileID: 0}
+  rythmMovesList: []
 --- !u!1 &9053706261639641325
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,12 +3,19 @@ using UnityEngine;
 
 public class RythmList : MonoBehaviour
 {
-    public static RythmList instance;
+    public static RythmList Instance;
+    public RythmMoveButtonGenerator Generator;
+
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
 
     public List<RythmMove> rythmMovesList;
-    public List<int> unlockedRythmIDs;
+
+    public void SetPlayerMoves(List<RythmMove> moves)
+    {
+        rythmMovesList = moves;
+        Generator.GenerateButtons();
+    }
 }

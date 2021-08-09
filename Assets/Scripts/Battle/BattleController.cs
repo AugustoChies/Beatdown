@@ -27,14 +27,14 @@ public class BattleController : MonoBehaviour
     public float hypeBarValue = 0;
     public int correctInputCombo = 0;
 
-    //LATER WILL ALSO GET PLAYER AND ENEMY MAX HEALTH FROM SCRIPTABLE OBJECTS AND APPLY CURRENT HEALTH TO THEM ON START
+    public CharacterData player = null;
+    public CharacterData enemy = null;
     public float playercurrenthealth = 100;
     public float enemycurrenthealth = 100;
     /////////////////   
     private bool _lastToMoveIsPlayer = true;
     public bool battleWinnerPlayer = false;
     public int currentmoveScore = 0;
-    public RythmMove enemyMove = null;
     [HideInInspector]
     public RythmMove currentMove = null;
 
@@ -47,6 +47,13 @@ public class BattleController : MonoBehaviour
         Instance = this;
     }
 
+    private void SetCharacterValues()
+    {
+        playercurrenthealth = player.Health;
+        enemycurrenthealth = enemy.Health;
+        RythmList.Instance.SetPlayerMoves(player.EquippedMoves);
+    }
+
     public void SetBattleStage(EBattleStage nextStage, RythmMove move = null)
     {
         _currentBattleStage = nextStage;
@@ -57,38 +64,32 @@ public class BattleController : MonoBehaviour
         switch (_currentBattleStage)
         {
             case EBattleStage.Intro:
-                Debug.Log("Battle Intro");
+                SetCharacterValues();
                 pauseController.CanPause = false;
                 OnIntro?.Invoke();
                 break;
             case EBattleStage.PlayerTurn:
-                Debug.Log("Player Turn");
                 pauseController.CanPause = true;                
                 OnPlayerTurn?.Invoke();
                 break;
             case EBattleStage.PlayerMove:
-                Debug.Log("Player Move");
                 _lastToMoveIsPlayer = true;
                 OnPlayerMove?.Invoke();
                 break;
             case EBattleStage.EnemyTurn:
-                Debug.Log("Enemy Turn");
                 pauseController.CanPause = true;                
                 OnEnemyTurn?.Invoke();
                 StartCoroutine(WaitToEnemyMove());
                 break;
             case EBattleStage.EnemyMove:
-                Debug.Log("Enemy Move");
                 _lastToMoveIsPlayer = false;                
                 OnEnemyMove?.Invoke();
                 break;
             case EBattleStage.DamageStep:
-                Debug.Log("DamageStep");                
                 OnDamage?.Invoke();
                 StartCoroutine(DelayedDamage());
                 break;
             case EBattleStage.Conclusion:
-                Debug.Log("Battle End");
                 pauseController.CanPause = false;
                 OnConclusion?.Invoke();
                 break;
@@ -146,7 +147,6 @@ public class BattleController : MonoBehaviour
     {
         //Include actual damage formula later
         float damage = (currentMove.baseDamage + 10 * (currentmoveScore / currentMove.rythmData.Length));
-        Debug.Log(damage + " damage dealt");
         if (_lastToMoveIsPlayer)
         {
             enemycurrenthealth -= damage;
@@ -199,7 +199,8 @@ public class BattleController : MonoBehaviour
     IEnumerator WaitToEnemyMove(float time = 3)
     {
         yield return new WaitForSeconds(time);
-        RythmManager.Instance.PlayMove(enemyMove, false);
+        int randomMove = UnityEngine.Random.Range(0, enemy.EquippedMoves.Count);
+        RythmManager.Instance.PlayMove(enemy.EquippedMoves[randomMove], false);
     }
 
     IEnumerator DelayedDamage(float time = 1.5f)
