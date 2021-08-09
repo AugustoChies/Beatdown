@@ -14,16 +14,16 @@ public class BattleUIMaster : MonoBehaviour
     private ConclusionBattleCanvas _conclusionBattleInfo = null;
 
     private void Start()
-    {
-        BattleController.Instance.OnPlayerTurn += _uiSkillNames.Hide;
+    {        
         BattleController.Instance.OnPlayerTurn += _uiActionMenu.Show;
         BattleController.Instance.OnPlayerTurn += _uiBattleInfo.Show;
 
         BattleController.Instance.OnPlayerMove += _uiActionMenu.Hide;
         BattleController.Instance.OnPlayerMove += _uiSkillNames.Show;
-
-        BattleController.Instance.OnEnemyTurn += _uiSkillNames.Hide;
+        
         BattleController.Instance.OnEnemyMove += _uiSkillNames.Show;
+
+        BattleController.Instance.OnDamage += _uiSkillNames.Hide;
 
         BattleController.Instance.OnConclusion += _uiBattleInfo.Hide;
         BattleController.Instance.OnConclusion += _uiSkillNames.Hide;

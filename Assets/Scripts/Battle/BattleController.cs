@@ -31,6 +31,7 @@ public class BattleController : MonoBehaviour
     public float playercurrenthealth = 100;
     public float enemycurrenthealth = 100;
     /////////////////   
+    private bool _lastToMoveIsPlayer = true;
     public bool battleWinnerPlayer = false;
     public int currentmoveScore = 0;
     public RythmMove enemyMove = null;
@@ -62,38 +63,34 @@ public class BattleController : MonoBehaviour
                 break;
             case EBattleStage.PlayerTurn:
                 Debug.Log("Player Turn");
-                pauseController.CanPause = true;
-                OnUIUpdate?.Invoke(true,true);
+                pauseController.CanPause = true;                
                 OnPlayerTurn?.Invoke();
                 break;
             case EBattleStage.PlayerMove:
                 Debug.Log("Player Move");
-                correctInputCombo = 0;                
+                _lastToMoveIsPlayer = true;
                 OnPlayerMove?.Invoke();
                 break;
             case EBattleStage.EnemyTurn:
                 Debug.Log("Enemy Turn");
-                pauseController.CanPause = true;
-                OnUIUpdate?.Invoke(true,false);
+                pauseController.CanPause = true;                
                 OnEnemyTurn?.Invoke();
                 StartCoroutine(WaitToEnemyMove());
                 break;
             case EBattleStage.EnemyMove:
                 Debug.Log("Enemy Move");
-                correctInputCombo = 0;               
+                _lastToMoveIsPlayer = false;                
                 OnEnemyMove?.Invoke();
                 break;
             case EBattleStage.DamageStep:
                 Debug.Log("DamageStep");                
                 OnDamage?.Invoke();
+                StartCoroutine(DelayedDamage());
                 break;
             case EBattleStage.Conclusion:
                 Debug.Log("Battle End");
                 pauseController.CanPause = false;
                 OnConclusion?.Invoke();
-                break;
-            default:
-                Debug.LogWarning("COWABUNGA IT IS!");//Something very wrong just happened
                 break;
         }
     }
@@ -150,7 +147,7 @@ public class BattleController : MonoBehaviour
         //Include actual damage formula later
         float damage = (currentMove.baseDamage + 10 * (currentmoveScore / currentMove.rythmData.Length));
         Debug.Log(damage + " damage dealt");
-        if (_currentBattleStage == EBattleStage.PlayerMove)
+        if (_lastToMoveIsPlayer)
         {
             enemycurrenthealth -= damage;
             if (enemycurrenthealth <= 0)
@@ -159,6 +156,8 @@ public class BattleController : MonoBehaviour
             }
             else
             {
+                correctInputCombo = 0;
+                OnUIUpdate?.Invoke(true, false);
                 SetBattleStage(EBattleStage.EnemyTurn);
             }
         }
@@ -171,6 +170,8 @@ public class BattleController : MonoBehaviour
             }
             else
             {
+                correctInputCombo = 0;
+                OnUIUpdate?.Invoke(true, true);
                 SetBattleStage(EBattleStage.PlayerTurn);
             }
         }
@@ -201,5 +202,11 @@ public class BattleController : MonoBehaviour
         RythmManager.Instance.PlayMove(enemyMove, false);
     }
 
-    
+    IEnumerator DelayedDamage(float time = 1.5f)
+    {
+        yield return new WaitForSeconds(time);
+        ApplyDamage();
+    }
+
+
 }
