@@ -38,19 +38,19 @@ public class Spectrum : MonoBehaviour
 
             #region music
 
-            if (BattleCam.endedTime)
-            {
-
-                float[] spectrum;
-
-                spectrum = AudioListener.GetSpectrumData(1024, 0, FFTWindow.Rectangular);
-
-                for (int i = 0; i < 1; i++)
-                {
-                    skinnedMeshRenderer.SetBlendShapeWeight(0, blendZero);
-                    blendZero = spectrum[i] * value;
-                }
-            }
+    //      if (BattleCam.endedTime)
+    //      {
+    //
+    //          float[] spectrum;
+    //
+    //          spectrum = AudioListener.GetSpectrumData(1024, 0, FFTWindow.Rectangular);
+    //
+    //          for (int i = 0; i < 1; i++)
+    //          {
+    //              skinnedMeshRenderer.SetBlendShapeWeight(0, blendZero);
+    //              blendZero = spectrum[i] * value;
+    //          }
+    //      }
             #endregion
 
         }

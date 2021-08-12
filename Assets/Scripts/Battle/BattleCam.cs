@@ -8,6 +8,7 @@ public class BattleCam : MonoBehaviour
     [SerializeField]
     private float _introTime = 3;
     private float _timer;
+
     // Start is called before the first frame update
     void Awake()
     {
