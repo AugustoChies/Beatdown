@@ -19,4 +19,12 @@ public class CharacterData : ScriptableObject
     public float Rythm => _rythm;
 
     public List<RythmMove> EquippedMoves = null;
+
+    public void ChangeStats(float moreHealth, float moreAttack, float moreDefense, float moreRythm)
+    {
+        _health += moreHealth;
+        _attack += moreAttack;
+        _defense += moreDefense;
+        _rythm += moreRythm;
+    }
 }
