@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec95ab0bc89fdd4438d7d3db24172955, type: 3}
   m_Name: TestEnemy
   m_EditorClassIdentifier: 
-  _health: 20
+  _health: 100
   _attack: 5
   _defense: 5
   _rythm: 5
   EquippedMoves:
+  - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
   - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
