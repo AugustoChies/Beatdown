@@ -51,11 +51,11 @@ public class GeneralBattleInfo : UIElementScript
 
         if(isPlayer)
         {           
-            StartCoroutine(HealthScroll(0.5f, BattleController.Instance.playercurrenthealth / 100, _playerHealth));
+            StartCoroutine(HealthScroll(0.5f, BattleController.Instance.playercurrenthealth / BattleController.Instance.MaxPlayerhealth, _playerHealth));
         }
         else
         {
-            StartCoroutine(HealthScroll(0.5f, BattleController.Instance.enemycurrenthealth / 100, _enemyHealth));
+            StartCoroutine(HealthScroll(0.5f, BattleController.Instance.enemycurrenthealth / BattleController.Instance.MaxEnemyhealth, _enemyHealth));
         }
     }
 

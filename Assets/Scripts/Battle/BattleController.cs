@@ -31,6 +31,10 @@ public class BattleController : MonoBehaviour
     public CharacterData enemy = null;
     public float playercurrenthealth = 100;
     public float enemycurrenthealth = 100;
+    [HideInInspector]
+    public float MaxPlayerhealth = 100;
+    [HideInInspector]
+    public float MaxEnemyhealth = 100;
     /////////////////   
     private bool _lastToMoveIsPlayer = true;
     public bool battleWinnerPlayer = false;
@@ -51,6 +55,8 @@ public class BattleController : MonoBehaviour
     {
         playercurrenthealth = player.Health;
         enemycurrenthealth = enemy.Health;
+        MaxPlayerhealth = player.Health;
+        MaxEnemyhealth = enemy.Health;
         RythmList.Instance.SetPlayerMoves(player.EquippedMoves);
     }
 
