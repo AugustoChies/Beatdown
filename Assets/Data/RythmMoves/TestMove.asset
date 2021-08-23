@@ -16,6 +16,9 @@ MonoBehaviour:
   moveAudioClip: {fileID: 8300000, guid: 8fae7696a891a3a44aeaeb6586d127e0, type: 3}
   moveAnimationName: 
   baseDamage: 10
+  performanceDamage: 5
+  extraDamage: 5
+  effect: 0
   rythmData:
   - WaitTimeToNextNote: 2.5
     keySpeed: 100
@@ -48,8 +51,5 @@ MonoBehaviour:
     keySpeed: 100
     score: 1
   - WaitTimeToNextNote: 3.75
-    keySpeed: 100
-    score: 1
-  - WaitTimeToNextNote: 0.25
     keySpeed: 100
     score: 1

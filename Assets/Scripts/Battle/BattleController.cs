@@ -24,6 +24,8 @@ public class BattleController : MonoBehaviour
     private PauseController pauseController = null;
 
     [Header("BATTLE INFORMATION")]
+    [SerializeField]
+    private float extraHypeDamage = 10;
     public float hypeBarValue = 0;
     public int correctInputCombo = 0;
 
@@ -152,9 +154,15 @@ public class BattleController : MonoBehaviour
     public void ApplyDamage()
     {
         //Include actual damage formula later
-        float damage = (currentMove.baseDamage + 10 * (currentmoveScore / currentMove.rythmData.Length));
+        float damage = currentMove.baseDamage + extraHypeDamage * hypeBarValue;
+        
         if (_lastToMoveIsPlayer)
         {
+            damage += currentMove.performanceDamage * (currentmoveScore / currentMove.rythmData.Length);
+            if (currentmoveScore == currentMove.rythmData.Length)
+            {
+                damage += currentMove.extraDamage;
+            }
             enemycurrenthealth -= damage;
             if (enemycurrenthealth <= 0)
             {
@@ -169,6 +177,11 @@ public class BattleController : MonoBehaviour
         }
         else
         {
+            damage += currentMove.performanceDamage *  (1 - (currentmoveScore / currentMove.rythmData.Length));
+            if (currentmoveScore == 0)
+            {
+                damage += currentMove.extraDamage;
+            }
             playercurrenthealth -= damage;
             if (playercurrenthealth <= 0)
             {
@@ -181,6 +194,7 @@ public class BattleController : MonoBehaviour
                 SetBattleStage(EBattleStage.PlayerTurn);
             }
         }
+        Debug.Log(damage + " damage dealt");
         BattleAudioController.Instance.FadeBackToMain();
     }
 

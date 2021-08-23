@@ -11,9 +11,20 @@ public class RythmMove : ScriptableObject
         public float score;
     }
 
+    public enum EMoveEffect
+    {
+        None,
+        TempoUp,
+        TempoDown,
+        Perfection,
+        PerformanceBased
+    }
     public string moveName;
     public AudioClip moveAudioClip;
     public string moveAnimationName;
     public float baseDamage;
+    public float performanceDamage;
+    public float extraDamage;
+    public EMoveEffect effect;
     public RythmData[] rythmData;
 }
