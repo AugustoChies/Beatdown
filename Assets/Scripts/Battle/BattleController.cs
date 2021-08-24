@@ -46,6 +46,10 @@ public class BattleController : MonoBehaviour
 
     public event Action<bool,bool> OnUIUpdate;
 
+    public float PlayerHpPercentage => playercurrenthealth / MaxPlayerhealth * 100;
+    public float enemyHpPercentage => enemycurrenthealth / MaxEnemyhealth * 100;
+    public float hypeGaugePercentage => hypeBarValue * 100;
+
     private void Awake()
     {
         if (Instance != null) Destroy(this.gameObject);
@@ -219,8 +223,8 @@ public class BattleController : MonoBehaviour
     IEnumerator WaitToEnemyMove(float time = 3)
     {
         yield return new WaitForSeconds(time);
-        int randomMove = UnityEngine.Random.Range(0, enemy.EquippedMoves.Count);
-        RythmManager.Instance.PlayMove(enemy.EquippedMoves[randomMove], false);
+        //int randomMove = UnityEngine.Random.Range(0, enemy.EquippedMoves.Count);
+        RythmManager.Instance.PlayMove(EnemyAI.Instance.DecideEnemyMove(), false);
     }
 
     IEnumerator DelayedDamage(float time = 1.5f)
