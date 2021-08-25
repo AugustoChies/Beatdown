@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private EnemyBehaviour _enemyBehaviour;
-    public RythmMove moveToPerform;
+    public static EnemyAI Instance;
 
-    private List<EnemyBehaviourParameters> _enemyBehaviourParameters = new List<EnemyBehaviourParameters>();
+    [SerializeField] private EnemyBehaviour _enemyBehaviour;
+    [SerializeField] private RythmMove moveToPerform;
+
+    [SerializeField] private List<EnemyBehaviourParameters> _enemyBehaviourParameters = new List<EnemyBehaviourParameters>();
 
     private void Awake()
     {
+        Instance = this;
         InitializeBehaviours();
     }
 
@@ -22,7 +25,9 @@ public class EnemyAI : MonoBehaviour
     }
     public RythmMove DecideEnemyMove()
     {
-        for(int i = 0; i < _enemyBehaviourParameters.Count; i++)
+        updateCooldowns();
+
+        for (int i = 0; i < _enemyBehaviourParameters.Count; i++)
         {
             if (_enemyBehaviourParameters[i].currentCooldown > 0) continue;
 
@@ -34,10 +39,11 @@ public class EnemyAI : MonoBehaviour
                 }
                 else
                 {
-                    _enemyBehaviourParameters[i].currentCooldown = _enemyBehaviourParameters[i].cooldown;
+                    _enemyBehaviourParameters[i].currentCooldown = _enemyBehaviourParameters[i].cooldown + 1;
                 }
 
                 moveToPerform = _enemyBehaviourParameters[i].moveToPerform;
+
                 return moveToPerform;
             }
         }
@@ -57,32 +63,40 @@ public class EnemyAI : MonoBehaviour
                 case Condition.Anytime:
                     break;
                 case Condition.EnemyHpAboveXPercent:
-                    if (BattleController.Instance.enemycurrenthealth < cond.threshold) shouldUseThisMove = false;
+                    if (BattleController.Instance.enemyHpPercentage < cond.threshold) shouldUseThisMove = false;
                     break;
                 case Condition.EnemyHpBelowXPercent:
-                    if (BattleController.Instance.enemycurrenthealth > cond.threshold) shouldUseThisMove = false;
+                    if (BattleController.Instance.enemyHpPercentage > cond.threshold) shouldUseThisMove = false;
                     break;
                 case Condition.EnemyHpHigherThanPlayerHp:
-                    if (BattleController.Instance.enemycurrenthealth < BattleController.Instance.playercurrenthealth) shouldUseThisMove = false;
+                    if (BattleController.Instance.enemyHpPercentage < BattleController.Instance.PlayerHpPercentage) shouldUseThisMove = false;
                     break;
                 case Condition.HypeGaugeHigherThanXPercent:
-                    if (BattleController.Instance.hypeBarValue < cond.threshold) shouldUseThisMove = false;
+                    if (BattleController.Instance.hypeGaugePercentage < cond.threshold) shouldUseThisMove = false;
                     break;
                 case Condition.HypeGaugeLowerThanXPercent:
-                    if (BattleController.Instance.hypeBarValue > cond.threshold) shouldUseThisMove = false;
+                    if (BattleController.Instance.hypeGaugePercentage > cond.threshold) shouldUseThisMove = false;
                     break;
                 case Condition.PlayerHpAboveXPercent:
-                    if (BattleController.Instance.playercurrenthealth < cond.threshold) shouldUseThisMove = false;
+                    if (BattleController.Instance.PlayerHpPercentage < cond.threshold) shouldUseThisMove = false;
                     break;
                 case Condition.PlayerHpBelowXPercent:
-                    if (BattleController.Instance.playercurrenthealth > cond.threshold) shouldUseThisMove = false;
+                    if (BattleController.Instance.PlayerHpPercentage > cond.threshold) shouldUseThisMove = false;
                     break;
                 case Condition.PlayerHpHigherThanEnemyHp:
-                    if (BattleController.Instance.enemycurrenthealth > BattleController.Instance.playercurrenthealth) shouldUseThisMove = false;
+                    if (BattleController.Instance.enemyHpPercentage > BattleController.Instance.PlayerHpPercentage) shouldUseThisMove = false;
                     break;
             }
         }
 
         return shouldUseThisMove;
+    }
+
+    public void updateCooldowns()
+    {
+        foreach(EnemyBehaviourParameters e in _enemyBehaviourParameters)
+        {
+            e.currentCooldown--;
+        }
     }
 }

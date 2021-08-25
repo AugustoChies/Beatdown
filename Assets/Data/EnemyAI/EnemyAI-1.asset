@@ -13,14 +13,25 @@ MonoBehaviour:
   m_Name: EnemyAI-1
   m_EditorClassIdentifier: 
   enemyBehaviourParameters:
-  - moveToPerform: {fileID: 0}
+  - moveToPerform: {fileID: 11400000, guid: 264e087c35905a943ab18cd230f25f1f, type: 2}
     cooldown: 0
     currentCooldown: 0
-    onlyUseOnce: 0
+    onlyUseOnce: 1
     conditions:
     - condition: 0
       threshold: 0
-  - moveToPerform: {fileID: 0}
+  - moveToPerform: {fileID: 11400000, guid: c813b3492f8bddc4faa0c20cd94069a0, type: 2}
+    cooldown: 3
+    currentCooldown: 0
+    onlyUseOnce: 0
+    conditions:
+    - condition: 1
+      threshold: 50
+    - condition: 3
+      threshold: 50
+    - condition: 7
+      threshold: 0
+  - moveToPerform: {fileID: 11400000, guid: 0d862147199fb1d42837065ede6a54c3, type: 2}
     cooldown: 0
     currentCooldown: 0
     onlyUseOnce: 0
