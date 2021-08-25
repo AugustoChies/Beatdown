@@ -12,10 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec95ab0bc89fdd4438d7d3db24172955, type: 3}
   m_Name: PlayerProxy
   m_EditorClassIdentifier: 
-  _health: 100
-  _attack: 10
-  _defense: 10
-  _rythm: 10
+  _health: 115
+  _attack: 25
+  _performance: 10
+  _defense: 25
+  _rythm: 25
+  _statCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.0934035
+      outSlope: 1.0934035
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.024493244
+    - serializedVersion: 3
+      time: 1
+      value: 0.7
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   EquippedMoves:
   - {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
   - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}

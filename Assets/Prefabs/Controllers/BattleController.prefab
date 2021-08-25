@@ -44,12 +44,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseController: {fileID: 0}
+  statsModifiers: {fileID: 11400000, guid: a2adc788f36da4e49bec1b5adaf907a3, type: 2}
   hypeBarValue: 0
   correctInputCombo: 0
   player: {fileID: 11400000, guid: c589acabb0bf67549bd9d3fb618cfbb4, type: 2}
   enemy: {fileID: 11400000, guid: a532dfb4569f44b4e95a336a70e28b62, type: 2}
   playercurrenthealth: 100
   enemycurrenthealth: 100
+  MaxPlayerhealth: 100
+  MaxEnemyhealth: 100
   battleWinnerPlayer: 0
   currentmoveScore: 0
   currentMove: {fileID: 0}

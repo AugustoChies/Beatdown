@@ -25,7 +25,7 @@ public class BattleController : MonoBehaviour
 
     [Header("BATTLE INFORMATION")]
     [SerializeField]
-    private float extraHypeDamage = 10;
+    private DamageModificationsStatus statsModifiers = null;
     public float hypeBarValue = 0;
     public int correctInputCombo = 0;
 
@@ -154,7 +154,7 @@ public class BattleController : MonoBehaviour
     public void ApplyDamage()
     {
         //Include actual damage formula later
-        float damage = currentMove.baseDamage + extraHypeDamage * hypeBarValue;
+        float damage = currentMove.baseDamage + statsModifiers.ExtraHypeDamage * hypeBarValue;
         
         if (_lastToMoveIsPlayer)
         {

@@ -14,8 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   _attack: 5
+  _performance: 10
   _defense: 5
   _rythm: 5
+  _statCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   EquippedMoves:
   - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
   - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}

@@ -7,6 +7,7 @@ public class StatGain
 {
     public float Health = 0;   
     public float Attack = 0;
+    public float Performance = 0;
     public float Defense = 0;    
     public float Rythm = 0;
 }
@@ -22,7 +23,7 @@ public class Minigame : MonoBehaviour
 
     protected void ApplyGains()
     {
-        Inventory.Instance.Character.ChangeStats(statGain.Health * performance, statGain.Attack * performance,
+        Inventory.Instance.Character.ChangeStats(statGain.Health * performance, statGain.Attack * performance, statGain.Performance * performance,
             statGain.Defense * performance, statGain.Rythm * performance);
         parentCanvas.HideMinigame();
     }
