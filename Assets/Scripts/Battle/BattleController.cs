@@ -157,44 +157,60 @@ public class BattleController : MonoBehaviour
 
     public void ApplyDamage()
     {
-        //Include actual damage formula later
-        float damage = currentMove.baseDamage + statsModifiers.ExtraHypeDamage * hypeBarValue;
+        CharacterData attackingChar = null;
+        CharacterData defendingChar = null;
+        if (_lastToMoveIsPlayer)
+        {
+            attackingChar = player;
+            defendingChar = enemy;
+        }
+        else
+        {
+            attackingChar = enemy;
+            defendingChar = player;
+        }
+
+        float damage = currentMove.baseDamage * statsModifiers.AtackModifier(attackingChar.GetCurveAttack()) + statsModifiers.ExtraHypeDamage * hypeBarValue;
         
         if (_lastToMoveIsPlayer)
         {
-            damage += currentMove.performanceDamage * (currentmoveScore / currentMove.rythmData.Length);
+            damage += currentMove.performanceDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance()) * (currentmoveScore / currentMove.rythmData.Length);
             if (currentmoveScore == currentMove.rythmData.Length)
             {
-                damage += currentMove.extraDamage;
+                damage += currentMove.extraDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance());
             }
+            damage -= damage * statsModifiers.DefenseModifier(defendingChar.GetCurveDefense());
             enemycurrenthealth -= damage;
+
+            OnUIUpdate?.Invoke(true, false);
+            correctInputCombo = 0;            
             if (enemycurrenthealth <= 0)
             {
                 BattleEnd(true);
             }
             else
-            {
-                correctInputCombo = 0;
-                OnUIUpdate?.Invoke(true, false);
+            {                
                 SetBattleStage(EBattleStage.EnemyTurn);
             }
         }
         else
         {
-            damage += currentMove.performanceDamage *  (1 - (currentmoveScore / currentMove.rythmData.Length));
+            damage += currentMove.performanceDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance()) *  (1 - (currentmoveScore / currentMove.rythmData.Length));
             if (currentmoveScore == 0)
             {
-                damage += currentMove.extraDamage;
+                damage += currentMove.extraDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance());
             }
+            damage -= damage * statsModifiers.DefenseModifier(defendingChar.GetCurveDefense());
             playercurrenthealth -= damage;
+
+            OnUIUpdate?.Invoke(true, true);
+            correctInputCombo = 0;
             if (playercurrenthealth <= 0)
             {
                 BattleEnd(false);
             }
             else
             {
-                correctInputCombo = 0;
-                OnUIUpdate?.Invoke(true, true);
                 SetBattleStage(EBattleStage.PlayerTurn);
             }
         }

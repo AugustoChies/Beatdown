@@ -3,10 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu]
 public class DamageModificationsStatus : ScriptableObject
-{
-    public float AtackModifier = 1.0f;
-    public float PerformanceModifier = 1.0f;
-    public float DefenseModifier = 0.5f;
-    public float RythmModifier = 0.5f;
+{   
     public float ExtraHypeDamage = 10;
+
+    public float AtackModifier(float attackvalue)
+    {
+        return (1 + attackvalue/(100 + attackvalue));
+    }
+
+    public float PerformanceModifier(float performancevalue)
+    {
+        return (1 + performancevalue / (100 + performancevalue));
+    }
+
+    public float DefenseModifier(float defensevalue)
+    {
+        return (defensevalue / (100 + defensevalue));
+    }
+
+    public float RythmModifier(float rythmvalue)
+    {
+        return (1 + rythmvalue / (100 + rythmvalue));
+    }
 }
