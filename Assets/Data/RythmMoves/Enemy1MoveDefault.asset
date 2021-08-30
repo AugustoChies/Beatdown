@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
+  m_Name: Enemy1MoveDefault
+  m_EditorClassIdentifier: 
+  moveName: TestMove
+  moveAudioClip: {fileID: 8300000, guid: 8fae7696a891a3a44aeaeb6586d127e0, type: 3}
+  moveAnimationName: 
+  baseDamage: 10
+  rythmData:
+  - WaitTimeToNextNote: 2.5
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 1.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 1.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 3.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
