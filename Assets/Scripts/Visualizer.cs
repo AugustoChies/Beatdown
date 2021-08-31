@@ -76,7 +76,7 @@ public class Visualizer : MonoBehaviour
             cube.name = group.index.ToString();
             var rotate = rotateVar / spectrumDataList.Count * count;
             cube.transform.position = Vector3.zero;
-            cube.transform.Rotate(new Vector3(14, rotate, 0));
+            cube.transform.Rotate(new Vector3(0, rotate, 0));
             cube.transform.Translate(new Vector3(6.5f, 0, 0f), Space.Self);
             cube.SetActive(true);
 
@@ -112,10 +112,7 @@ public class Visualizer : MonoBehaviour
             count++;
         }
     }
-
-    /// <summary>
-    /// Update
-    /// </summary>
+    
     void Update()
     {
         UpdateSpectrumDataList();
@@ -134,10 +131,7 @@ public class Visualizer : MonoBehaviour
             prevGroup = group;
         }
     }
-
-    /// <summary>
-    /// Update the spectrum data list for current music position
-    /// </summary>
+        
     public void UpdateSpectrumDataList()
     {
         // how much hz does each spectrum data sample represent
