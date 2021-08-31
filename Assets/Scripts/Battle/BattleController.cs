@@ -40,6 +40,8 @@ public class BattleController : MonoBehaviour
     /////////////////   
     private bool _lastToMoveIsPlayer = true;
     public bool battleWinnerPlayer = false;
+    public EMoveEffect playerEffect = EMoveEffect.None;
+    public EMoveEffect enemyEffect = EMoveEffect.None;
     public int currentmoveScore = 0;
     [HideInInspector]
     public RythmMove currentMove = null;
@@ -170,15 +172,45 @@ public class BattleController : MonoBehaviour
             defendingChar = player;
         }
 
-        float damage = currentMove.baseDamage * statsModifiers.AtackModifier(attackingChar.GetCurveAttack()) + statsModifiers.ExtraHypeDamage * hypeBarValue;
+        float damage = 0;
+        float tempoMultiplier = 1;
         
         if (_lastToMoveIsPlayer)
         {
-            damage += currentMove.performanceDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance()) * (currentmoveScore / currentMove.rythmData.Length);
+            if(playerEffect == EMoveEffect.TempoUp)
+            {
+                tempoMultiplier += statsModifiers.SpeedEffectMultiplier;
+            }
+
+            if (playerEffect == EMoveEffect.PerformanceBased)
+            {
+                damage = statsModifiers.ExtraHypeDamage * hypeBarValue;
+                damage += (currentMove.performanceDamage + currentMove.baseDamage) * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance()) * (currentmoveScore / currentMove.rythmData.Length);
+            }
+            else
+            {
+                damage = currentMove.baseDamage * statsModifiers.AtackModifier(attackingChar.GetCurveAttack()) + statsModifiers.ExtraHypeDamage * hypeBarValue;
+                damage += currentMove.performanceDamage * tempoMultiplier *statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance()) * (currentmoveScore / currentMove.rythmData.Length);
+            }
+
+            
             if (currentmoveScore == currentMove.rythmData.Length)
             {
-                damage += currentMove.extraDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance());
+                if(playerEffect == EMoveEffect.Perfection)
+                {
+                    damage += currentMove.extraDamage * statsModifiers.PerfectionEffectMultiplier * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance());
+                }
+                else
+                {
+                    damage += currentMove.extraDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance());
+                }               
             }
+
+            if (playerEffect == EMoveEffect.PerformanceBased)
+            {
+                damage *= statsModifiers.PerformanceBasedEffectMultiplier;
+            }
+
             damage -= damage * statsModifiers.DefenseModifier(defendingChar.GetCurveDefense());
             enemycurrenthealth -= damage;
 
@@ -195,11 +227,41 @@ public class BattleController : MonoBehaviour
         }
         else
         {
-            damage += currentMove.performanceDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance()) *  (1 - (currentmoveScore / currentMove.rythmData.Length));
+            if (enemyEffect == EMoveEffect.TempoUp)
+            {
+                tempoMultiplier += statsModifiers.SpeedEffectMultiplier;
+            }
+
+            if (enemyEffect == EMoveEffect.PerformanceBased)
+            {
+                damage = statsModifiers.ExtraHypeDamage * hypeBarValue;
+                damage += (currentMove.performanceDamage + currentMove.baseDamage) * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance()) * (1 - (currentmoveScore / currentMove.rythmData.Length));
+            }
+            else
+            {
+                damage = currentMove.baseDamage * statsModifiers.AtackModifier(attackingChar.GetCurveAttack()) + statsModifiers.ExtraHypeDamage * hypeBarValue;
+                damage += currentMove.performanceDamage * tempoMultiplier * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance()) * (1 - (currentmoveScore / currentMove.rythmData.Length));
+            }
+
+
             if (currentmoveScore == 0)
             {
-                damage += currentMove.extraDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance());
+                if (enemyEffect == EMoveEffect.Perfection)
+                {
+                    damage += currentMove.extraDamage * statsModifiers.PerfectionEffectMultiplier * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance());
+                }
+                else
+                {
+                    damage += currentMove.extraDamage * statsModifiers.PerformanceModifier(attackingChar.GetCurveAPerformance());
+                }
+
             }
+
+            if (enemyEffect == EMoveEffect.PerformanceBased)
+            {
+                damage *= statsModifiers.PerformanceBasedEffectMultiplier;
+            }
+
             damage -= damage * statsModifiers.DefenseModifier(defendingChar.GetCurveDefense());
             playercurrenthealth -= damage;
 
@@ -213,6 +275,15 @@ public class BattleController : MonoBehaviour
             {
                 SetBattleStage(EBattleStage.PlayerTurn);
             }
+        }
+
+        if (_lastToMoveIsPlayer)
+        {
+            playerEffect = currentMove.effect;
+        }
+        else
+        {
+            enemyEffect = currentMove.effect;
         }
         Debug.Log(damage + " damage dealt");
         BattleAudioController.Instance.FadeBackToMain();
@@ -239,7 +310,6 @@ public class BattleController : MonoBehaviour
     IEnumerator WaitToEnemyMove(float time = 3)
     {
         yield return new WaitForSeconds(time);
-        //int randomMove = UnityEngine.Random.Range(0, enemy.EquippedMoves.Count);
         RythmManager.Instance.PlayMove(EnemyAI.Instance.DecideEnemyMove(), false);
     }
 

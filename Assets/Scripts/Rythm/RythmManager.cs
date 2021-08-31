@@ -8,6 +8,7 @@ public class RythmManager : MonoBehaviour
     public static RythmManager Instance;
 
     public float score;
+    private float _speedModifier = 1.0f;
 
     public RythmMove RythmToPlay;
 
@@ -50,15 +51,35 @@ public class RythmManager : MonoBehaviour
     {
         RythmToPlay = move;
         CurrentMoveCount = 0;
-        BattleAudioController.Instance.PlayMoveTrack(move.moveAudioClip);
+        _speedModifier = 1.0f;
+        
         if (isPlayer)
         {
             BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove, move);
+
+            if (BattleController.Instance.playerEffect == EMoveEffect.TempoUp)
+            {
+                _speedModifier = 1.2f;
+            }
+            if (BattleController.Instance.playerEffect == EMoveEffect.TempoDown)
+            {
+                _speedModifier = 0.8f;
+            }
         }
         else
         {
             BattleController.Instance.SetBattleStage(EBattleStage.EnemyMove, move);
+
+            if (BattleController.Instance.enemyEffect == EMoveEffect.TempoUp)
+            {
+                _speedModifier = 1.2f;
+            }
+            if (BattleController.Instance.enemyEffect == EMoveEffect.TempoDown)
+            {
+                _speedModifier = 0.8f;
+            }
         }
+        BattleAudioController.Instance.PlayMoveTrack(move.moveAudioClip, _speedModifier);
         BattleController.Instance.currentmoveScore = 0; //reset current move score
         StartCoroutine(PlayRythm());
     }
@@ -98,7 +119,7 @@ public class RythmManager : MonoBehaviour
 
         if(temp)
         {
-            temp.speed = RythmToPlay.rythmData[index].keySpeed;
+            temp.speed = RythmToPlay.rythmData[index].keySpeed * _speedModifier;
             temp.score = RythmToPlay.rythmData[index].score;
             temp.centerPoint = CenterPoint.transform;
         }
@@ -111,7 +132,7 @@ public class RythmManager : MonoBehaviour
         while(currentIndex < RythmToPlay.rythmData.Length)
         {
             CreateKey(currentIndex);
-            yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote);
+            yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote * _speedModifier);
             currentIndex++;
         }
 

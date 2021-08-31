@@ -1,5 +1,14 @@
 using UnityEngine;
 
+public enum EMoveEffect
+{
+    None,
+    TempoUp,
+    TempoDown,
+    Perfection,
+    PerformanceBased
+}
+
 [CreateAssetMenu()]
 public class RythmMove : ScriptableObject
 {
@@ -11,14 +20,7 @@ public class RythmMove : ScriptableObject
         public float score;
     }
 
-    public enum EMoveEffect
-    {
-        None,
-        TempoUp,
-        TempoDown,
-        Perfection,
-        PerformanceBased
-    }
+    
     public string moveName;
     public AudioClip moveAudioClip;
     public string moveAnimationName;

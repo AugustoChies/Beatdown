@@ -22,13 +22,14 @@ public class BattleAudioController : MonoBehaviour
         moveVolume = MoveTrack.volume;
     }
 
-    public void PlayMoveTrack(AudioClip audioClip)
+    public void PlayMoveTrack(AudioClip audioClip, float speed)
     {
         if (MoveTrack.isPlaying)
         {
             MoveTrack.Stop();
         }
         MoveTrack.clip = audioClip;
+        MoveTrack.pitch = speed;
         MoveTrack.Play();
         StopAllCoroutines();
         StartCoroutine(FadeTracks(true));

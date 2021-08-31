@@ -5,6 +5,9 @@ using UnityEngine;
 public class DamageModificationsStatus : ScriptableObject
 {   
     public float ExtraHypeDamage = 10;
+    public float PerfectionEffectMultiplier = 2f;
+    public float SpeedEffectMultiplier = 0.2f;
+    public float PerformanceBasedEffectMultiplier = 2;
 
     public float AtackModifier(float attackvalue)
     {

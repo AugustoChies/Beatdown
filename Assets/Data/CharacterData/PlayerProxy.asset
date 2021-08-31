@@ -44,3 +44,4 @@ MonoBehaviour:
   EquippedMoves:
   - {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
   - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
+  - {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
