@@ -132,7 +132,7 @@ public class RythmManager : MonoBehaviour
         while(currentIndex < RythmToPlay.rythmData.Length)
         {
             CreateKey(currentIndex);
-            yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote * _speedModifier);
+            yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote * (2 - _speedModifier));
             currentIndex++;
         }
 
