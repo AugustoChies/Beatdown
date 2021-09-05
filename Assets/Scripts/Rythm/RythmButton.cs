@@ -1,30 +1,33 @@
 using UnityEngine;
-
+using System.Collections;
 public class RythmButton : MonoBehaviour
 {
     public RythmMove move;
-    public bool isMouseOverThis = false;
+
+    private void Start()
+    {
+        StartCoroutine(ResizeBoxCollider());
+    }
 
     public void OnClick()
     {
         RythmManager.Instance.PlayMove(move, true);
     }
 
-    private void OnMouseOver()
+    public void OnMouseOver()
     {
-        if(!isMouseOverThis)
-        {
-            isMouseOverThis = true;
-            TooltipsPanel.Instance.ChangeTooltipText(move);
-        }
+        TooltipsPanel.Instance.ChangeTooltipText(move);
     }
 
-    private void OnMouseExit()
+    public void OnMouseExit()
     {
-        if(isMouseOverThis)
-        {
-            isMouseOverThis = false;
-            TooltipsPanel.Instance.ResetTooltipText();
-        }
+        TooltipsPanel.Instance.ResetTooltipText();
+    }
+
+    public IEnumerator ResizeBoxCollider()
+    {
+        yield return null;
+        yield return null;
+        GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<RectTransform>().sizeDelta.x, GetComponent<RectTransform>().sizeDelta.y);
     }
 }

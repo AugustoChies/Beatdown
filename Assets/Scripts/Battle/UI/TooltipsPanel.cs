@@ -15,11 +15,13 @@ public class TooltipsPanel : MonoBehaviour
 
     public void ResetTooltipText()
     {
+        print("Resetted");
         tooltipsText.text = "";
     }
 
     public void ChangeTooltipText(RythmMove move)
     {
-        tooltipsText.text = move.name + "\nBase: " + move.baseDamage + "\nPerformance: " + move.performanceDamage + "\nExtra: " + move.extraDamage + "\n:Effect: " + move.effect;
+        print("Changed");
+        tooltipsText.text = "\n" + move.name + "\nBase: " + move.baseDamage + "\nPerformance: " + move.performanceDamage + "\nExtra: " + move.extraDamage + "\nEffect: " + move.effect;
     }
 }
