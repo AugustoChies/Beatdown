@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
   m_Name: Enemy1StartMove
   m_EditorClassIdentifier: 
-  moveName: TestMove
+  moveName: Test Move
   moveAudioClip: {fileID: 8300000, guid: 8fae7696a891a3a44aeaeb6586d127e0, type: 3}
   moveAnimationName: 
   baseDamage: 20
+  performanceDamage: 0
+  extraDamage: 0
+  effect: 0
   rythmData:
   - WaitTimeToNextNote: 2.5
     keySpeed: 100

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
   m_Name: TestMove2
   m_EditorClassIdentifier: 
-  moveName: TestMove2
+  moveName: Test Move 2
   moveAudioClip: {fileID: 8300000, guid: 04aa35493c2454440914dceaf0649de0, type: 3}
   moveAnimationName: 
   baseDamage: 20
