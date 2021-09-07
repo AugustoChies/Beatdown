@@ -25,6 +25,7 @@ public class ConclusionBattleCanvas : UIElementScript
 
     public void DoneButton()
     {
+        Inventory.Instance.EndDay();
         SceneManager.LoadScene(afterBattleScene);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Inventory : MonoBehaviour
 {
@@ -13,6 +14,13 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private ItemList _equipment = null;
     public ItemList Equipment => _equipment;
+    [SerializeField]
+    private int _hour = 6;
+    public int Hour => _hour;
+    [SerializeField]
+    private int _day = 1;
+    public int Day => _day;
+    public Action OnUpdateTime;
 
     public static Inventory Instance = null;
 
@@ -27,5 +35,23 @@ public class Inventory : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void EndDay()
+    {
+        _hour = 6;
+        _day++;
+        OnUpdateTime?.Invoke();
+    }
+
+    public void PassTime(int hours)
+    {
+        _hour += hours;
+        if(hours > 23)
+        {
+            _day++;
+            _hour %= 24;
+        }
+        OnUpdateTime?.Invoke();
     }
 }

@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   victoryObject: {fileID: 8198045393573654536}
   defeatObject: {fileID: 1081111823738150203}
-  afterBattleScene: ConceptScene
+  afterBattleScene: WorldMap
 --- !u!1 &1081111823738150203
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1829642756885029149
