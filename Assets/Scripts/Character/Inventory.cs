@@ -6,19 +6,19 @@ using System;
 public class Inventory : MonoBehaviour
 {
     [SerializeField]
-    private CharacterData _character = null;
+    public CharacterData _character = null;
     public CharacterData Character => _character;
     [SerializeField]
-    private ItemList _consumables = null;
+    public ItemList _consumables = null;
     public ItemList Consumables => _consumables;
     [SerializeField]
-    private ItemList _equipment = null;
+    public ItemList _equipment = null;
     public ItemList Equipment => _equipment;
     [SerializeField]
-    private int _hour = 6;
+    public int _hour = 6;
     public int Hour => _hour;
     [SerializeField]
-    private int _day = 1;
+    public int _day = 1;
     public int Day => _day;
     public Action OnUpdateTime;
 
