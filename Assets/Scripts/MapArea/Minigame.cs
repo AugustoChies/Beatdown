@@ -18,7 +18,6 @@ public class Minigame : MonoBehaviour
     [SerializeField]
     protected StatGain statGain = null;
     protected float performance = 1f;
-    [HideInInspector]
     public MinigameCanvas parentCanvas = null;
 
     protected void ApplyGains()

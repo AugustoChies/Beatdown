@@ -338,6 +338,9 @@ MonoBehaviour:
   PlayerData:
     Day: 1
     Hour: 6
+    PlayerProxy: {fileID: 0}
+    PlayerConsumableList: {fileID: 0}
+    PlayerEquipmentList: {fileID: 0}
   QuickSaveKey: 286
   QuickDeleteKey: 287
 --- !u!4 &2033648965
