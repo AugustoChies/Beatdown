@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
-  m_Name: TestMoveSpeedUp
+  m_Name: Rock (speed)
   m_EditorClassIdentifier: 
-  moveName: SPEED
+  moveName: Rock (speed)
   moveAudioClip: {fileID: 8300000, guid: 04aa35493c2454440914dceaf0649de0, type: 3}
   moveAnimationName: 
-  baseDamage: 20
-  performanceDamage: 10
-  extraDamage: 5
+  baseDamage: 30
+  performanceDamage: 15
+  extraDamage: 45
   effect: 1
   rythmData:
   - WaitTimeToNextNote: 0.5
@@ -29,7 +29,13 @@ MonoBehaviour:
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
@@ -41,7 +47,13 @@ MonoBehaviour:
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
@@ -53,9 +65,6 @@ MonoBehaviour:
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 1
-    keySpeed: 200
-    score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
@@ -65,6 +74,9 @@ MonoBehaviour:
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
