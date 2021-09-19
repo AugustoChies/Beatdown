@@ -6,24 +6,24 @@ using System;
 public class Inventory : MonoBehaviour
 {
     [SerializeField]
-    public CharacterData _character = null;
+    private CharacterData _character = null;
     public CharacterData Character => _character;
     [SerializeField]
-    public ItemList _consumables = null;
+    private ItemList _consumables = null;
     public ItemList Consumables => _consumables;
     [SerializeField]
-    public ItemList _equipment = null;
+    private ItemList _equipment = null;
     public ItemList Equipment => _equipment;
     [SerializeField]
-    public int _hour = 6;
+    private int _hour = 6;
     public int Hour => _hour;
     [SerializeField]
-    public int _day = 1;
+    private int _day = 1;
     public int Day => _day;
     public Action OnUpdateTime;
 
-    [SerializeField] private CharacterDataClass _characterData;
-    public CharacterDataClass CharacterData => _characterData;
+    [SerializeField] private CharacterDataClass _playerData;
+    public CharacterDataClass PlayerData => _playerData;
 
     public static Inventory Instance = null;
 
@@ -54,22 +54,22 @@ public class Inventory : MonoBehaviour
         _isInitialized = true;
         //print("Initializing Default");
 
-        _characterData.Attack = _character.Attack;
-        _characterData.Health = _character.Health;
-        _characterData.Defense = _character.Defense;
-        _characterData.Performance = _character.Performance;
-        _characterData.Rythm = _character.Rythm;
-        _characterData.StatsCurve = _character.StatCurve;
-        _characterData.EquippedMoves = _character.EquippedMoves;
-        _characterData.Consumables = _consumables.items;
-        _characterData.Equipments = _equipment.items;
+        _playerData.Attack = _character.Attack;
+        _playerData.Health = _character.Health;
+        _playerData.Defense = _character.Defense;
+        _playerData.Performance = _character.Performance;
+        _playerData.Rythm = _character.Rythm;
+        _playerData.StatsCurve = _character.StatCurve;
+        _playerData.EquippedMoves = _character.EquippedMoves;
+        _playerData.Consumables = _consumables.items;
+        _playerData.Equipments = _equipment.items;
     }
 
     public void InitializeData(CharacterDataClass characterData, int hour, int day)
     {
         _isInitialized = true;
 
-        _characterData = characterData;
+        _playerData = characterData;
         _hour = hour;
         _day = day;
         //print("Game Loaded Successfully");

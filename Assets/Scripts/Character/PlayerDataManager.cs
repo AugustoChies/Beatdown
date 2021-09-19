@@ -76,12 +76,14 @@ public class PlayerDataManager : MonoBehaviour
         string jsonString = "";
         if (File.Exists(JsonPath))
         {
+            print("Save Found, Loading Game");
             jsonString = File.ReadAllText(JsonPath);
             PlayerData = JsonUtility.FromJson<SaveData>(jsonString);
             Inventory.Instance.InitializeData(PlayerData.GeneralData, PlayerData.Hour, PlayerData.Day);
         }
         else
         {
+            print("Save Not Found, Initializing Default Parameters");
             Inventory.Instance.InitializeDataDefault();
         }
     }
@@ -89,19 +91,19 @@ public class PlayerDataManager : MonoBehaviour
 
     public void DeleteSaveData()
     {
-        //print("Deleting Save");
+        print("Deleting Save");
 
         File.Delete(JsonPath);
     }
     public IEnumerator SaveGame()
     {
-        //print("Saving Game");
+        print("Saving Game");
         if(!isBusy)
         {
             isBusy = true;
 
             var inventory = Inventory.Instance;
-            PlayerData = new SaveData(inventory.Day, inventory.Hour, inventory.CharacterData);
+            PlayerData = new SaveData(inventory.Day, inventory.Hour, inventory.PlayerData);
 
             //print(JsonPath);
             string jsonString = "";
