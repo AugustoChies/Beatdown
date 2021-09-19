@@ -9,21 +9,20 @@ public class SaveData
 {
     public int Day;
     public int Hour;
-    public CharacterData PlayerProxy;
-    public ItemList PlayerConsumableList;
-    public ItemList PlayerEquipmentList;
+    public CharacterDataClass GeneralData;
 
-    public SaveData(int day, int hour, CharacterData playerProxy, ItemList playerConsumableList, ItemList playerEquipmentList)
+    public SaveData(int day, int hour, CharacterDataClass data)
     {
         Day = day;
         Hour = hour;
-        PlayerProxy = playerProxy;
-        PlayerConsumableList = playerConsumableList;
-        PlayerEquipmentList = playerEquipmentList;
+        GeneralData = data;
     }
 
     public SaveData()
     {
+        Day = 0;
+        Hour = 0;
+        GeneralData = new CharacterDataClass();
 
     }
 }
@@ -66,7 +65,7 @@ public class PlayerDataManager : MonoBehaviour
     public void InitializeData()
     {
         JsonPath = Application.persistentDataPath + JsonPath;
-        print(JsonPath);
+        //print(JsonPath);
         PlayerData = new SaveData();
 
         LoadGame();
@@ -79,41 +78,32 @@ public class PlayerDataManager : MonoBehaviour
         {
             jsonString = File.ReadAllText(JsonPath);
             PlayerData = JsonUtility.FromJson<SaveData>(jsonString);
-            CloneDataToInventory();
+            Inventory.Instance.InitializeData(PlayerData.GeneralData, PlayerData.Hour, PlayerData.Day);
         }
         else
         {
-            print("No Save Found");
+            Inventory.Instance.InitializeDataDefault();
         }
     }
 
-    public void CloneDataToInventory()
-    {
-        var inventory = Inventory.Instance;
-        inventory._day = PlayerData.Day;
-        inventory._hour = PlayerData.Hour;
-        inventory._character = PlayerData.PlayerProxy;
-        inventory._consumables = PlayerData.PlayerConsumableList;
-        inventory._equipment = PlayerData.PlayerEquipmentList;
-    }
 
     public void DeleteSaveData()
     {
-        print("Deleting Save");
+        //print("Deleting Save");
 
         File.Delete(JsonPath);
     }
     public IEnumerator SaveGame()
     {
-        print("Saving Game");
+        //print("Saving Game");
         if(!isBusy)
         {
             isBusy = true;
 
             var inventory = Inventory.Instance;
-            PlayerData = new SaveData(inventory.Day, inventory.Hour, inventory.Character, inventory.Consumables, inventory.Equipment);
+            PlayerData = new SaveData(inventory.Day, inventory.Hour, inventory.CharacterData);
 
-            print(JsonPath);
+            //print(JsonPath);
             string jsonString = "";
             if (File.Exists(JsonPath))
             {

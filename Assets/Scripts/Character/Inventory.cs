@@ -22,7 +22,12 @@ public class Inventory : MonoBehaviour
     public int Day => _day;
     public Action OnUpdateTime;
 
+    [SerializeField] private CharacterDataClass _characterData;
+    public CharacterDataClass CharacterData => _characterData;
+
     public static Inventory Instance = null;
+
+    private bool _isInitialized;
 
     private void Awake()
     {
@@ -35,6 +40,39 @@ public class Inventory : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        if (!PlayerDataManager.Instance) InitializeDataDefault();
+    }
+
+    public void InitializeDataDefault()
+    {
+        if (_isInitialized) return;
+       
+        _isInitialized = true;
+        //print("Initializing Default");
+
+        _characterData.Attack = _character.Attack;
+        _characterData.Health = _character.Health;
+        _characterData.Defense = _character.Defense;
+        _characterData.Performance = _character.Performance;
+        _characterData.Rythm = _character.Rythm;
+        _characterData.StatsCurve = _character.StatCurve;
+        _characterData.EquippedMoves = _character.EquippedMoves;
+        _characterData.Consumables = _consumables.items;
+        _characterData.Equipments = _equipment.items;
+    }
+
+    public void InitializeData(CharacterDataClass characterData, int hour, int day)
+    {
+        _isInitialized = true;
+
+        _characterData = characterData;
+        _hour = hour;
+        _day = day;
+        //print("Game Loaded Successfully");
     }
 
     public void EndDay()

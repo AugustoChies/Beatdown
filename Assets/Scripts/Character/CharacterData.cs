@@ -23,6 +23,7 @@ public class CharacterData : ScriptableObject
 
     [SerializeField]
     private AnimationCurve _statCurve = null;
+    public AnimationCurve StatCurve => _statCurve;
 
     public List<RythmMove> EquippedMoves = null;
 
