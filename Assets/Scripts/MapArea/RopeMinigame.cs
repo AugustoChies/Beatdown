@@ -17,8 +17,8 @@ public class RopeMinigame : Minigame
     
 
     private float limitsDistance = 0;
-    public float topSafe = 0;
-    public float bottomSafe = 0;
+    private float topSafe = 0;
+    private float bottomSafe = 0;
     private Vector2 descentVector;
     private Vector2 jumpVector;
 
