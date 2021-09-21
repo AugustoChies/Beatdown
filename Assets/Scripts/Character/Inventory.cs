@@ -6,23 +6,28 @@ using System;
 public class Inventory : MonoBehaviour
 {
     [SerializeField]
-    public CharacterData _character = null;
+    private CharacterData _character = null;
     public CharacterData Character => _character;
     [SerializeField]
-    public ItemList _consumables = null;
+    private ItemList _consumables = null;
     public ItemList Consumables => _consumables;
     [SerializeField]
-    public ItemList _equipment = null;
+    private ItemList _equipment = null;
     public ItemList Equipment => _equipment;
     [SerializeField]
-    public int _hour = 6;
+    private int _hour = 6;
     public int Hour => _hour;
     [SerializeField]
-    public int _day = 1;
+    private int _day = 1;
     public int Day => _day;
     public Action OnUpdateTime;
 
+    [SerializeField] private CharacterDataClass _playerData;
+    public CharacterDataClass PlayerData => _playerData;
+
     public static Inventory Instance = null;
+
+    private bool _isInitialized;
 
     private void Awake()
     {
@@ -35,6 +40,39 @@ public class Inventory : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        if (!PlayerDataManager.Instance) InitializeDataDefault();
+    }
+
+    public void InitializeDataDefault()
+    {
+        if (_isInitialized) return;
+       
+        _isInitialized = true;
+        //print("Initializing Default");
+
+        _playerData.Attack = _character.Attack;
+        _playerData.Health = _character.Health;
+        _playerData.Defense = _character.Defense;
+        _playerData.Performance = _character.Performance;
+        _playerData.Rythm = _character.Rythm;
+        _playerData.StatsCurve = _character.StatCurve;
+        _playerData.EquippedMoves = _character.EquippedMoves;
+        _playerData.Consumables = _consumables.items;
+        _playerData.Equipments = _equipment.items;
+    }
+
+    public void InitializeData(CharacterDataClass characterData, int hour, int day)
+    {
+        _isInitialized = true;
+
+        _playerData = characterData;
+        _hour = hour;
+        _day = day;
+        //print("Game Loaded Successfully");
     }
 
     public void EndDay()

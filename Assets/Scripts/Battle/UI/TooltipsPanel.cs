@@ -9,8 +9,14 @@ public class TooltipsPanel : MonoBehaviour
     public Text tooltipsTextDmg1;
     public Text tooltipsTextDmg2;
     public Text tooltipsTextDmg3;
-    public Text tooltipsTextEffectDefault;
     public Text tooltipsTextEffect;
+    public Text tooltipsTextEffectDefault;
+    public GameObject staticBaseText; 
+    public GameObject staticPerformanceText;
+    public GameObject staticPerfectText;
+    public GameObject blackSquare;
+
+    public bool useBlackSquare = true;
 
     public Color tooltipColor = new Color32(236, 108, 30, 255);
 
@@ -18,6 +24,7 @@ public class TooltipsPanel : MonoBehaviour
     {
         Instance = this;
         ResetTooltipText();
+        if (useBlackSquare) blackSquare.SetActive(true);
         //SetColor();
     }
 
@@ -36,17 +43,26 @@ public class TooltipsPanel : MonoBehaviour
         tooltipsTextDmg2.text = "";
         tooltipsTextDmg3.text = "";
         tooltipsTextEffectDefault.gameObject.SetActive(false);
+        staticBaseText.SetActive(false);
+        staticPerfectText.SetActive(false);
+        staticPerformanceText.SetActive(false);
         tooltipsTextEffect.text = "";
-}
+        if (useBlackSquare) blackSquare.SetActive(true);
+
+    }
 
     public void ChangeTooltipText(RythmMove move)
     {
         tooltipsTextTitle.text = move.name;
-        tooltipsTextDmg1.text = "Base: " + move.baseDamage;
-        tooltipsTextDmg2.text = "Performance: " + move.performanceDamage;
-        tooltipsTextDmg3.text = "Extra: " + move.extraDamage;
+        tooltipsTextDmg1.text = move.baseDamage.ToString("F0");
+        tooltipsTextDmg2.text = move.performanceDamage.ToString("F0");
+        tooltipsTextDmg3.text = move.extraDamage.ToString("F0");
         tooltipsTextEffectDefault.gameObject.SetActive(true);
+        staticBaseText.SetActive(true);
+        staticPerfectText.SetActive(true);
+        staticPerformanceText.SetActive(true);
         tooltipsTextEffect.text = ConvertMoveEffectToString(move.effect);
+        if (useBlackSquare) blackSquare.SetActive(false);
     }
 
     public string ConvertMoveEffectToString(EMoveEffect effect)
