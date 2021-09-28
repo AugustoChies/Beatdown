@@ -213,8 +213,7 @@ public class BattleController : MonoBehaviour
 
             damage -= damage * statsModifiers.DefenseModifier(defendingChar.GetCurveDefense());
             enemycurrenthealth -= damage;
-
-            OnUIUpdate?.Invoke(true, false);
+            
             correctInputCombo = 0;            
             if (enemycurrenthealth <= 0)
             {
@@ -265,7 +264,6 @@ public class BattleController : MonoBehaviour
             damage -= damage * statsModifiers.DefenseModifier(defendingChar.GetCurveDefense());
             playercurrenthealth -= damage;
 
-            OnUIUpdate?.Invoke(true, true);
             correctInputCombo = 0;
             if (playercurrenthealth <= 0)
             {
@@ -280,10 +278,12 @@ public class BattleController : MonoBehaviour
         if (_lastToMoveIsPlayer)
         {
             playerEffect = currentMove.effect;
+            OnUIUpdate?.Invoke(true, false);
         }
         else
         {
             enemyEffect = currentMove.effect;
+            OnUIUpdate?.Invoke(true, true);
         }
         Debug.Log(damage + " damage dealt");
         BattleAudioController.Instance.FadeBackToMain();

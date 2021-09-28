@@ -15,7 +15,14 @@ public class GeneralBattleInfo : UIElementScript
     [SerializeField]
     private Image _enemyHealth;
     [SerializeField]
+    private Image _playerStatus;
+    [SerializeField]
+    private Image _enemyStatus;
+    [SerializeField]
     private TextMeshProUGUI _comboText;
+    [SerializeField]
+    private Sprite[] statusIcons;
+
 
     protected void Start()
     {
@@ -49,7 +56,30 @@ public class GeneralBattleInfo : UIElementScript
 
         if (!updateHealth) return;
 
-        if(isPlayer)
+        int statusplayer = (int)BattleController.Instance.playerEffect;
+        int statusenemy = (int)BattleController.Instance.enemyEffect;
+        
+        if(statusplayer == 0)
+        {
+            _playerStatus.enabled = false;
+        }
+        else
+        {
+            _playerStatus.enabled = true;
+            _playerStatus.sprite = statusIcons[statusplayer - 1];
+        }
+
+        if (statusenemy == 0)
+        {
+            _enemyStatus.enabled = false;
+        }
+        else
+        {
+            _enemyStatus.enabled = true;
+            _enemyStatus.sprite = statusIcons[statusenemy - 1];
+        }
+
+        if (isPlayer)
         {           
             StartCoroutine(HealthScroll(0.5f, BattleController.Instance.playercurrenthealth / BattleController.Instance.MaxPlayerhealth, _playerHealth));
         }

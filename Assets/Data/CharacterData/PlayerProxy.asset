@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec95ab0bc89fdd4438d7d3db24172955, type: 3}
   m_Name: PlayerProxy
   m_EditorClassIdentifier: 
-  _health: 115
-  _attack: 25
-  _performance: 10
-  _defense: 25
-  _rythm: 25
+  _health: 100
+  _attack: 5
+  _performance: 5
+  _defense: 5
+  _rythm: 5
   _statCurve:
     serializedVersion: 2
     m_Curve:
