@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
+using TMPro;
 
 public enum Stats
 {
@@ -9,7 +10,7 @@ public enum Stats
     Def,
     Hp,
     Atk,
-    Phy
+    Rhy
 }
 
 public class StatsPentagon : MonoBehaviour
@@ -36,24 +37,57 @@ public class StatsPentagon : MonoBehaviour
   //  [SerializeField] private float AtkMinValue;
     [SerializeField] private float AtkMaxValue;
 
-    [SerializeField] private Vector3 PhyMinPos;
-    [SerializeField] private Vector3 PhyMaxPos;
+    [SerializeField] private Vector3 RhyMinPos;
+    [SerializeField] private Vector3 RhyMaxPos;
    // [SerializeField] private float PhyMinValue;
-    [SerializeField] private float PhyMaxValue;
+    [SerializeField] private float RhyMaxValue;
+
+    [SerializeField] private float AtkCurrentValue;
+    [SerializeField] private float DefCurrentValue;
+    [SerializeField] private float HpCurrentValue;
+    [SerializeField] private float HypeCurrentValue;
+    [SerializeField] private float RhyCurrentValue;
+
+    [SerializeField] private TextMeshProUGUI RhyText;
+    [SerializeField] private TextMeshProUGUI AtkText;
+    [SerializeField] private TextMeshProUGUI DefText;
+    [SerializeField] private TextMeshProUGUI HpText;
+    [SerializeField] private TextMeshProUGUI HypeText;
 
 
-    [SerializeField] private Stats statToDebug;
-    [SerializeField] private float StatToDebugValue;
-
-    private void Update()
+    private void OnEnable()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Inventory.Instance != null)
         {
-            UpdateOneStat(statToDebug);
+            AtkCurrentValue = Inventory.Instance.PlayerData.Attack;
+            DefCurrentValue = Inventory.Instance.PlayerData.Defense;
+            HpCurrentValue = Inventory.Instance.PlayerData.Health;
+            HypeCurrentValue = Inventory.Instance.PlayerData.Performance;
+            RhyCurrentValue = Inventory.Instance.PlayerData.Rythm;
+
+            UpdateAllStats();
         }
     }
 
-    public void UpdateOneStat(Stats _statToDebug)
+    public void UpdateAllStats()
+    {
+        UpdateOneStat(Stats.Atk, AtkCurrentValue);
+        AtkText.text = AtkCurrentValue.ToString("F0");
+
+        UpdateOneStat(Stats.Def, DefCurrentValue);
+        DefText.text = DefCurrentValue.ToString("F0");
+
+        UpdateOneStat(Stats.Rhy, RhyCurrentValue);
+        RhyText.text = RhyCurrentValue.ToString("F0");
+
+        UpdateOneStat(Stats.Hp, HpCurrentValue);
+        HpText.text = HpCurrentValue.ToString("F0");
+
+        UpdateOneStat(Stats.Hype, HypeCurrentValue);
+        HypeText.text = HypeCurrentValue.ToString("F0");
+    }
+
+    public void UpdateOneStat(Stats _statToDebug, float StatToDebugValue)
     {
         if(shapeController == null ) shapeController = GetComponent<SpriteShapeController>();
 
@@ -61,34 +95,8 @@ public class StatsPentagon : MonoBehaviour
 
         Vector3 newPointPos = GetStatMinPosition(_statToDebug) - ((GetStatMinPosition(_statToDebug) - GetStatMaxPosition(_statToDebug)) * percentage);
 
-        shapeController.spline.SetPosition((int)statToDebug, newPointPos);
+        shapeController.spline.SetPosition((int)_statToDebug, newPointPos);
     }
-
-    public void UpdateOneStat(Stats _statToDebug, float percentage)
-    {
-        if (shapeController == null) shapeController = GetComponent<SpriteShapeController>();
-
-        shapeController.spline.SetPosition((int)statToDebug, new Vector3(10, 10, 10));
-    }
-
-    //public float StatRange(Stats _statToDebug)
-    //{
-    //    switch(_statToDebug)
-    //    {
-    //        case Stats.Atk:
-    //            return AtkMaxValue - AtkMinValue;
-    //        case Stats.Def:
-    //            return DefMaxValue - DefMinValue;
-    //        case Stats.Hp:
-    //            return HpMaxValue - HpMinValue;
-    //        case Stats.Hype:
-    //            return HypeMaxValue - HypeMinValue;
-    //        case Stats.Phy:
-    //            return PhyMaxValue - PhyMinValue;
-    //    }
-
-    //    return 0;
-    //}
 
     public Vector3 GetStatMaxPosition(Stats _statToDebug)
     {
@@ -102,8 +110,8 @@ public class StatsPentagon : MonoBehaviour
                 return HpMaxPos;
             case Stats.Hype:
                 return HypeMaxPos;
-            case Stats.Phy:
-                return PhyMaxPos;
+            case Stats.Rhy:
+                return RhyMaxPos;
         }
 
         return Vector3.zero;
@@ -121,8 +129,8 @@ public class StatsPentagon : MonoBehaviour
                 return HpMinPos;
             case Stats.Hype:
                 return HypeMinPos;
-            case Stats.Phy:
-                return PhyMinPos;
+            case Stats.Rhy:
+                return RhyMinPos;
         }
 
         return Vector3.zero;
@@ -140,29 +148,11 @@ public class StatsPentagon : MonoBehaviour
                 return HpMaxValue;
             case Stats.Hype:
                 return HypeMaxValue;
-            case Stats.Phy:
-                return PhyMaxValue;
+            case Stats.Rhy:
+                return RhyMaxValue;
         }
 
         return 0;
     }
 
-    //public float MinStatValue(Stats _statToDebug)
-    //{
-    //    switch (_statToDebug)
-    //    {
-    //        case Stats.Atk:
-    //            return AtkMinValue;
-    //        case Stats.Def:
-    //            return DefMinValue;
-    //        case Stats.Hp:
-    //            return HpMinValue;
-    //        case Stats.Hype:
-    //            return HypeMinValue;
-    //        case Stats.Phy:
-    //            return PhyMinValue;
-    //    }
-
-    //    return 0;
-    //}
 }
