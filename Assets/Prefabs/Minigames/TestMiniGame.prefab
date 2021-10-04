@@ -92,8 +92,10 @@ MonoBehaviour:
   statGain:
     Health: 5
     Attack: 5
+    Performance: 0
     Defense: 5
     Rythm: 5
+  hourDuration: 5
   parentCanvas: {fileID: 0}
   filled: {fileID: 8174174806515701536}
 --- !u!1 &8740473577863664560

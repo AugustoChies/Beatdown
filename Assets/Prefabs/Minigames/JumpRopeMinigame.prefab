@@ -95,6 +95,7 @@ MonoBehaviour:
     Performance: 5
     Defense: 5
     Rythm: 5
+  hourDuration: 4
   parentCanvas: {fileID: 0}
   safeAreaSize: 0.5
   descentSpeed: 0.3
@@ -104,8 +105,6 @@ MonoBehaviour:
   meter: {fileID: 5961241339578630384}
   topLimit: {fileID: 319739563698010372}
   bottomLimit: {fileID: 5210535874397878011}
-  topSafe: 0
-  bottomSafe: 0
 --- !u!1 &3565519609326132922
 GameObject:
   m_ObjectHideFlags: 0

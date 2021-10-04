@@ -17,6 +17,8 @@ public class Minigame : MonoBehaviour
 {
     [SerializeField]
     protected StatGain statGain = null;
+    [SerializeField]
+    protected int hourDuration = 0;
     protected float performance = 1f;
     public MinigameCanvas parentCanvas = null;
 
@@ -24,6 +26,7 @@ public class Minigame : MonoBehaviour
     {
         Inventory.Instance.Character.ChangeStats(statGain.Health * performance, statGain.Attack * performance, statGain.Performance * performance,
             statGain.Defense * performance, statGain.Rythm * performance);
+        Inventory.Instance.PassTime(hourDuration);
         parentCanvas.HideMinigame();
     }
 }

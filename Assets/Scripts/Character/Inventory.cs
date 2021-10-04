@@ -83,9 +83,9 @@ public class Inventory : MonoBehaviour
     }
 
     public void PassTime(int hours)
-    {
+    {       
         _hour += hours;
-        if(hours > 23)
+        if(_hour > 23)
         {
             _day++;
             _hour %= 24;
