@@ -31,6 +31,8 @@ public class BattleController : MonoBehaviour
 
     public CharacterData player = null;
     public CharacterData enemy = null;
+    public Animator playerAnimation = null;
+    public Animator enemyAnimation = null;
     public float playercurrenthealth = 100;
     public float enemycurrenthealth = 100;
     [HideInInspector]
@@ -68,6 +70,24 @@ public class BattleController : MonoBehaviour
         RythmList.Instance.SetPlayerMoves(player.EquippedMoves);
     }
 
+    public void SetAnimatorReference(bool isPlayer, Animator anim)
+    {
+        if(isPlayer)
+        {
+            playerAnimation = anim;
+        }
+        else
+        {
+            enemyAnimation = anim;
+        }
+
+        if(playerAnimation != null && enemyAnimation != null)
+        {
+            SetPlayerAnimation(player.IdleAnimation);
+            SetEnemyAnimation(enemy.IdleAnimation);
+        }
+    }
+
     public void SetBattleStage(EBattleStage nextStage, RythmMove move = null)
     {
         _currentBattleStage = nextStage;
@@ -83,6 +103,7 @@ public class BattleController : MonoBehaviour
                 OnIntro?.Invoke();
                 break;
             case EBattleStage.PlayerTurn:
+                SetEnemyAnimation(enemy.IdleAnimation);
                 pauseController.CanPause = true;                
                 OnPlayerTurn?.Invoke();
                 break;
@@ -91,6 +112,7 @@ public class BattleController : MonoBehaviour
                 OnPlayerMove?.Invoke();
                 break;
             case EBattleStage.EnemyTurn:
+                SetPlayerAnimation(player.IdleAnimation);
                 pauseController.CanPause = true;                
                 OnEnemyTurn?.Invoke();
                 StartCoroutine(WaitToEnemyMove());
@@ -108,6 +130,16 @@ public class BattleController : MonoBehaviour
                 OnConclusion?.Invoke();
                 break;
         }
+    }
+
+    public void SetPlayerAnimation(string animation)
+    {       
+        playerAnimation.SetTrigger(animation);
+    }
+
+    public void SetEnemyAnimation(string animation)
+    {
+        enemyAnimation.SetTrigger(animation);
     }
 
     public void UpdateHype(bool hit)

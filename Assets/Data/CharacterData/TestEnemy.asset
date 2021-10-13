@@ -17,6 +17,7 @@ MonoBehaviour:
   _performance: 10
   _defense: 7
   _rythm: 5
+  _idleAnimation: Default
   _statCurve:
     serializedVersion: 2
     m_Curve:

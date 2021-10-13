@@ -263,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fcab46a3e26d1b847b39d091137cc9a9, type: 3}
       propertyPath: m_Name
-      value: Dancer_0
+      value: EnemyCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 2978280580551946675, guid: fcab46a3e26d1b847b39d091137cc9a9, type: 3}
       propertyPath: m_Materials.Array.data[6]
@@ -286,7 +286,7 @@ Animator:
   m_GameObject: {fileID: 198369307}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1cc6e7319e5d2774388d8803930157fb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 883ba94823962a04b93c94a266310fbe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -295,6 +295,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &198369309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198369307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386b6f7b848659c4980e7d64332617b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
 --- !u!1 &316838739
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,10 +351,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
-    - target: {fileID: 371727091874263942, guid: 5f6a05909a50b054d9a0c919c888894e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d19767a5858d91740b0121a32e50ec95, type: 3}
     - target: {fileID: 371727091874263943, guid: 5f6a05909a50b054d9a0c919c888894e, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -630,7 +639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e5a76e4baf0e18042978c883666b321a, type: 3}
       propertyPath: m_Name
-      value: Dancer_1
+      value: PlayerCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 2978280580551946675, guid: e5a76e4baf0e18042978c883666b321a, type: 3}
       propertyPath: m_Materials.Array.data[6]
@@ -1641,7 +1650,7 @@ Animator:
   m_GameObject: {fileID: 1661632667}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e6bdb6c1f1e01b42b72dbabf10a95de, type: 2}
+  m_Controller: {fileID: 9100000, guid: 883ba94823962a04b93c94a266310fbe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1650,7 +1659,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1661632670
+--- !u!114 &1661632669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1659,9 +1668,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1661632667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60d330593b5965f4bb83cb989ecad53f, type: 3}
+  m_Script: {fileID: 11500000, guid: 386b6f7b848659c4980e7d64332617b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsPlayer: 1
 --- !u!1 &1693588130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,9 +1991,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3067083968752246951, guid: bcdb41a6ce05a2346bb2cd2c44ea77c7, type: 3}
+      propertyPath: enemyAnimation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067083968752246951, guid: bcdb41a6ce05a2346bb2cd2c44ea77c7, type: 3}
       propertyPath: pauseController
       value: 
       objectReference: {fileID: 1488190802}
+    - target: {fileID: 3067083968752246951, guid: bcdb41a6ce05a2346bb2cd2c44ea77c7, type: 3}
+      propertyPath: playerAnimation
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5173086733296097252, guid: bcdb41a6ce05a2346bb2cd2c44ea77c7, type: 3}
       propertyPath: m_RootOrder
       value: 10

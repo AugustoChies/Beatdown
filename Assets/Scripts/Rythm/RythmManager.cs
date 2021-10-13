@@ -56,6 +56,7 @@ public class RythmManager : MonoBehaviour
         if (isPlayer)
         {
             BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove, move);
+            BattleController.Instance.SetPlayerAnimation(move.moveAnimation);
 
             if (BattleController.Instance.playerEffect == EMoveEffect.TempoUp)
             {
@@ -69,6 +70,7 @@ public class RythmManager : MonoBehaviour
         else
         {
             BattleController.Instance.SetBattleStage(EBattleStage.EnemyMove, move);
+            BattleController.Instance.SetEnemyAnimation(move.moveAnimation);
 
             if (BattleController.Instance.enemyEffect == EMoveEffect.TempoUp)
             {

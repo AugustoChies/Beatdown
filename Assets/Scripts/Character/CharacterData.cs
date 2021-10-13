@@ -22,6 +22,10 @@ public class CharacterData : ScriptableObject
     public float Rythm => _rythm;
 
     [SerializeField]
+    private string _idleAnimation = "";
+    public string IdleAnimation => _idleAnimation;
+
+    [SerializeField]
     private AnimationCurve _statCurve = null;
     public AnimationCurve StatCurve => _statCurve;
 

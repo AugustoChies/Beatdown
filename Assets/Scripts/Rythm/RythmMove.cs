@@ -23,7 +23,7 @@ public class RythmMove : ScriptableObject
     
     public string moveName;
     public AudioClip moveAudioClip;
-    public string moveAnimationName;
+    public string moveAnimation;
     public float baseDamage;
     public float performanceDamage;
     public float extraDamage;

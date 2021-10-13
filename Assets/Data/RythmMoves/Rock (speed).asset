@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: Rock (speed)
   moveAudioClip: {fileID: 8300000, guid: 04aa35493c2454440914dceaf0649de0, type: 3}
-  moveAnimationName: 
+  moveAnimation: TestMove
   baseDamage: 30
   performanceDamage: 15
   extraDamage: 45

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: Macarena
   moveAudioClip: {fileID: 8300000, guid: 8fae7696a891a3a44aeaeb6586d127e0, type: 3}
-  moveAnimationName: 
+  moveAnimation: TestMove
   baseDamage: 30
   performanceDamage: 20
   extraDamage: 20
