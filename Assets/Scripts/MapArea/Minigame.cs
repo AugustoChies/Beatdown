@@ -24,7 +24,7 @@ public class Minigame : MonoBehaviour
 
     protected void ApplyGains()
     {
-        Inventory.Instance.Character.ChangeStats(statGain.Health * performance, statGain.Attack * performance, statGain.Performance * performance,
+        Inventory.Instance.PlayerData.ChangeStats(statGain.Health * performance, statGain.Attack * performance, statGain.Performance * performance,
             statGain.Defense * performance, statGain.Rythm * performance);
         Inventory.Instance.PassTime(hourDuration);
         parentCanvas.HideMinigame();

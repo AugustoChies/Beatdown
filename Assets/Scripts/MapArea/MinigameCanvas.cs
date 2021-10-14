@@ -23,11 +23,11 @@ public class MinigameCanvas : MonoBehaviour
         _currentMinigame = Instantiate(game, this.transform);
         _currentMinigame.GetComponent<Minigame>().parentCanvas = this;
 
-        oldHP = (int)_inventory.Character.Health;
-        oldAtk = (int)_inventory.Character.Attack;
-        oldPerf = (int)_inventory.Character.Performance;
-        oldDef = (int)_inventory.Character.Defense;
-        oldRtm = (int)_inventory.Character.Rythm;
+        oldHP = (int)_inventory.PlayerData.Health;
+        oldAtk = (int)_inventory.PlayerData.Attack;
+        oldPerf = (int)_inventory.PlayerData.Performance;
+        oldDef = (int)_inventory.PlayerData.Defense;
+        oldRtm = (int)_inventory.PlayerData.Rythm;
     }
 
     public void HideMinigame()
@@ -49,11 +49,11 @@ public class MinigameCanvas : MonoBehaviour
         _textOldDefense.text = "" + (int)oldDef;
         _textOldRythm.text = "" + (int)oldRtm;
 
-        _textNewHP.text = "" + (int)_inventory.Character.Health;
-        _textNewAttack.text = "" + (int)_inventory.Character.Attack;
-        _textNewPerformance.text = "" + (int)_inventory.Character.Performance;
-        _textNewDefense.text = "" + (int)_inventory.Character.Defense;
-        _textNewRythm.text = "" + (int)_inventory.Character.Rythm;
+        _textNewHP.text = "" + (int)_inventory.PlayerData.Health;
+        _textNewAttack.text = "" + (int)_inventory.PlayerData.Attack;
+        _textNewPerformance.text = "" + (int)_inventory.PlayerData.Performance;
+        _textNewDefense.text = "" + (int)_inventory.PlayerData.Defense;
+        _textNewRythm.text = "" + (int)_inventory.PlayerData.Rythm;
     }
 
     public void HideGains()

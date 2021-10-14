@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
     private int _day = 1;
     public int Day => _day;
     public Action OnUpdateTime;
+    public DamageModificationsStatus modificationsStatus = null;
 
     [SerializeField] private CharacterDataClass _playerData;
     public CharacterDataClass PlayerData => _playerData;
@@ -59,6 +60,7 @@ public class Inventory : MonoBehaviour
         _playerData.Defense = _character.Defense;
         _playerData.Performance = _character.Performance;
         _playerData.Rythm = _character.Rythm;
+        _playerData.modificationStatuses = modificationsStatus;
         _playerData.StatsCurve = _character.StatCurve;
         _playerData.EquippedMoves = _character.EquippedMoves;
         _playerData.Consumables = _consumables.items;
