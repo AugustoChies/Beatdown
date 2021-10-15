@@ -16,31 +16,27 @@ public enum Stats
 public class StatsPentagon : MonoBehaviour
 {
     private SpriteShapeController shapeController;
+    public DamageModificationsStatus maxStatsInfo = null;
 
     [SerializeField] private Vector3 HypeMinPos;
     [SerializeField] private Vector3 HypeMaxPos;
   //  [SerializeField] private float HypeMinValue;
-    [SerializeField] private float HypeMaxValue;
 
     [SerializeField] private Vector3 DefMinPos;
     [SerializeField] private Vector3 DefMaxPos;
    // [SerializeField] private float DefMinValue;
-    [SerializeField] private float DefMaxValue;
 
     [SerializeField] private Vector3 HpMinPos;
     [SerializeField] private Vector3 HpMaxPos;
    // [SerializeField] private float HpMinValue;
-    [SerializeField] private float HpMaxValue;
 
     [SerializeField] private Vector3 AtkMinPos;
     [SerializeField] private Vector3 AtkMaxPos;
   //  [SerializeField] private float AtkMinValue;
-    [SerializeField] private float AtkMaxValue;
 
     [SerializeField] private Vector3 RhyMinPos;
     [SerializeField] private Vector3 RhyMaxPos;
    // [SerializeField] private float PhyMinValue;
-    [SerializeField] private float RhyMaxValue;
 
     [SerializeField] private float AtkCurrentValue;
     [SerializeField] private float DefCurrentValue;
@@ -141,15 +137,15 @@ public class StatsPentagon : MonoBehaviour
         switch (_statToDebug)
         {
             case Stats.Atk:
-                return AtkMaxValue;
+                return maxStatsInfo.maxAttack;
             case Stats.Def:
-                return DefMaxValue;
+                return maxStatsInfo.maxDefense;
             case Stats.Hp:
-                return HpMaxValue;
+                return maxStatsInfo.maxHP;
             case Stats.Hype:
-                return HypeMaxValue;
+                return maxStatsInfo.maxPerformance;
             case Stats.Rhy:
-                return RhyMaxValue;
+                return maxStatsInfo.maxRythm;
         }
 
         return 0;

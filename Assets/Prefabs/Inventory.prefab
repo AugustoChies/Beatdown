@@ -46,3 +46,22 @@ MonoBehaviour:
   _character: {fileID: 11400000, guid: c589acabb0bf67549bd9d3fb618cfbb4, type: 2}
   _consumables: {fileID: 11400000, guid: af21d6cd4abe9e945a642701274b2d42, type: 2}
   _equipment: {fileID: 11400000, guid: fd0f760d8edc6124fb975f96955cc8aa, type: 2}
+  _hour: 6
+  _day: 1
+  modificationsStatus: {fileID: 11400000, guid: a2adc788f36da4e49bec1b5adaf907a3, type: 2}
+  _playerData:
+    Health: 0
+    Attack: 0
+    Performance: 0
+    Defense: 0
+    Rythm: 0
+    modificationStatuses: {fileID: 0}
+    StatsCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EquippedMoves: []
+    Consumables: []
+    Equipments: []

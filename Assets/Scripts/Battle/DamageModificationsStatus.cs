@@ -8,6 +8,12 @@ public class DamageModificationsStatus : ScriptableObject
     public float PerfectionEffectMultiplier = 2f;
     public float SpeedEffectMultiplier = 0.2f;
     public float PerformanceBasedEffectMultiplier = 2;
+    public float maxHP = 500;
+    public float maxAttack = 100;
+    public float maxPerformance = 100;
+    public float maxDefense = 100;
+    public float maxRythm = 100;
+
 
     public float AtackModifier(float attackvalue)
     {

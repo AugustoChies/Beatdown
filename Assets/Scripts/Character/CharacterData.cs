@@ -29,21 +29,7 @@ public class CharacterData : ScriptableObject
     private AnimationCurve _statCurve = null;
     public AnimationCurve StatCurve => _statCurve;
 
-    public List<RythmMove> EquippedMoves = null;
-
-    public void ChangeStats(float moreHealth, float moreAttack, float morePerformance, float moreDefense, float moreRythm)
-    {
-        _health += moreHealth;
-        _attack += moreAttack;
-        _performance += morePerformance;
-        _defense += moreDefense;
-        _rythm += moreRythm;
-
-        Mathf.Clamp(_attack, 0, 100);
-        Mathf.Clamp(_performance, 0, 100);
-        Mathf.Clamp(_defense, 0, 100);
-        Mathf.Clamp(_rythm, 0, 100);
-    }
+    public List<RythmMove> EquippedMoves = null;    
 
     public float GetCurveAttack()
     {
