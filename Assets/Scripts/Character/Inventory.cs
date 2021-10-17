@@ -71,7 +71,7 @@ public class Inventory : MonoBehaviour
         _playerData.EquippedItems = _character.equippedItems;
         _playerData.ListOfObtainedEquipments = _character.obtainedEquippedItems;
 
-        PlayerDataManager.Instance.Save();
+        if(PlayerDataManager.Instance) PlayerDataManager.Instance.Save();
         EquipmentManager.Instance.RecalculateBonusStats();
     }
 
