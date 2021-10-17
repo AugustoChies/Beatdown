@@ -55,11 +55,11 @@ public class StatsPentagon : MonoBehaviour
     {
         if (Inventory.Instance != null)
         {
-            AtkCurrentValue = Inventory.Instance.PlayerData.Attack;
-            DefCurrentValue = Inventory.Instance.PlayerData.Defense;
-            HpCurrentValue = Inventory.Instance.PlayerData.Health;
-            HypeCurrentValue = Inventory.Instance.PlayerData.Performance;
-            RhyCurrentValue = Inventory.Instance.PlayerData.Rythm;
+            AtkCurrentValue = Inventory.Instance.PlayerData.Attack + EquipmentManager.Instance.AtkBonusTotal;
+            DefCurrentValue = Inventory.Instance.PlayerData.Defense + EquipmentManager.Instance.DefBonusTotal;
+            HpCurrentValue = Inventory.Instance.PlayerData.Health + EquipmentManager.Instance.HPBonusTotal;
+            HypeCurrentValue = Inventory.Instance.PlayerData.Performance + EquipmentManager.Instance.HypeBonusTotal;
+            RhyCurrentValue = Inventory.Instance.PlayerData.Rythm + EquipmentManager.Instance.RhyBonusTotal;
 
             UpdateAllStats();
         }
@@ -68,19 +68,19 @@ public class StatsPentagon : MonoBehaviour
     public void UpdateAllStats()
     {
         UpdateOneStat(Stats.Atk, AtkCurrentValue);
-        AtkText.text = AtkCurrentValue.ToString("F0");
+        AtkText.text = AtkCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.AtkBonusTotal + ")</color>";
 
         UpdateOneStat(Stats.Def, DefCurrentValue);
-        DefText.text = DefCurrentValue.ToString("F0");
+        DefText.text = DefCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.DefBonusTotal + ")</color>";
 
         UpdateOneStat(Stats.Rhy, RhyCurrentValue);
-        RhyText.text = RhyCurrentValue.ToString("F0");
+        RhyText.text = RhyCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.RhyBonusTotal + ")</color>";
 
         UpdateOneStat(Stats.Hp, HpCurrentValue);
-        HpText.text = HpCurrentValue.ToString("F0");
+        HpText.text = HpCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.HPBonusTotal + ")</color>";
 
         UpdateOneStat(Stats.Hype, HypeCurrentValue);
-        HypeText.text = HypeCurrentValue.ToString("F0");
+        HypeText.text = HypeCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.HypeBonusTotal + ")</color>";
     }
 
     public void UpdateOneStat(Stats _statToDebug, float StatToDebugValue)

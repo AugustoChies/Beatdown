@@ -76,7 +76,7 @@ public class PlayerDataManager : MonoBehaviour
         string jsonString = "";
         if (File.Exists(JsonPath))
         {
-            print("Save Found, Loading Game");
+            print("Save Found, Game Loaded");
             jsonString = File.ReadAllText(JsonPath);
             PlayerData = JsonUtility.FromJson<SaveData>(jsonString);
             Inventory.Instance.InitializeData(PlayerData.GeneralData, PlayerData.Hour, PlayerData.Day);
@@ -95,9 +95,14 @@ public class PlayerDataManager : MonoBehaviour
 
         File.Delete(JsonPath);
     }
+
+    public void Save()
+    {
+        StartCoroutine(SaveGame());
+    }
+    
     public IEnumerator SaveGame()
     {
-        print("Saving Game");
         if(!isBusy)
         {
             isBusy = true;
@@ -109,17 +114,22 @@ public class PlayerDataManager : MonoBehaviour
             string jsonString = "";
             if (File.Exists(JsonPath))
             {
+                print("Game Saved");
                 jsonString = JsonUtility.ToJson(PlayerData);
                 File.WriteAllText(JsonPath, jsonString);
             }
             else
             {
+                print("Creating New Save Game, Please Wait");
+
                 File.Create(JsonPath);
                 jsonString = JsonUtility.ToJson(PlayerData);
 
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(5f);
 
                 File.WriteAllText(JsonPath, jsonString);
+                
+                print("Game Saved");
             }
 
             isBusy = false;

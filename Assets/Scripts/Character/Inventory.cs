@@ -29,7 +29,7 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance = null;
 
     private bool _isInitialized;
-
+    
     private void Awake()
     {
         if (Instance == null)
@@ -65,6 +65,11 @@ public class Inventory : MonoBehaviour
         _playerData.EquippedMoves = _character.EquippedMoves;
         _playerData.Consumables = _consumables.items;
         _playerData.Equipments = _equipment.items;
+        _playerData.EquippedItems = _character.equippedItems;
+        _playerData.ListOfObtainedEquipments = _character.obtainedEquippedItems;
+
+        PlayerDataManager.Instance.Save();
+        EquipmentManager.Instance.RecalculateBonusStats();
     }
 
     public void InitializeData(CharacterDataClass characterData, int hour, int day)
@@ -74,6 +79,8 @@ public class Inventory : MonoBehaviour
         _playerData = characterData;
         _hour = hour;
         _day = day;
+        
+        EquipmentManager.Instance.RecalculateBonusStats();
         //print("Game Loaded Successfully");
     }
 

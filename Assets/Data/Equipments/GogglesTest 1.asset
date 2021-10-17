@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
+  m_Name: GogglesTest 1
+  m_EditorClassIdentifier: 
+  equipmentName: GoggleTest1
+  equipmentStatsBonusText: Hp + 100
+  addedAtk: 0
+  addedDef: 0
+  addedHype: 0
+  addedHP: 100
+  addedRhy: 0
+  equipmentType: 1
+  equipmentSprite: {fileID: -8707463209913565470, guid: 96e138ca6ac2e4a478798dc59a7d258d, type: 3}

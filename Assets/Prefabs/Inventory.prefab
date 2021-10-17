@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5385210848949785195}
   - component: {fileID: 5385210848949785194}
+  - component: {fileID: 1259713854}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -65,3 +66,33 @@ MonoBehaviour:
     EquippedMoves: []
     Consumables: []
     Equipments: []
+    EquippedItems: []
+    ListOfObtainedEquipments: []
+--- !u!114 &1259713854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385210848949785189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eabf5c0e6b81a544bba4ec2838cf36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AtkBonusTotal: 0
+  DefBonusTotal: 0
+  HypeBonusTotal: 0
+  HPBonusTotal: 0
+  RhyBonusTotal: 0
+  ListOfAllEquipments:
+  - {fileID: 11400000, guid: 6becac86c8487c942aa2ec45a68ea3c9, type: 2}
+  - {fileID: 11400000, guid: a6f75def98755fa48a354fed02805375, type: 2}
+  - {fileID: 11400000, guid: 37adb5aaf156911478d5602d3273bfc8, type: 2}
+  - {fileID: 11400000, guid: f5ad29f34dc775c4baae3324d73b8841, type: 2}
+  - {fileID: 11400000, guid: d23709d43dd5d4d47a7a07f84dff5239, type: 2}
+  - {fileID: 11400000, guid: e3fc621334026b14684055579e185682, type: 2}
+  - {fileID: 11400000, guid: b8c172fd6666e6f4584b1e08dd9f66eb, type: 2}
+  - {fileID: 11400000, guid: 7e2d27cf7e623c34fbdee6bca9d64031, type: 2}
+  - {fileID: 11400000, guid: 7bed16e518d4cc542b61c6626c684a97, type: 2}
+  - {fileID: 11400000, guid: 06b922713681cb24a862c154847f5280, type: 2}

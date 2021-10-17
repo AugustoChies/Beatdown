@@ -29,7 +29,10 @@ public class CharacterData : ScriptableObject
     private AnimationCurve _statCurve = null;
     public AnimationCurve StatCurve => _statCurve;
 
-    public List<RythmMove> EquippedMoves = null;    
+    public List<RythmMove> EquippedMoves = null;
+
+    public List<Equipment> equippedItems = null;
+    public List<Equipment> obtainedEquippedItems = null;
 
     public float GetCurveAttack()
     {

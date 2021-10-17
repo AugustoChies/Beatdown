@@ -15,6 +15,8 @@ public class CharacterDataClass
     public List<RythmMove> EquippedMoves = new List<RythmMove>();
     public List<BaseItem> Consumables;
     public List<BaseItem> Equipments;
+    public List<Equipment> EquippedItems;
+    public List<Equipment> ListOfObtainedEquipments;
 
     public void ChangeStats(float moreHealth, float moreAttack, float morePerformance, float moreDefense, float moreRythm)
     {
