@@ -49,6 +49,8 @@ public class EquipmentManager : MonoBehaviour
         HypeBonusTotal = 0;
         HPBonusTotal = 0;
         RhyBonusTotal = 0;
+
+        if (Inventory.Instance.PlayerData.EquippedItems.Count == 0) return;
         
         foreach (Equipment equip in Inventory.Instance.PlayerData.EquippedItems)
         {

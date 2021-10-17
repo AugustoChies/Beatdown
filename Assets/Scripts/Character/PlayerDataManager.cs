@@ -9,12 +9,14 @@ public class SaveData
 {
     public int Day;
     public int Hour;
+    public int Gold;
     public CharacterDataClass GeneralData;
 
-    public SaveData(int day, int hour, CharacterDataClass data)
+    public SaveData(int day, int hour, int gold, CharacterDataClass data)
     {
         Day = day;
         Hour = hour;
+        Gold = gold;
         GeneralData = data;
     }
 
@@ -22,8 +24,8 @@ public class SaveData
     {
         Day = 0;
         Hour = 0;
+        Gold = 0;
         GeneralData = new CharacterDataClass();
-
     }
 }
 
@@ -79,7 +81,7 @@ public class PlayerDataManager : MonoBehaviour
             print("Save Found, Game Loaded");
             jsonString = File.ReadAllText(JsonPath);
             PlayerData = JsonUtility.FromJson<SaveData>(jsonString);
-            Inventory.Instance.InitializeData(PlayerData.GeneralData, PlayerData.Hour, PlayerData.Day);
+            Inventory.Instance.InitializeData(PlayerData.GeneralData, PlayerData.Hour, PlayerData.Day, PlayerData.Gold);
         }
         else
         {
@@ -108,7 +110,7 @@ public class PlayerDataManager : MonoBehaviour
             isBusy = true;
 
             var inventory = Inventory.Instance;
-            PlayerData = new SaveData(inventory.Day, inventory.Hour, inventory.PlayerData);
+            PlayerData = new SaveData(inventory.Day, inventory.Hour, inventory.Gold, inventory.PlayerData);
 
             //print(JsonPath);
             string jsonString = "";

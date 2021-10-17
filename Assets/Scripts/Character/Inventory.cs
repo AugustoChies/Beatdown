@@ -20,6 +20,9 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private int _day = 1;
     public int Day => _day;
+    [SerializeField]
+    private int _gold = 100;
+    public int Gold => _gold;
     public Action OnUpdateTime;
     public DamageModificationsStatus modificationsStatus = null;
 
@@ -72,13 +75,14 @@ public class Inventory : MonoBehaviour
         EquipmentManager.Instance.RecalculateBonusStats();
     }
 
-    public void InitializeData(CharacterDataClass characterData, int hour, int day)
+    public void InitializeData(CharacterDataClass characterData, int hour, int day, int gold)
     {
         _isInitialized = true;
 
         _playerData = characterData;
         _hour = hour;
         _day = day;
+        _gold = gold;
         
         EquipmentManager.Instance.RecalculateBonusStats();
         //print("Game Loaded Successfully");
