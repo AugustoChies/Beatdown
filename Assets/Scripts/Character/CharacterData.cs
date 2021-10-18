@@ -34,6 +34,22 @@ public class CharacterData : ScriptableObject
     public List<Equipment> equippedItems = null;
     public List<Equipment> obtainedEquippedItems = null;
 
+    public CharacterData(float health, float attack, float performance, float defense, float rythm,
+                            string anim, AnimationCurve curve, List<RythmMove> eMoves,
+                            List<Equipment> eItems)
+    {
+        _health = health;
+        _attack = attack;
+        _performance = performance;
+        _defense = defense;
+        _rythm = rythm;
+
+        _idleAnimation = anim;
+        _statCurve = curve;
+        EquippedMoves = eMoves;
+        equippedItems = eItems;
+    }
+
     public float GetCurveAttack()
     {
         return _statCurve.Evaluate(_attack / 100);

@@ -892,6 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5749deb33be3f80489c35fa319af3775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _modifiers: {fileID: 11400000, guid: a2adc788f36da4e49bec1b5adaf907a3, type: 2}
   score: 0
   RythmToPlay: {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
   scoreText: {fileID: 3920508488983017296}

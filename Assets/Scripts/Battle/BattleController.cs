@@ -63,6 +63,9 @@ public class BattleController : MonoBehaviour
 
     private void SetCharacterValues()
     {
+        CharacterDataClass inventoryInfo = Inventory.Instance.PlayerData;
+        player = new CharacterData(inventoryInfo.Health,inventoryInfo.Attack, inventoryInfo.Performance, inventoryInfo.Defense, inventoryInfo.Rythm,
+            inventoryInfo.IdleAnimation, inventoryInfo.StatsCurve, inventoryInfo.EquippedMoves, inventoryInfo.EquippedItems);
         playercurrenthealth = player.Health;
         enemycurrenthealth = enemy.Health;
         MaxPlayerhealth = player.Health;

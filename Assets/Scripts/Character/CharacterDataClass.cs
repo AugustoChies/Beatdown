@@ -12,6 +12,7 @@ public class CharacterDataClass
     public float Rythm;
     public DamageModificationsStatus modificationStatuses = null;
     public AnimationCurve StatsCurve;
+    public string IdleAnimation = "";
     public List<RythmMove> EquippedMoves = new List<RythmMove>();
     public List<BaseItem> Consumables;
     public List<BaseItem> Equipments;
@@ -31,6 +32,26 @@ public class CharacterDataClass
         Mathf.Clamp(Performance, 0, modificationStatuses.maxPerformance);
         Mathf.Clamp(Defense, 0, modificationStatuses.maxDefense);
         Mathf.Clamp(Rythm, 0, modificationStatuses.maxRythm);
+    }
+
+    public float GetCurveAttack()
+    {
+        return StatsCurve.Evaluate(Attack / 100);
+    }
+
+    public float GetCurveAPerformance()
+    {
+        return StatsCurve.Evaluate(Performance / 100);
+    }
+
+    public float GetCurveDefense()
+    {
+        return StatsCurve.Evaluate(Defense / 100);
+    }
+
+    public float GetCurveRythm()
+    {
+        return StatsCurve.Evaluate(Rythm / 100);
     }
 
 }

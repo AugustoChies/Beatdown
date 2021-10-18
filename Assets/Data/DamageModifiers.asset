@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fb63f416cc0884cadc28bfbcb88708, type: 3}
   m_Name: DamageModifiers
   m_EditorClassIdentifier: 
-  AtackModifier: 1
-  PerformanceModifier: 1
-  DefenseModifier: 0.5
-  RythmModifier: 0.5
   ExtraHypeDamage: 10
+  PerfectionEffectMultiplier: 2
+  SpeedEffectMultiplier: 0.2
+  PerformanceBasedEffectMultiplier: 2
+  StartMoveDelay: 0.75
+  maxHP: 500
+  maxAttack: 100
+  maxPerformance: 100
+  maxDefense: 100
+  maxRythm: 100

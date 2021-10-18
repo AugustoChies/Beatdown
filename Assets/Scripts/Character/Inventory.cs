@@ -65,6 +65,7 @@ public class Inventory : MonoBehaviour
         _playerData.Rythm = _character.Rythm;
         _playerData.modificationStatuses = modificationsStatus;
         _playerData.StatsCurve = _character.StatCurve;
+        _playerData.IdleAnimation = _character.IdleAnimation;
         _playerData.EquippedMoves = _character.EquippedMoves;
         _playerData.Consumables = _consumables.items;
         _playerData.Equipments = _equipment.items;

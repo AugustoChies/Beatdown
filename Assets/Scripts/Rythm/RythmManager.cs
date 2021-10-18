@@ -7,6 +7,8 @@ public class RythmManager : MonoBehaviour
 {
     public static RythmManager Instance;
 
+    [SerializeField]
+    private DamageModificationsStatus _modifiers;
     public float score;
     private float _speedModifier = 1.0f;
 
@@ -56,34 +58,13 @@ public class RythmManager : MonoBehaviour
         if (isPlayer)
         {
             BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove, move);
-            BattleController.Instance.SetPlayerAnimation(move.moveAnimation);
-
-            if (BattleController.Instance.playerEffect == EMoveEffect.TempoUp)
-            {
-                _speedModifier = 1.2f;
-            }
-            if (BattleController.Instance.playerEffect == EMoveEffect.TempoDown)
-            {
-                _speedModifier = 0.8f;
-            }
         }
         else
         {
             BattleController.Instance.SetBattleStage(EBattleStage.EnemyMove, move);
-            BattleController.Instance.SetEnemyAnimation(move.moveAnimation);
-
-            if (BattleController.Instance.enemyEffect == EMoveEffect.TempoUp)
-            {
-                _speedModifier = 1.2f;
-            }
-            if (BattleController.Instance.enemyEffect == EMoveEffect.TempoDown)
-            {
-                _speedModifier = 0.8f;
-            }
         }
-        BattleAudioController.Instance.PlayMoveTrack(move.moveAudioClip, _speedModifier);
-        BattleController.Instance.currentmoveScore = 0; //reset current move score
-        StartCoroutine(PlayRythm());
+
+        StartCoroutine(PlayRythm(isPlayer, move, _modifiers.StartMoveDelay));
     }
 
     public void CreateKey(int index)
@@ -127,8 +108,39 @@ public class RythmManager : MonoBehaviour
         }
     }
 
-    public IEnumerator PlayRythm()
+    public IEnumerator PlayRythm(bool isPlayer, RythmMove move, float waittime)
     {
+        yield return new WaitForSeconds(waittime);
+
+        if (isPlayer)
+        {
+            BattleController.Instance.SetPlayerAnimation(move.moveAnimation);
+
+            if (BattleController.Instance.playerEffect == EMoveEffect.TempoUp)
+            {
+                _speedModifier = 1.2f;
+            }
+            if (BattleController.Instance.playerEffect == EMoveEffect.TempoDown)
+            {
+                _speedModifier = 0.8f;
+            }
+        }
+        else
+        {
+            BattleController.Instance.SetEnemyAnimation(move.moveAnimation);
+
+            if (BattleController.Instance.enemyEffect == EMoveEffect.TempoUp)
+            {
+                _speedModifier = 1.2f;
+            }
+            if (BattleController.Instance.enemyEffect == EMoveEffect.TempoDown)
+            {
+                _speedModifier = 0.8f;
+            }
+        }
+        BattleAudioController.Instance.PlayMoveTrack(move.moveAudioClip, _speedModifier);
+        BattleController.Instance.currentmoveScore = 0; //reset current move score
+
         int currentIndex = 0;
 
         while(currentIndex < RythmToPlay.rythmData.Length)
