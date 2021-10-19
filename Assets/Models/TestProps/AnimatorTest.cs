@@ -41,11 +41,11 @@ public class AnimatorTest : MonoBehaviour
         {
             animator.SetBool("Hip_Hop_0", true);           
         }
-        //else if (walkRd)
-        //{
-        //    animator.SetBool("Walk_Fw", false);
-        //    animator.SetBool("Walk_Rd", true);
-        //}
+        else
+        {
+            animator.SetBool("Hip_Hop_0", false);
+        }
+
     }
 
     public void SetAnimation(bool var)

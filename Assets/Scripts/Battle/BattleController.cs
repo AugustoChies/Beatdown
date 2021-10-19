@@ -320,7 +320,9 @@ public class BattleController : MonoBehaviour
             enemyEffect = currentMove.effect;
             OnUIUpdate?.Invoke(true, true);
         }
+        AnimatorTest.hip_Hop_0 = false;
         Debug.Log(damage + " damage dealt");
+        
         BattleAudioController.Instance.FadeBackToMain();
     }
 

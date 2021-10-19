@@ -54,7 +54,7 @@ public class RythmManager : MonoBehaviour
         RythmToPlay = move;
         CurrentMoveCount = 0;
         _speedModifier = 1.0f;
-        AnimatorTest.hip_Hop_0 = true;
+        
 
         if (isPlayer)
         {
@@ -124,6 +124,7 @@ public class RythmManager : MonoBehaviour
             if (BattleController.Instance.playerEffect == EMoveEffect.TempoDown)
             {
                 _speedModifier = 0.8f;
+               
             }
         }
         else
@@ -149,7 +150,7 @@ public class RythmManager : MonoBehaviour
             CreateKey(currentIndex);
             yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote * (2 - _speedModifier));
             currentIndex++;
-        }
+        }        
 
         yield return null;
     }
