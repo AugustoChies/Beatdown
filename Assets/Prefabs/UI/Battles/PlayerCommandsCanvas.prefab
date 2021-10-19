@@ -448,8 +448,8 @@ MonoBehaviour:
   tooltipsTextDmg1: {fileID: 4320782699276184954}
   tooltipsTextDmg2: {fileID: 924552439257528538}
   tooltipsTextDmg3: {fileID: 2276208583788637825}
-  tooltipsTextEffectDefault: {fileID: 852129706822375504}
   tooltipsTextEffect: {fileID: 3720214856713292950}
+  tooltipsTextEffectDefault: {fileID: 852129706822375504}
   staticBaseText: {fileID: 3064274153745154177}
   staticPerformanceText: {fileID: 7303467920111912824}
   staticPerfectText: {fileID: 7365704074231517256}
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4254856038996268981
 MonoBehaviour:
   m_ObjectHideFlags: 0
