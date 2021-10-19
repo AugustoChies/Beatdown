@@ -504,6 +504,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 371727091730999532, guid: 5f6a05909a50b054d9a0c919c888894e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 371727091731000083, guid: 5f6a05909a50b054d9a0c919c888894e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
     - target: {fileID: 371727091874263941, guid: 5f6a05909a50b054d9a0c919c888894e, type: 3}
       propertyPath: m_Name
       value: MusicPlayer
@@ -971,7 +979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00f6b4d747a81f642b0ed16d28ed482d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00f6b4d747a81f642b0ed16d28ed482d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1133,6 +1141,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &579393661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579393657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405250eb72b6b10488452888a22ceb9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 579393659}
+  changeAnim: 0
 --- !u!1 &724105519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,7 +1345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ee2f4a2f2cbcc5e4f898b4324502af31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.71
+      value: -3.264
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ee2f4a2f2cbcc5e4f898b4324502af31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1385,6 +1407,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 250119564485338695, guid: ee2f4a2f2cbcc5e4f898b4324502af31, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3f77f932435050418fd98c3710fde53, type: 2}
     - target: {fileID: 919132149155446097, guid: ee2f4a2f2cbcc5e4f898b4324502af31, type: 3}
       propertyPath: m_Name
       value: Character
@@ -1757,7 +1783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f9bbe70a6fe9fb41a41cb8b2e34ded3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f9bbe70a6fe9fb41a41cb8b2e34ded3, type: 3}
       propertyPath: m_LocalPosition.z

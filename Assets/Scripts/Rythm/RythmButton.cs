@@ -16,6 +16,7 @@ public class RythmButton : MonoBehaviour
     public void OnClick()
     {
         RythmManager.Instance.PlayMove(move, true);
+        
     }
 
     public void OnMouseOver()

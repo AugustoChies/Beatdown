@@ -54,7 +54,8 @@ public class RythmManager : MonoBehaviour
         RythmToPlay = move;
         CurrentMoveCount = 0;
         _speedModifier = 1.0f;
-        
+        AnimatorTest.hip_Hop_0 = true;
+
         if (isPlayer)
         {
             BattleController.Instance.SetBattleStage(EBattleStage.PlayerMove, move);

@@ -4,43 +4,52 @@ using UnityEngine;
 
 public class AnimatorTest : MonoBehaviour
 {
-    //guto this script change animations only
-    //press "P" to change animations
+    public static AnimatorTest instance;
 
     public Animator animator = null;
-    public bool changeAnim = false;    
+    public bool changeAnim = false;
+    
+    public static bool walkFw = false;
+    public static bool walkRd = false;
+    public static bool hip_Hop_0 = false;
+    public static bool hip_Hop_1 = false;
+
 
     void Start()
     {
         animator = GetComponent<Animator>();
     }
-    
+
     void Update()
     {
         if (Input.GetKey(KeyCode.P) && changeAnim == false)
         {
             Debug.Log("here");
-            changeAnim = true;
+            walkFw = true;
         }
-        else if (Input.GetKey(KeyCode.P) && changeAnim == true)
-        {
-            changeAnim = false;
-        }
+        //else if (Input.GetKey(KeyCode.P) && changeAnim == true)
+        //{
+        //    changeAnim = false;
+        //}
 
         PlayAnimations();
     }
 
     public void PlayAnimations()
     {
-        if (changeAnim)
+        if (hip_Hop_0)
         {
-            animator.SetBool("anim_0", false);
-            animator.SetBool("anim_1", true);
+            animator.SetBool("Hip_Hop_0", true);           
         }
-        else
-        {
-            animator.SetBool("anim_0", true);
-            animator.SetBool("anim_1", false);
-        }
+        //else if (walkRd)
+        //{
+        //    animator.SetBool("Walk_Fw", false);
+        //    animator.SetBool("Walk_Rd", true);
+        //}
+    }
+
+    public void SetAnimation(bool var)
+    {
+        walkFw = var;
     }
 }
