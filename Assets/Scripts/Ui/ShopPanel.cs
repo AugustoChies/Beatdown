@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using TMPro;
 
 public class ShopPanel : MonoBehaviour
 {
@@ -12,9 +13,14 @@ public class ShopPanel : MonoBehaviour
     [SerializeField] private float heightMultiplier;
     [SerializeField] private GameObject shopItemPrefab;
     [SerializeField] private GameObject buttonsParent;
+    [SerializeField] private TextMeshProUGUI goldText;
     [SerializeField] private ScrollRect scrollView;
+    [SerializeField] private Color buyableColor = Color.white;
+    [SerializeField] private Color unBuyableColor = Color.red;
 
     public List<GameObject> ButtonsList = new List<GameObject>();
+
+    public bool debugMode = false;
     private void Awake()
     {
         Instance = this;
@@ -25,6 +31,13 @@ public class ShopPanel : MonoBehaviour
         buttonsParent.GetComponent<RectTransform>().sizeDelta =
             new Vector2(0, (EquipmentManager.Instance.ListOfAllEquipments.Count - Inventory.Instance.PlayerData.ListOfObtainedEquipments.Count) 
                            * heightMultiplier);
+
+        foreach (GameObject button in ButtonsList)
+        {
+            button.GetComponent<ShopButton>().UpdateMyColor(buyableColor, unBuyableColor);
+        }
+
+        goldText.text = "Gold: " + Inventory.Instance.Gold.ToString();
     }
 
     private void OnEnable()

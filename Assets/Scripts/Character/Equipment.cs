@@ -18,7 +18,7 @@ public class Equipment : ScriptableObject
 {
     public string equipmentName;
     public string equipmentStatsBonusText;
-    public float goldCost = 50;
+    public int goldCost = 50;
     public float addedAtk;
     public float addedDef;
     public float addedHype;

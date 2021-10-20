@@ -23,13 +23,25 @@ public class ShopButton : MonoBehaviour
 
     public void UnlockItem()
     {
+        if(Inventory.Instance.Gold < myEquipment.goldCost && !ShopPanel.Instance.debugMode) return;
+
+        Inventory.Instance.Gold -= myEquipment.goldCost;
+    
         Inventory.Instance.PlayerData.ListOfObtainedEquipments.Add(myEquipment);
         Inventory.Instance.PlayerData.ListOfObtainedEquipmentsID.Add(EquipmentManager.Instance.ListOfAllEquipments.IndexOf(myEquipment));
 
         Inventory.Instance.PlayerData.ListOfObtainedEquipments.Sort((p1,p2)=>p1.equipmentType.CompareTo(p2.equipmentType));
 
+        ShopPanel.Instance.ButtonsList.Remove(this.gameObject);
+        
         ShopPanel.Instance.RefreshSize();
         
         Destroy(this.gameObject);
+    }
+
+    public void UpdateMyColor(Color buyableColor, Color unbuyableColor)
+    {
+        if (Inventory.Instance.Gold < myEquipment.goldCost) goldCostText.color = unbuyableColor;
+        else goldCostText.color = buyableColor;
     }
 }

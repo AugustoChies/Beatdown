@@ -22,7 +22,6 @@ public class Inventory : MonoBehaviour
     public int Day => _day;
     [SerializeField]
     private int _gold = 100;
-    public int Gold => _gold;
     public Action OnUpdateTime;
     public DamageModificationsStatus modificationsStatus = null;
 
@@ -32,6 +31,13 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance = null;
 
     private bool _isInitialized;
+
+    public int Gold
+    {
+        get => _gold;
+        set => _gold = value;
+    }
+
     
     private void Awake()
     {
