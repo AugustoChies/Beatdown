@@ -24,7 +24,8 @@ public class ShopButton : MonoBehaviour
     public void UnlockItem()
     {
         Inventory.Instance.PlayerData.ListOfObtainedEquipments.Add(myEquipment);
-        
+        Inventory.Instance.PlayerData.ListOfObtainedEquipmentsID.Add(EquipmentManager.Instance.ListOfAllEquipments.IndexOf(myEquipment));
+
         Inventory.Instance.PlayerData.ListOfObtainedEquipments.Sort((p1,p2)=>p1.equipmentType.CompareTo(p2.equipmentType));
 
         ShopPanel.Instance.RefreshSize();

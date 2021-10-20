@@ -18,6 +18,9 @@ public class CharacterDataClass
     public List<BaseItem> Equipments;
     public List<Equipment> EquippedItems;
     public List<Equipment> ListOfObtainedEquipments;
+    public List<int> EquippedItemsID;
+    public List<int> ListOfObtainedEquipmentsID;
+    public List<int> EquippedMovesID;
 
     public void ChangeStats(float moreHealth, float moreAttack, float morePerformance, float moreDefense, float moreRythm)
     {

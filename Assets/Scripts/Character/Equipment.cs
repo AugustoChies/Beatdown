@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public enum EquipmentType
 {
     Hat,
@@ -11,6 +12,7 @@ public enum EquipmentType
     Arms
 }
 
+[System.Serializable]
 [CreateAssetMenu()]
 public class Equipment : ScriptableObject
 {
