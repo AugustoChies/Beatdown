@@ -357,11 +357,15 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+      IdleAnimation: 
       EquippedMoves: []
       Consumables: []
       Equipments: []
       EquippedItems: []
       ListOfObtainedEquipments: []
+      EquippedItemsID: 
+      ListOfObtainedEquipmentsID: 
+      EquippedMovesID: 
   QuickSaveKey: 286
   QuickDeleteKey: 287
 --- !u!4 &2033648965
@@ -385,6 +389,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1259713854, guid: d4353663d73a57643a7ed186d6ae8d2f, type: 3}
+      propertyPath: ListOfAllRythms.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259713854, guid: d4353663d73a57643a7ed186d6ae8d2f, type: 3}
+      propertyPath: ListOfAllRythms.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
+    - target: {fileID: 1259713854, guid: d4353663d73a57643a7ed186d6ae8d2f, type: 3}
+      propertyPath: ListOfAllRythms.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
+    - target: {fileID: 1259713854, guid: d4353663d73a57643a7ed186d6ae8d2f, type: 3}
+      propertyPath: ListOfAllRythms.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
+    - target: {fileID: 1259713854, guid: d4353663d73a57643a7ed186d6ae8d2f, type: 3}
+      propertyPath: ListOfAllRythms.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259713854, guid: d4353663d73a57643a7ed186d6ae8d2f, type: 3}
+      propertyPath: ListOfAllRythms.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5385210848949785189, guid: d4353663d73a57643a7ed186d6ae8d2f, type: 3}
       propertyPath: m_Name
       value: Inventory

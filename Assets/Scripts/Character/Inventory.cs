@@ -72,6 +72,19 @@ public class Inventory : MonoBehaviour
         _playerData.EquippedItems = _character.equippedItems;
         _playerData.ListOfObtainedEquipments = _character.obtainedEquippedItems;
 
+        foreach (Equipment equip in _playerData.EquippedItems)
+        {
+            PlayerData.EquippedItemsID.Add(_playerData.EquippedItems.IndexOf(equip));
+        }
+        foreach (Equipment equip in _playerData.ListOfObtainedEquipments)
+        {
+            PlayerData.ListOfObtainedEquipmentsID.Add(_playerData.ListOfObtainedEquipments.IndexOf(equip));
+        }
+        foreach (RythmMove move in _playerData.EquippedMoves)
+        {
+            PlayerData.EquippedMovesID.Add(_playerData.EquippedMoves.IndexOf(move));
+        }
+
         if(PlayerDataManager.Instance) PlayerDataManager.Instance.Save();
         EquipmentManager.Instance.RecalculateBonusStats();
     }
@@ -84,6 +97,26 @@ public class Inventory : MonoBehaviour
         _hour = hour;
         _day = day;
         _gold = gold;
+        characterData.modificationStatuses = modificationsStatus;
+
+        characterData.EquippedItems.Clear();
+        characterData.EquippedMoves.Clear();
+        characterData.ListOfObtainedEquipments.Clear();
+
+        foreach (int i in characterData.EquippedItemsID)
+        {
+            characterData.EquippedItems.Add(EquipmentManager.Instance.ListOfAllEquipments[i]);
+        }
+        
+        foreach (int i in characterData.EquippedMovesID)
+        {
+            characterData.EquippedMoves.Add(EquipmentManager.Instance.ListOfAllRythms[i]);
+        }
+        
+        foreach (int i in characterData.ListOfObtainedEquipmentsID)
+        {
+            characterData.ListOfObtainedEquipments.Add(EquipmentManager.Instance.ListOfAllEquipments[i]);
+        }
         
         EquipmentManager.Instance.RecalculateBonusStats();
         //print("Game Loaded Successfully");

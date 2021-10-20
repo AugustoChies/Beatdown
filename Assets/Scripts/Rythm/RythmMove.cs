@@ -9,6 +9,7 @@ public enum EMoveEffect
     PerformanceBased
 }
 
+[System.Serializable]
 [CreateAssetMenu()]
 public class RythmMove : ScriptableObject
 {

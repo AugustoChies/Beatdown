@@ -13,6 +13,7 @@ public class EquipmentManager : MonoBehaviour
     public float HPBonusTotal = 0;
     public float RhyBonusTotal = 0;
     public List<Equipment> ListOfAllEquipments;
+    public List<RythmMove> ListOfAllRythms;
 
     private void Awake()
     {
@@ -27,18 +28,26 @@ public class EquipmentManager : MonoBehaviour
             {
                 Inventory.Instance.PlayerData.EquippedItems.Remove(equip);
                 Inventory.Instance.PlayerData.EquippedItems.Add(newEquip);
+                
+                Inventory.Instance.PlayerData.EquippedItemsID.Remove(ListOfAllEquipments.IndexOf(equip));
+                Inventory.Instance.PlayerData.EquippedItemsID.Add(ListOfAllEquipments.IndexOf(newEquip));
+
                 RecalculateBonusStats();
                 return;
             }
         }
         
         Inventory.Instance.PlayerData.EquippedItems.Add(newEquip);
+        Inventory.Instance.PlayerData.EquippedItemsID.Add(ListOfAllEquipments.IndexOf(newEquip));
+
         RecalculateBonusStats();
     }
 
     public void UnequipItem(Equipment newEquip)
     {
         Inventory.Instance.PlayerData.EquippedItems.Remove(newEquip);
+        Inventory.Instance.PlayerData.EquippedItemsID.Remove(ListOfAllEquipments.IndexOf(newEquip));
+
         RecalculateBonusStats();
     }
 
