@@ -35,6 +35,6 @@ public class MapButtonMethods : MonoBehaviour
             hour -= 12;
         }
 
-        _dateText.text = "Day " + day + "    " + hour + " " + ampm;
+        _dateText.text = "Day " + day + "  " + hour + " " + ampm;
     }
 }
