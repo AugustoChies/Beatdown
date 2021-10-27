@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Visualizer : MonoBehaviour
+public class SoundSpectrum : MonoBehaviour
 {
     public GameObject cubePrefab;
 
