@@ -24,45 +24,38 @@ public class Key : MonoBehaviour
 
     public void HandleKey()
     {
-        if(Input.GetKeyDown(KeyCode.W) && rythmKey == RythmKey.Up && this == RythmManager.Instance.UpKeysQueue.Peek() && canPlayKeyThisFrame)
+        if (RythmManager.Instance.KeysQueue.Count == 0) return;
+        if (this != RythmManager.Instance.KeysQueue.Peek()) return;
+        if (!canPlayKeyThisFrame) return;
+        
+        
+        if(Input.GetKeyDown(KeyCode.W))
         {
-            HandleRythmKey(true, rythmKey);
+            HandleRythmKey(true, RythmKey.Up);
         }
-        if (Input.GetKeyDown(KeyCode.S) && rythmKey == RythmKey.Down && this == RythmManager.Instance.DownKeysQueue.Peek() && canPlayKeyThisFrame)
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            HandleRythmKey(true, rythmKey);
+            HandleRythmKey(true, RythmKey.Down);
         }
-        if (Input.GetKeyDown(KeyCode.A) && rythmKey == RythmKey.Left && this == RythmManager.Instance.LeftKeysQueue.Peek() && canPlayKeyThisFrame)
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            HandleRythmKey(true, rythmKey);
+            HandleRythmKey(true, RythmKey.Left);
         }
-        if (Input.GetKeyDown(KeyCode.D) && rythmKey == RythmKey.Right && this == RythmManager.Instance.RightKeysQueue.Peek() && canPlayKeyThisFrame)
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            HandleRythmKey(true, rythmKey);
+            HandleRythmKey(true, RythmKey.Right);
         }
     }
 
     public void HandleRythmKey(bool wasPressed, RythmKey side)
     {
+        if (RythmManager.Instance.KeysQueue.Count == 0) return;
+
         canPlayKeyThisFrame = false;
 
-        switch(side)
-        {
-            case RythmKey.Up:
-                RythmManager.Instance.UpKeysQueue.Dequeue();
-                break;
-            case RythmKey.Down:
-                RythmManager.Instance.DownKeysQueue.Dequeue();
-                break;
-            case RythmKey.Left:
-                RythmManager.Instance.LeftKeysQueue.Dequeue();
-                break;
-            case RythmKey.Right:
-                RythmManager.Instance.RightKeysQueue.Dequeue();
-                break;
-        }
-
-        if (canPlayKey && wasPressed)
+        RythmKey rightSide = RythmManager.Instance.KeysQueue.Peek().rythmKey;
+        
+        if (canPlayKey && wasPressed && (rightSide == side))
         {
             //print("Acertou");
             BattleController.Instance.UpdateHype(true);
@@ -74,6 +67,24 @@ public class Key : MonoBehaviour
             //print("Errou");
             BattleController.Instance.UpdateHype(false);
         }
+        
+        switch(side)
+        {
+            case RythmKey.Up:
+                RythmManager.Instance.KeysQueue.Dequeue();
+                break;
+            case RythmKey.Down:
+                RythmManager.Instance.KeysQueue.Dequeue();
+                break;
+            case RythmKey.Left:
+                RythmManager.Instance.KeysQueue.Dequeue();
+                break;
+            case RythmKey.Right:
+                RythmManager.Instance.KeysQueue.Dequeue();
+                break;
+        }
+
+        
         RythmManager.Instance.CurrentMoveCount++;
         if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
         {
@@ -82,9 +93,9 @@ public class Key : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("Center"))
+        if(collision.CompareTag("Center") && RythmManager.Instance.KeysQueue.Peek() == this && canPlayKey == false)
         {
             GetComponent<Image>().sprite = activeSprite;
             canPlayKey = true;

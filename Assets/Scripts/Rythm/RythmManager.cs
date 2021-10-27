@@ -23,10 +23,7 @@ public class RythmManager : MonoBehaviour
     public GameObject LeftPoint;
     public GameObject RythmPanel;
 
-    public Queue<Key> UpKeysQueue = new Queue<Key>();
-    public Queue<Key> LeftKeysQueue = new Queue<Key>(); 
-    public Queue<Key> RightKeysQueue = new Queue<Key>();
-    public Queue<Key> DownKeysQueue = new Queue<Key>();
+    public Queue<Key> KeysQueue = new Queue<Key>();
 
     public int CurrentMoveCount = 0;
     
@@ -79,22 +76,22 @@ public class RythmManager : MonoBehaviour
             case 0:
                 temp = Instantiate(RythmKeyPrefab, UpPoint.transform.position, Quaternion.Euler(0, 0, 180), RythmPanel.transform).GetComponent<Key>();
                 temp.rythmKey = RythmKey.Up;
-                UpKeysQueue.Enqueue(temp);
+                KeysQueue.Enqueue(temp);
                 break;
             case 1:
                 temp = Instantiate(RythmKeyPrefab, DownPoint.transform.position, Quaternion.Euler(0, 0, 0), RythmPanel.transform).GetComponent<Key>();
                 temp.rythmKey = RythmKey.Down;
-                DownKeysQueue.Enqueue(temp);
+                KeysQueue.Enqueue(temp);
                 break;
             case 2:
                 temp = Instantiate(RythmKeyPrefab, LeftPoint.transform.position, Quaternion.Euler(0, 0, -90), RythmPanel.transform).GetComponent<Key>();
                 temp.rythmKey = RythmKey.Left;
-                LeftKeysQueue.Enqueue(temp);
+                KeysQueue.Enqueue(temp);
                 break;
             case 3:
                 temp = Instantiate(RythmKeyPrefab, RightPoint.transform.position, Quaternion.Euler(0, 0, 90), RythmPanel.transform).GetComponent<Key>();
                 temp.rythmKey = RythmKey.Right;
-                RightKeysQueue.Enqueue(temp);
+                KeysQueue.Enqueue(temp);
                 break;
             default:
                 print("Error");

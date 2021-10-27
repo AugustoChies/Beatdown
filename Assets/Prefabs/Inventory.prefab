@@ -49,6 +49,7 @@ MonoBehaviour:
   _equipment: {fileID: 11400000, guid: fd0f760d8edc6124fb975f96955cc8aa, type: 2}
   _hour: 6
   _day: 1
+  _gold: 100
   modificationsStatus: {fileID: 11400000, guid: a2adc788f36da4e49bec1b5adaf907a3, type: 2}
   _playerData:
     Health: 0
@@ -63,11 +64,15 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    IdleAnimation: 
     EquippedMoves: []
     Consumables: []
     Equipments: []
     EquippedItems: []
     ListOfObtainedEquipments: []
+    EquippedItemsID: 
+    ListOfObtainedEquipmentsID: 
+    EquippedMovesID: 
 --- !u!114 &1259713854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,3 +101,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7e2d27cf7e623c34fbdee6bca9d64031, type: 2}
   - {fileID: 11400000, guid: 7bed16e518d4cc542b61c6626c684a97, type: 2}
   - {fileID: 11400000, guid: 06b922713681cb24a862c154847f5280, type: 2}
+  ListOfAllRythms:
+  - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
+  - {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
+  - {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
