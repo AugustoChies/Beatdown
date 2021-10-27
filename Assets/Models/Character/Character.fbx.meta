@@ -45,6 +45,9 @@ ModelImporter:
   - first:
       74: -1147738109751221025
     second: Character_Rig|8_shoes_mesh_0Action
+  - first:
+      74: 4900484557848735426
+    second: Character_Rig|8_Hip_Hop_2
   externalObjects: {}
   materials:
     materialImportMode: 2
