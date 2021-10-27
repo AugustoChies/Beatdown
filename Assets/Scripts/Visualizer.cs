@@ -124,7 +124,7 @@ public class Visualizer : MonoBehaviour
             var norm = group.dataNormalized;
             var cube = cubes[group.index];        
             var scale = Vector3.one;
-            scale.y = norm * 6f;
+            scale.y = norm * 3f;
             // just lerp to smooth things out a bit
             scale = Vector3.Lerp(cube.transform.localScale, scale, 0.4f);
             cube.transform.localScale = scale;
