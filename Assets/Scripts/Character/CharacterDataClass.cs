@@ -13,14 +13,16 @@ public class CharacterDataClass
     public DamageModificationsStatus modificationStatuses = null;
     public AnimationCurve StatsCurve;
     public string IdleAnimation = "";
+    [HideInInspector] public List<BaseItem> Consumables; //not being used
+    [HideInInspector] public List<BaseItem> Equipments; //not being used
     public List<RythmMove> EquippedMoves = new List<RythmMove>();
-    public List<BaseItem> Consumables;
-    public List<BaseItem> Equipments;
-    public List<Equipment> EquippedItems;
-    public List<Equipment> ListOfObtainedEquipments;
-    public List<int> EquippedItemsID;
-    public List<int> ListOfObtainedEquipmentsID;
     public List<int> EquippedMovesID;
+    public List<RythmMove> ObtainedMoves = new List<RythmMove>();
+    public List<int> ObtainedMovesMovesID;
+    public List<Equipment> EquippedItems;
+    public List<int> EquippedItemsID;
+    public List<Equipment> ListOfObtainedEquipments;
+    public List<int> ListOfObtainedEquipmentsID;
 
     public void ChangeStats(float moreHealth, float moreAttack, float morePerformance, float moreDefense, float moreRythm)
     {

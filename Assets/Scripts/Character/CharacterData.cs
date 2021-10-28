@@ -30,6 +30,7 @@ public class CharacterData : ScriptableObject
     public AnimationCurve StatCurve => _statCurve;
 
     public List<RythmMove> EquippedMoves = null;
+    public List<RythmMove> ObtainedMoves = null;
 
     public List<Equipment> equippedItems = null;
     public List<Equipment> obtainedEquippedItems = null;

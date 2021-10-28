@@ -73,6 +73,7 @@ public class Inventory : MonoBehaviour
         _playerData.StatsCurve = _character.StatCurve;
         _playerData.IdleAnimation = _character.IdleAnimation;
         _playerData.EquippedMoves = _character.EquippedMoves;
+        _playerData.ObtainedMoves = _character.ObtainedMoves;
         _playerData.Consumables = _consumables.items;
         _playerData.Equipments = _equipment.items;
         _playerData.EquippedItems = _character.equippedItems;
@@ -89,6 +90,10 @@ public class Inventory : MonoBehaviour
         foreach (RythmMove move in _playerData.EquippedMoves)
         {
             PlayerData.EquippedMovesID.Add(_playerData.EquippedMoves.IndexOf(move));
+        }
+        foreach (RythmMove move in _playerData.ObtainedMoves)
+        {
+            PlayerData.ObtainedMovesMovesID.Add(_playerData.ObtainedMoves.IndexOf(move));
         }
 
         if(PlayerDataManager.Instance) PlayerDataManager.Instance.Save();

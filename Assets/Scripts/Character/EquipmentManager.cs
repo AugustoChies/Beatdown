@@ -14,7 +14,9 @@ public class EquipmentManager : MonoBehaviour
     public float RhyBonusTotal = 0;
     public List<Equipment> ListOfAllEquipments;
     public List<RythmMove> ListOfAllRythms;
-
+    
+    [Header("Debug")]
+    public bool unequipLastMoveAutomatically = false;
     private void Awake()
     {
         Instance = this;
@@ -49,6 +51,29 @@ public class EquipmentManager : MonoBehaviour
         Inventory.Instance.PlayerData.EquippedItemsID.Remove(ListOfAllEquipments.IndexOf(newEquip));
 
         RecalculateBonusStats();
+    }
+
+    public void EquipMove(RythmMove newMove)
+    {
+        if (Inventory.Instance.PlayerData.EquippedMoves.Count >= 3)
+        {
+            if(!unequipLastMoveAutomatically) return;
+            
+            Inventory.Instance.PlayerData.EquippedMoves.RemoveAt(0);
+            Inventory.Instance.PlayerData.EquippedMovesID.RemoveAt(0);
+        }
+        
+        Inventory.Instance.PlayerData.EquippedMoves.Add(newMove);
+        Inventory.Instance.PlayerData.EquippedMovesID.Add(ListOfAllRythms.IndexOf(newMove));
+        
+        StepsPanel.Instance.RefreshStatus();
+    }
+
+    public void UnequipMove(RythmMove newMove)
+    {
+        Inventory.Instance.PlayerData.EquippedMoves.Remove(newMove);
+        Inventory.Instance.PlayerData.EquippedMovesID.Remove(ListOfAllRythms.IndexOf(newMove));
+        StepsPanel.Instance.RefreshStatus();
     }
 
     public void RecalculateBonusStats()

@@ -65,14 +65,16 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     IdleAnimation: 
-    EquippedMoves: []
     Consumables: []
     Equipments: []
-    EquippedItems: []
-    ListOfObtainedEquipments: []
-    EquippedItemsID: 
-    ListOfObtainedEquipmentsID: 
+    EquippedMoves: []
     EquippedMovesID: 
+    ObtainedMoves: []
+    ObtainedMovesMovesID: 
+    EquippedItems: []
+    EquippedItemsID: 
+    ListOfObtainedEquipments: []
+    ListOfObtainedEquipmentsID: 
 --- !u!114 &1259713854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +104,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7bed16e518d4cc542b61c6626c684a97, type: 2}
   - {fileID: 11400000, guid: 06b922713681cb24a862c154847f5280, type: 2}
   ListOfAllRythms:
+  - {fileID: 11400000, guid: 0d862147199fb1d42837065ede6a54c3, type: 2}
+  - {fileID: 11400000, guid: 264e087c35905a943ab18cd230f25f1f, type: 2}
+  - {fileID: 11400000, guid: c813b3492f8bddc4faa0c20cd94069a0, type: 2}
   - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
   - {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
   - {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
+  unequipLastMoveAutomatically: 1

@@ -358,14 +358,16 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       IdleAnimation: 
-      EquippedMoves: []
       Consumables: []
       Equipments: []
-      EquippedItems: []
-      ListOfObtainedEquipments: []
-      EquippedItemsID: 
-      ListOfObtainedEquipmentsID: 
+      EquippedMoves: []
       EquippedMovesID: 
+      ObtainedMoves: []
+      ObtainedMovesMovesID: 
+      EquippedItems: []
+      EquippedItemsID: 
+      ListOfObtainedEquipments: []
+      ListOfObtainedEquipmentsID: 
   QuickSaveKey: 286
   QuickDeleteKey: 287
 --- !u!4 &2033648965
