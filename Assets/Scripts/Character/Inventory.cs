@@ -113,15 +113,11 @@ public class Inventory : MonoBehaviour
         characterData.EquippedItems.Clear();
         characterData.EquippedMoves.Clear();
         characterData.ListOfObtainedEquipments.Clear();
+        characterData.ObtainedMoves.Clear();
 
         foreach (int i in characterData.EquippedItemsID)
         {
             characterData.EquippedItems.Add(EquipmentManager.Instance.ListOfAllEquipments[i]);
-        }
-        
-        foreach (int i in characterData.EquippedMovesID)
-        {
-            characterData.EquippedMoves.Add(EquipmentManager.Instance.ListOfAllRythms[i]);
         }
         
         foreach (int i in characterData.ListOfObtainedEquipmentsID)
@@ -129,6 +125,16 @@ public class Inventory : MonoBehaviour
             characterData.ListOfObtainedEquipments.Add(EquipmentManager.Instance.ListOfAllEquipments[i]);
         }
         
+        foreach (int i in characterData.EquippedMovesID)
+        {
+            characterData.EquippedMoves.Add(EquipmentManager.Instance.ListOfAllRythms[i]);
+        }
+        
+        foreach (int i in characterData.ObtainedMovesMovesID)
+        {
+            characterData.ObtainedMoves.Add(EquipmentManager.Instance.ListOfAllRythms[i]);
+        }
+
         EquipmentManager.Instance.RecalculateBonusStats();
         //print("Game Loaded Successfully");
     }
