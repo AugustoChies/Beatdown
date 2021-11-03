@@ -19,4 +19,22 @@ public class GangMemberPanel : MonoBehaviour
 
     [SerializeField]
     private GangMemberInfo _infoObject;
+
+    private void Awake()
+    {
+        _name.text = _infoObject.Name;
+        _moneyReward.text = string.Concat("$" + _infoObject.BattleInfo.RewardMoney);
+        if (_infoObject.BattleInfo.RewardMove != null)
+        {
+            _itemReward.text = string.Concat("Reward: " ,_infoObject.BattleInfo.RewardMove.moveName);
+        }
+        else
+        {
+            _itemReward.text ="Reward: None";
+        }
+
+        _portrait.sprite = _infoObject.Portarit;
+        //Rank Puxa uma imagem especifica de uma lista baseando o índice no numero do StrenghtLevel do infoobject - 1;
+
+    }
 }

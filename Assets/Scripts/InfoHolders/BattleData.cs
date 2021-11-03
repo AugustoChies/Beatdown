@@ -8,5 +8,5 @@ public class BattleData : ScriptableObject
     public CharacterData enemyData = null;
     public GameObject CharacterModel = null;
     public int RewardMoney = 0;
-    public BaseItem RewardItem = null;
+    public RythmMove RewardMove = null;
 }
