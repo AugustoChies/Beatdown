@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
+  m_Name: BaseMove
+  m_EditorClassIdentifier: 
+  moveName: baseMove1
+  moveAudioClip: {fileID: 8300000, guid: f6adeedc704619f4190456bc7302b010, type: 3}
+  moveAnimation: TestMove
+  baseDamage: 30
+  performanceDamage: 20
+  extraDamage: 20
+  effect: 0
+  rythmData:
+  - WaitTimeToNextNote: 1
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.6
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.6
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.75
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.15
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.15
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.15
+    keySpeed: 100
+    score: 1
+  - WaitTimeToNextNote: 0.15
+    keySpeed: 100
+    score: 1
