@@ -18,8 +18,9 @@ public class MapButtonMethods : MonoBehaviour
         Inventory.Instance.OnUpdateTime -= UpdateTime;
     }
 
-    public void StartBattleButton()
+    public void StartBattleButton(BattleData battleData)
     {
+        BattleDataHolder.Instance.CurrentBattleData = battleData;
         SceneManager.LoadScene("BattleScene");
     }
 

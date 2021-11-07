@@ -50,7 +50,7 @@ MonoBehaviour:
   - WaitTimeToNextNote: 0.75
     keySpeed: 100
     score: 1
-  - WaitTimeToNextNote: 3.75
+  - WaitTimeToNextNote: 1
     keySpeed: 100
     score: 1
   - WaitTimeToNextNote: 0.25
