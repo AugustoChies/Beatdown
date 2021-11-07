@@ -84,6 +84,7 @@ public class EquipmentManager : MonoBehaviour
         HPBonusTotal = 0;
         RhyBonusTotal = 0;
 
+        if(StylesPanel.Instance) StylesPanel.Instance.RefreshStatus();
         if (Inventory.Instance.PlayerData.EquippedItems.Count == 0) return;
         
         foreach (Equipment equip in Inventory.Instance.PlayerData.EquippedItems)
@@ -94,7 +95,5 @@ public class EquipmentManager : MonoBehaviour
             RhyBonusTotal += equip.addedRhy;
             HPBonusTotal += equip.addedHP;
         }
-        
-        if(StylesPanel.Instance) StylesPanel.Instance.RefreshStatus();
     }
 }

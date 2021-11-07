@@ -55,6 +55,13 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         if (!PlayerDataManager.Instance) InitializeDataDefault();
+        else PlayerDataManager.Instance.InitializeData();
+    }
+
+    public void ResetData()
+    {
+        _isInitialized = false;
+        InitializeDataDefault();
     }
 
     public void InitializeDataDefault()
@@ -63,7 +70,20 @@ public class Inventory : MonoBehaviour
        
         _isInitialized = true;
         //print("Initializing Default");
+        
+        _playerData.EquippedItems.Clear();
+        _playerData.EquippedMoves.Clear();
+        _playerData.ListOfObtainedEquipments.Clear();
+        _playerData.ObtainedMoves.Clear();
+        _playerData.EquippedItemsID.Clear();
+        _playerData.EquippedMovesID.Clear();
+        _playerData.ListOfObtainedEquipmentsID.Clear();
+        _playerData.ObtainedMovesMovesID.Clear();
 
+        _hour = _character.defaultHour;
+        _day = _character.defaultDay;
+        _gold = _character.defaultGold;
+        
         _playerData.Attack = _character.Attack;
         _playerData.Health = _character.Health;
         _playerData.Defense = _character.Defense;
@@ -72,28 +92,28 @@ public class Inventory : MonoBehaviour
         _playerData.modificationStatuses = modificationsStatus;
         _playerData.StatsCurve = _character.StatCurve;
         _playerData.IdleAnimation = _character.IdleAnimation;
-        _playerData.EquippedMoves = _character.EquippedMoves;
-        _playerData.ObtainedMoves = _character.ObtainedMoves;
-        _playerData.Consumables = _consumables.items;
-        _playerData.Equipments = _equipment.items;
-        _playerData.EquippedItems = _character.equippedItems;
-        _playerData.ListOfObtainedEquipments = _character.obtainedEquippedItems;
+        _playerData.EquippedMoves = new List<RythmMove>(_character.EquippedMoves);
+        _playerData.ObtainedMoves = new List<RythmMove>(_character.ObtainedMoves);
+        _playerData.Consumables = new List<BaseItem>(_consumables.items);
+        _playerData.Equipments = new List<BaseItem>(_equipment.items);
+        _playerData.EquippedItems = new List<Equipment>(_character.equippedItems);
+        _playerData.ListOfObtainedEquipments = new List<Equipment>(_character.obtainedEquippedItems);
 
         foreach (Equipment equip in _playerData.EquippedItems)
         {
-            PlayerData.EquippedItemsID.Add(_playerData.EquippedItems.IndexOf(equip));
+            PlayerData.EquippedItemsID.Add(EquipmentManager.Instance.ListOfAllEquipments.IndexOf(equip));
         }
         foreach (Equipment equip in _playerData.ListOfObtainedEquipments)
         {
-            PlayerData.ListOfObtainedEquipmentsID.Add(_playerData.ListOfObtainedEquipments.IndexOf(equip));
+            PlayerData.ListOfObtainedEquipmentsID.Add(EquipmentManager.Instance.ListOfAllEquipments.IndexOf(equip));
         }
         foreach (RythmMove move in _playerData.EquippedMoves)
         {
-            PlayerData.EquippedMovesID.Add(_playerData.EquippedMoves.IndexOf(move));
+            PlayerData.EquippedMovesID.Add(EquipmentManager.Instance.ListOfAllRythms.IndexOf(move));
         }
         foreach (RythmMove move in _playerData.ObtainedMoves)
         {
-            PlayerData.ObtainedMovesMovesID.Add(_playerData.ObtainedMoves.IndexOf(move));
+            PlayerData.ObtainedMovesMovesID.Add(EquipmentManager.Instance.ListOfAllRythms.IndexOf(move));
         }
 
         if(PlayerDataManager.Instance) PlayerDataManager.Instance.Save();
@@ -102,6 +122,7 @@ public class Inventory : MonoBehaviour
 
     public void InitializeData(CharacterDataClass characterData, int hour, int day, int gold)
     {
+        if (_isInitialized) return;
         _isInitialized = true;
 
         _playerData = characterData;

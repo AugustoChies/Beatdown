@@ -29,6 +29,8 @@ public class StylesPanel : MonoBehaviour
 
     public void RefreshStatus()
     {
+        RefreshEquipmentList();
+
         foreach (GameObject g in ButtonsList)
         {
             g.GetComponent<EquipmentButton>().ChangeStylePanelStatus();

@@ -53,6 +53,8 @@ public class StatsPentagon : MonoBehaviour
 
     private void OnEnable()
     {
+        EquipmentManager.Instance.RecalculateBonusStats();
+
         if (Inventory.Instance != null)
         {
             AtkCurrentValue = Inventory.Instance.PlayerData.Attack + EquipmentManager.Instance.AtkBonusTotal;

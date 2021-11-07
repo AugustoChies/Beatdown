@@ -20,6 +20,6 @@ public class OptionsCanvas : MonoBehaviour
     public void Quit()
     {
         print("You can't quit while in editor");
-        Application.Quit();
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 }

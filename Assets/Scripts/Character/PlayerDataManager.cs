@@ -40,6 +40,8 @@ public class PlayerDataManager : MonoBehaviour
 
     private bool isBusy = false;
 
+    public GameObject waitScreen;
+
     private void Awake()
     {
         if(Instance == null)
@@ -51,11 +53,6 @@ public class PlayerDataManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
-
-    private void Start()
-    {
-        InitializeData();
     }
 
     private void Update()
@@ -123,14 +120,16 @@ public class PlayerDataManager : MonoBehaviour
             else
             {
                 print("Creating New Save Game, Please Wait");
+                waitScreen.SetActive(true);
 
                 File.Create(JsonPath);
                 jsonString = JsonUtility.ToJson(PlayerData);
 
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(2f);
 
                 File.WriteAllText(JsonPath, jsonString);
                 
+                waitScreen.SetActive(false);
                 print("Game Saved");
             }
 
