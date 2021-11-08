@@ -174,6 +174,11 @@ MonoBehaviour:
   _itemReward: {fileID: 1260689830968828265}
   _portrait: {fileID: 2523375166605688806}
   _rank: {fileID: 108426308207847059}
+  rankSprites:
+  - {fileID: 21300000, guid: 93c65e19bf9c0ec40a84c8b78c8af42d, type: 3}
+  - {fileID: 21300000, guid: cc994e49fa06bf4498c8fb8efbb9eaf7, type: 3}
+  - {fileID: 21300000, guid: a1a99bfde970756408294f12146d28a5, type: 3}
+  - {fileID: 21300000, guid: c26b1422e77ac0e408ea9b50a14b1adb, type: 3}
   _infoObject: {fileID: 11400000, guid: 572b5fb407ae84d4fbab735cf3506e2a, type: 2}
 --- !u!114 &2677689650181948601
 MonoBehaviour:
@@ -430,7 +435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 93c65e19bf9c0ec40a84c8b78c8af42d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

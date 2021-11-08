@@ -18,6 +18,9 @@ public class GangMemberPanel : MonoBehaviour
     private Image _rank;
 
     [SerializeField]
+    private List<Sprite> rankSprites;
+
+    [SerializeField]
     private GangMemberInfo _infoObject;
 
     private void Awake()
@@ -34,6 +37,7 @@ public class GangMemberPanel : MonoBehaviour
         }
 
         _portrait.sprite = _infoObject.Portarit;
+        _rank.sprite = rankSprites[_infoObject.StrenghtLevel];
         //Rank Puxa uma imagem especifica de uma lista baseando o índice no numero do StrenghtLevel do infoobject - 1;
 
     }

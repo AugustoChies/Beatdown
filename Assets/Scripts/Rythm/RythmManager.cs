@@ -9,12 +9,10 @@ public class RythmManager : MonoBehaviour
 
     [SerializeField]
     private DamageModificationsStatus _modifiers;
-    public float score;
     private float _speedModifier = 1.0f;
 
     public RythmMove RythmToPlay;
 
-    public Text scoreText;
     public GameObject RythmKeyPrefab;
     public GameObject CenterPoint;
     public GameObject UpPoint;
@@ -31,19 +29,12 @@ public class RythmManager : MonoBehaviour
     {
         Instance = this;
         Application.targetFrameRate = 60;
-        UpdateScore(0);
     }
 
     private void LateUpdate()
     {
         Key.canPlayKeyThisFrame = true;
         //Debug.Log("Upq " +  UpKeysQueue.Count);
-    }
-
-    public void UpdateScore(float value)
-    {
-        score += value;
-        scoreText.text = "Score: " + score;
     }
 
     public void PlayMove(RythmMove move, bool isPlayer)

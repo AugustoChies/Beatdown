@@ -206,7 +206,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &80092409
@@ -2536,7 +2536,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Steps
+  m_text: Moves
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00f5d65338ee29040b74e1ae45a18738, type: 2}
   m_sharedMaterial: {fileID: 2201150544475143231, guid: 00f5d65338ee29040b74e1ae45a18738, type: 2}
@@ -2670,7 +2670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'And Here Would Go My Styles...
+  m_text: 'And Here Would Go My Style...
 
 
     If I had Any'
@@ -3080,7 +3080,7 @@ MonoBehaviour:
 
     If I had Any'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 00f5d65338ee29040b74e1ae45a18738, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 15d759f7a85a1084aadd8efeb6ff8426, type: 2}
   m_sharedMaterial: {fileID: 2201150544475143231, guid: 00f5d65338ee29040b74e1ae45a18738, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3144,7 +3144,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &760693527694384980
@@ -3785,12 +3785,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'And Here Would Go My Styles...
+  m_text: 'And Here Would Go My Moves...
 
 
     If I had Any'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 00f5d65338ee29040b74e1ae45a18738, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 15d759f7a85a1084aadd8efeb6ff8426, type: 2}
   m_sharedMaterial: {fileID: 2201150544475143231, guid: 00f5d65338ee29040b74e1ae45a18738, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3854,7 +3854,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4505102703618820571

@@ -330,7 +330,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 23036a9152bd39142abcc330d0b01891, type: 3}
+    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
     m_FontSize: 100
     m_FontStyle: 1
     m_BestFit: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 23036a9152bd39142abcc330d0b01891, type: 3}
+    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
     m_FontSize: 100
     m_FontStyle: 1
     m_BestFit: 0
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5904803195429775820, guid: 2f3f07003f57d1a4e93c2b46a93673aa, type: 3}
+  m_Sprite: {fileID: 8885775522293648749, guid: 0e0de62b9ef19444c8baac28989a12dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -952,7 +952,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 23036a9152bd39142abcc330d0b01891, type: 3}
+    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
     m_FontSize: 100
     m_FontStyle: 1
     m_BestFit: 0
@@ -1108,7 +1108,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 23036a9152bd39142abcc330d0b01891, type: 3}
+    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
     m_FontSize: 100
     m_FontStyle: 1
     m_BestFit: 0
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5185297081406925427, guid: 76c4fbd9b14a78e4599016635879ec59, type: 3}
+  m_Sprite: {fileID: -7476015298894525668, guid: deab39cc7d61753498c4025f0b5f7be8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5904803195429775820, guid: 2f3f07003f57d1a4e93c2b46a93673aa, type: 3}
+  m_Sprite: {fileID: 6178573378667908637, guid: 9ad1797170e40054e88664066852a4f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2340,7 +2340,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 23036a9152bd39142abcc330d0b01891, type: 3}
+    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
     m_FontSize: 100
     m_FontStyle: 1
     m_BestFit: 0
@@ -2963,7 +2963,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 133.5}
-  m_SizeDelta: {x: 468.86, y: 92.7436}
+  m_SizeDelta: {x: 579.6676, y: 92.7436}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4863403589486817877
 CanvasRenderer:
@@ -2995,8 +2995,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: THE GRASSHOPPERS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 00f5d65338ee29040b74e1ae45a18738, type: 2}
-  m_sharedMaterial: {fileID: 2201150544475143231, guid: 00f5d65338ee29040b74e1ae45a18738, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 15d759f7a85a1084aadd8efeb6ff8426, type: 2}
+  m_sharedMaterial: {fileID: 3976151779255652298, guid: 15d759f7a85a1084aadd8efeb6ff8426, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

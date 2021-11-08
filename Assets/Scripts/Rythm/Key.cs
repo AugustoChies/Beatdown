@@ -60,7 +60,6 @@ public class Key : MonoBehaviour
             //print("Acertou");
             BattleController.Instance.UpdateHype(true);
             BattleController.Instance.currentmoveScore++;
-            RythmManager.Instance.UpdateScore(score);
         }
         else
         {

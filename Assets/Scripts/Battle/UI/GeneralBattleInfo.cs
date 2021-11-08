@@ -47,7 +47,7 @@ public class GeneralBattleInfo : UIElementScript
         if (combo > 0)
         {
             _comboText.enabled = true;
-            _comboText.text = "Combo: " + combo;   
+            _comboText.text = "Combo " + combo;   
         }
         else
         {
