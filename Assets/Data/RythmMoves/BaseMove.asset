@@ -12,71 +12,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
   m_Name: BaseMove
   m_EditorClassIdentifier: 
-  moveName: baseMove1
+  moveName: Apagando o cigarro
   moveAudioClip: {fileID: 8300000, guid: f6adeedc704619f4190456bc7302b010, type: 3}
   moveAnimation: baseMove1
   baseDamage: 30
-  performanceDamage: 20
-  extraDamage: 20
+  performanceDamage: 5
+  extraDamage: 10
   effect: 0
   rythmData:
-  - WaitTimeToNextNote: 1
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.7
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.4
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.7
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.6
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.4
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.6
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.75
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.15
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.15
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.15
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.15
-    keySpeed: 100
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 200
     score: 1

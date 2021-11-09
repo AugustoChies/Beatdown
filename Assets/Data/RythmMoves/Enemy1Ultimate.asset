@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enemy1Ultimate
   m_EditorClassIdentifier: 
   moveName: Test Move2
-  moveAudioClip: {fileID: 8300000, guid: 04aa35493c2454440914dceaf0649de0, type: 3}
+  moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   moveAnimation: TestMove
   baseDamage: 20
   performanceDamage: 0

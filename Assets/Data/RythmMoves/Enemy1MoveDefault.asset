@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Enemy1MoveDefault
   m_EditorClassIdentifier: 
   moveName: Test Move
-  moveAudioClip: {fileID: 8300000, guid: 8fae7696a891a3a44aeaeb6586d127e0, type: 3}
+  moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   moveAnimation: TestMove
-  baseDamage: 10
+  baseDamage: 15
   performanceDamage: 0
   extraDamage: 0
   effect: 0
