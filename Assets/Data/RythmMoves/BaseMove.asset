@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: baseMove1
   moveAudioClip: {fileID: 8300000, guid: f6adeedc704619f4190456bc7302b010, type: 3}
-  moveAnimation: TestMove
+  moveAnimation: baseMove1
   baseDamage: 30
   performanceDamage: 20
   extraDamage: 20
