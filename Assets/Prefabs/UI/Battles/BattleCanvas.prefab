@@ -336,6 +336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConclusionCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 537969276466707606, guid: af75a78313709e34985abe8a979cb19f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4653433387666475134, guid: af75a78313709e34985abe8a979cb19f, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
