@@ -70,19 +70,19 @@ public class StatsPentagon : MonoBehaviour
     public void UpdateAllStats()
     {
         UpdateOneStat(Stats.Atk, AtkCurrentValue);
-        AtkText.text = AtkCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.AtkBonusTotal + ")</color>";
+        AtkText.text = "ATK: " + AtkCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.AtkBonusTotal + ")</color>";
 
         UpdateOneStat(Stats.Def, DefCurrentValue);
-        DefText.text = DefCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.DefBonusTotal + ")</color>";
+        DefText.text = "DEF: " + DefCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.DefBonusTotal + ")</color>";
 
         UpdateOneStat(Stats.Rhy, RhyCurrentValue);
-        RhyText.text = RhyCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.RhyBonusTotal + ")</color>";
+        RhyText.text = "RTH: " + RhyCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.RhyBonusTotal + ")</color>";
 
         UpdateOneStat(Stats.Hp, HpCurrentValue);
-        HpText.text = HpCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.HPBonusTotal + ")</color>";
+        HpText.text = "HP: " + HpCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.HPBonusTotal + ")</color>";
 
         UpdateOneStat(Stats.Hype, HypeCurrentValue);
-        HypeText.text = HypeCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.HypeBonusTotal + ")</color>";
+        HypeText.text = "PRF: " + HypeCurrentValue.ToString("F0") + "<color=green> (" + EquipmentManager.Instance.HypeBonusTotal + ")</color>";
     }
 
     public void UpdateOneStat(Stats _statToDebug, float StatToDebugValue)

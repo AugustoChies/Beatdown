@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GogglesTest 1
   m_EditorClassIdentifier: 
   equipmentName: GoggleTest1
-  equipmentStatsBonusText: Hp + 100
+  equipmentStatsBonusText: HP + 100
+  goldCost: 50
   addedAtk: 0
   addedDef: 0
   addedHype: 0
