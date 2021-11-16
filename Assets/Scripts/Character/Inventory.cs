@@ -21,6 +21,9 @@ public class Inventory : MonoBehaviour
     private int _day = 1;
     public int Day => _day;
     [SerializeField]
+    private int _championVictories = 0;
+    public int ChampionVictories => _championVictories;
+    [SerializeField]
     private int _gold = 100;
     public Action OnUpdateTime;
     public DamageModificationsStatus modificationsStatus = null;
@@ -83,6 +86,7 @@ public class Inventory : MonoBehaviour
         _hour = _character.defaultHour;
         _day = _character.defaultDay;
         _gold = _character.defaultGold;
+        _championVictories = _character.defaultVictories;
         
         _playerData.Attack = _character.Attack;
         _playerData.Health = _character.Health;
@@ -120,7 +124,7 @@ public class Inventory : MonoBehaviour
         EquipmentManager.Instance.RecalculateBonusStats();
     }
 
-    public void InitializeData(CharacterDataClass characterData, int hour, int day, int gold)
+    public void InitializeData(CharacterDataClass characterData, int hour, int day, int gold, int bosses)
     {
         if (_isInitialized) return;
         _isInitialized = true;
@@ -129,6 +133,7 @@ public class Inventory : MonoBehaviour
         _hour = hour;
         _day = day;
         _gold = gold;
+        _championVictories = bosses;
         characterData.modificationStatuses = modificationsStatus;
 
         characterData.EquippedItems.Clear();

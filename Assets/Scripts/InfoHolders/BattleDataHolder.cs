@@ -6,6 +6,8 @@ public class BattleDataHolder : MonoBehaviour
 {
     public static BattleDataHolder Instance = null;
     public BattleData CurrentBattleData = null;
+    public ChampionInfo[] championInfos = null;
+    public bool IsChampionBattle = false;
 
     private void Awake()
     {

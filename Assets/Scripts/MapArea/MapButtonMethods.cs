@@ -21,6 +21,14 @@ public class MapButtonMethods : MonoBehaviour
     public void StartBattleButton(BattleData battleData)
     {
         BattleDataHolder.Instance.CurrentBattleData = battleData;
+        BattleDataHolder.Instance.IsChampionBattle = false;
+        SceneManager.LoadScene("BattleScene");
+    }
+
+    public void StartChampionBattleButton()
+    {
+        BattleDataHolder.Instance.CurrentBattleData = BattleDataHolder.Instance.championInfos[Inventory.Instance.ChampionVictories].BattleInfo;
+        BattleDataHolder.Instance.IsChampionBattle = true;
         SceneManager.LoadScene("BattleScene");
     }
 

@@ -949,6 +949,22 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 335106655}
+    - target: {fileID: 5461961204112730118, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461961204112730118, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartChampionBattleButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461961204112730118, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461961204112730118, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
 --- !u!1001 &8560044881521955182

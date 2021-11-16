@@ -38,6 +38,8 @@ public class CharacterData : ScriptableObject
     public int defaultDay = 1;
     public int defaultHour = 6;
     public int defaultGold = 100;
+    public int defaultVictories = 0;
+
     public CharacterData(float health, float attack, float performance, float defense, float rythm,
                             string anim, AnimationCurve curve, List<RythmMove> eMoves,
                             List<Equipment> eItems)

@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentBattleData: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+  championInfos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
