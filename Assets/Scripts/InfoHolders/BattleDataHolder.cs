@@ -8,6 +8,7 @@ public class BattleDataHolder : MonoBehaviour
     public BattleData CurrentBattleData = null;
     public ChampionInfo[] championInfos = null;
     public bool IsChampionBattle = false;
+    public int RegularBattleDuration = 4;
 
     private void Awake()
     {

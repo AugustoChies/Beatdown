@@ -46,12 +46,25 @@ public class ConclusionBattleCanvas : UIElementScript
                 }
                 _moveReward.text = newMove.moveName;
             }
+
+            if(BattleDataHolder.Instance.IsChampionBattle)
+            {
+                inventory.ChampionVictories += 1;
+            }
         }
     }
 
     public void DoneButton()
     {
-        Inventory.Instance.EndDay();
+        if (BattleDataHolder.Instance.IsChampionBattle)
+        {
+            Inventory.Instance.EndDay();
+        }
+        else
+        {
+            Inventory.Instance.PassTime(BattleDataHolder.Instance.RegularBattleDuration);
+        }
+        
         SceneManager.LoadScene(afterBattleScene);
     }
 }

@@ -6,6 +6,8 @@ public class MapButtonMethods : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI _dateText = null;
+    [SerializeField]
+    private GameObject _gameover = null;
 
     private void Start()
     {
@@ -45,5 +47,21 @@ public class MapButtonMethods : MonoBehaviour
         }
 
         _dateText.text = "Day " + day + "  " + hour + " " + ampm;
+
+        GameOverCheck();
+    }
+
+    public void GameOverReload()
+    {        
+        PlayerDataManager.Instance.LoadGame();
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
+
+    private void GameOverCheck()
+    {
+        if(Inventory.Instance.Day > BattleDataHolder.Instance.championInfos[Inventory.Instance.ChampionVictories].DayLimit)
+        {
+            _gameover.SetActive(true);
+        }
     }
 }

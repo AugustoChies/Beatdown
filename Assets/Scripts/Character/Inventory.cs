@@ -19,10 +19,8 @@ public class Inventory : MonoBehaviour
     public int Hour => _hour;
     [SerializeField]
     private int _day = 1;
-    public int Day => _day;
-    [SerializeField]
-    private int _championVictories = 0;
-    public int ChampionVictories => _championVictories;
+    public int Day => _day;    
+    public int ChampionVictories = 0;
     [SerializeField]
     private int _gold = 100;
     public Action OnUpdateTime;
@@ -86,7 +84,7 @@ public class Inventory : MonoBehaviour
         _hour = _character.defaultHour;
         _day = _character.defaultDay;
         _gold = _character.defaultGold;
-        _championVictories = _character.defaultVictories;
+        ChampionVictories = _character.defaultVictories;
         
         _playerData.Attack = _character.Attack;
         _playerData.Health = _character.Health;
@@ -133,7 +131,7 @@ public class Inventory : MonoBehaviour
         _hour = hour;
         _day = day;
         _gold = gold;
-        _championVictories = bosses;
+        ChampionVictories = bosses;
         characterData.modificationStatuses = modificationsStatus;
 
         characterData.EquippedItems.Clear();
