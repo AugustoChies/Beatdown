@@ -8,9 +8,9 @@ public class Dialogue : ScriptableObject
     [System.Serializable]
     public struct DialogueStruct
     {
-        public string speakerName;
+        //public string speakerName;
         public string dialogueText;
-        public bool isTopSpeaker;
+        public bool isRightSpeaker;
     }
 
     public DialogueStruct[] dialogues;
