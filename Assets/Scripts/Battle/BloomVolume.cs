@@ -7,12 +7,14 @@ public class BloomVolume : MonoBehaviour
 {
 
     public Volume volume;
+
+    public static BloomVolume instance;
+
     Bloom bloom;
+    public static bool pullingUp = false;
 
     void Start()
     {
-        
-
         if (volume.profile.TryGet<Bloom>(out bloom))
         {
             //bloom.intensity.value;
@@ -22,6 +24,14 @@ public class BloomVolume : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        bloom.intensity.value = Mathf.PingPong(Time.time * 2, 8);
+        if (pullingUp)
+        {
+            print("UP");
+            bloom.intensity.value = Mathf.PingPong(Time.time * 2, 8);
+        }
+        else
+        {
+            bloom.intensity.value = Mathf.PingPong(Time.time * 2, -8);
+        }
     }
 }

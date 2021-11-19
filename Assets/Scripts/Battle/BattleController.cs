@@ -155,10 +155,12 @@ public class BattleController : MonoBehaviour
                 if(correctInputCombo > 4)
                 {
                     hypeBarValue += 0.02f;
+                    BloomVolume.pullingUp = true;
                 }
                 else
                 {
                     hypeBarValue+= 0.01f;
+                    BloomVolume.pullingUp = false;
                 }
                 correctInputCombo++;
             }
