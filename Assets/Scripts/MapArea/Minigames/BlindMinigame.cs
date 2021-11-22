@@ -15,6 +15,13 @@ public class BlindMinigame : Minigame
     public TextMeshProUGUI text = null;
     public Image arrow = null;
 
+    [SerializeField]
+    private Color _defaultColor = Color.white;
+    [SerializeField]
+    private Color _wrongColor = Color.red;
+    [SerializeField]
+    private Color _rightColor = Color.green;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,16 +60,37 @@ public class BlindMinigame : Minigame
     {
         if (!inputActive) return;
 
-        if(key == Inputs[currentInputIndex])
+        arrow.enabled = true;
+        switch (Inputs[currentInputIndex])
         {
-            currentInputIndex++;
-            if(currentInputIndex >= Inputs.Count)
-            {
+            case RythmKey.Down:
+                arrow.rectTransform.localEulerAngles = new Vector3(0, 0, 0);
+                break;
+            case RythmKey.Up:
+                arrow.rectTransform.localEulerAngles = new Vector3(0, 0, 180);
+                break;
+            case RythmKey.Left:
+                arrow.rectTransform.localEulerAngles = new Vector3(0, 0, 270);
+                break;
+            case RythmKey.Right:
+                arrow.rectTransform.localEulerAngles = new Vector3(0, 0, 90);
+                break;
+            default:
+                break;
+        }
+
+        if (key == Inputs[currentInputIndex])
+        {
+            currentInputIndex++;            
+            arrow.color = _rightColor;
+            if (currentInputIndex >= Inputs.Count)
+            {                
                 StartCoroutine(NextRound(true));
             }
         }
         else
         {
+            arrow.color = _wrongColor;
             StartCoroutine(NextRound(false));
         }
     }
@@ -74,14 +102,15 @@ public class BlindMinigame : Minigame
 
     IEnumerator NextRound(bool win)
     {
-        inputActive = false;
-        yield return new WaitForSeconds(1);
+        inputActive = false;        
 
         if(win)
         {
-            if(Inputs.Count >= highestInputAmount)
+            yield return new WaitForSeconds(1);
+
+            if (Inputs.Count >= highestInputAmount)
             {
-                performance = Inputs.Count / highestInputAmount;
+                performance = (float)Inputs.Count / (float)highestInputAmount;
                 ApplyGains();
             }
             else
@@ -92,7 +121,8 @@ public class BlindMinigame : Minigame
         }
         else
         {
-            performance = Inputs.Count / highestInputAmount;
+            yield return new WaitForSeconds(1);
+            performance = (float)Inputs.Count / (float)highestInputAmount;
             ApplyGains();
         }
     }
@@ -106,9 +136,10 @@ public class BlindMinigame : Minigame
 
     IEnumerator ShowCoroutine()
     {
+        arrow.color = _defaultColor;
         for (int i = 0; i < Inputs.Count; i++)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.25f);
             arrow.enabled = true;
             switch (Inputs[i])
             {
@@ -127,10 +158,11 @@ public class BlindMinigame : Minigame
                 default:
                     break;
             }
+            yield return new WaitForSeconds(0.75f);
+            arrow.enabled = false;
         }
-        yield return new WaitForSeconds(1);
         text.text = "Repeat!";
-        arrow.enabled = false;
+        currentInputIndex = 0;
         inputActive = true;
     }
 }

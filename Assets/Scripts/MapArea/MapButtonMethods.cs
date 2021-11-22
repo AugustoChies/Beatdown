@@ -52,7 +52,8 @@ public class MapButtonMethods : MonoBehaviour
     }
 
     public void GameOverReload()
-    {        
+    {
+        Inventory.Instance._isInitialized = false;
         PlayerDataManager.Instance.LoadGame();
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }

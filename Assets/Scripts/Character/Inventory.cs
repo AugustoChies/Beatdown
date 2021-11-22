@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
 
     public static Inventory Instance = null;
 
-    private bool _isInitialized;
+    public bool _isInitialized;
 
     public int Gold
     {
@@ -160,6 +160,7 @@ public class Inventory : MonoBehaviour
         }
 
         EquipmentManager.Instance.RecalculateBonusStats();
+        OnUpdateTime?.Invoke();
         //print("Game Loaded Successfully");
     }
 

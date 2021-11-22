@@ -186,11 +186,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 23036a9152bd39142abcc330d0b01891, type: 3}
-    m_FontSize: 80
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: dab5938d9d7bd154fb8efdb106ab4706, type: 3}
+    m_FontSize: 48
+    m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 80
+    m_MinSize: 0
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Base
+  m_Text: 99
 --- !u!1 &1196904955793660312
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,11 +523,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
-    m_FontSize: 80
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: dab5938d9d7bd154fb8efdb106ab4706, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 80
+    m_MinSize: 6
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -602,11 +602,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 23036a9152bd39142abcc330d0b01891, type: 3}
-    m_FontSize: 80
+    m_Font: {fileID: 12800000, guid: dab5938d9d7bd154fb8efdb106ab4706, type: 3}
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 80
+    m_MinSize: 48
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Base
+  m_Text: 99
 --- !u!1 &3623071227044657583
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,11 +681,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
-    m_FontSize: 80
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: dab5938d9d7bd154fb8efdb106ab4706, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 80
+    m_MinSize: 50
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -760,11 +760,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 23036a9152bd39142abcc330d0b01891, type: 3}
-    m_FontSize: 80
+    m_Font: {fileID: 12800000, guid: dab5938d9d7bd154fb8efdb106ab4706, type: 3}
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 80
+    m_MinSize: 48
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -772,7 +772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Base
+  m_Text: 99
 --- !u!1 &4101197585797611809
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,11 +840,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
-    m_FontSize: 80
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: dab5938d9d7bd154fb8efdb106ab4706, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 80
+    m_MinSize: 50
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1229,11 +1229,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
-    m_FontSize: 80
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: dab5938d9d7bd154fb8efdb106ab4706, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 80
+    m_MinSize: 0
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1309,11 +1309,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: be26fa5901b150746a51aaba09053124, type: 3}
-    m_FontSize: 80
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: dab5938d9d7bd154fb8efdb106ab4706, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 80
+    m_MinSize: 50
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0

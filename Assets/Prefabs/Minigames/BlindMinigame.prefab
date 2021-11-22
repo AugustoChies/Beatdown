@@ -167,10 +167,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Repeat!
+  m_text: Watch!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 15d759f7a85a1084aadd8efeb6ff8426, type: 2}
-  m_sharedMaterial: {fileID: 3976151779255652298, guid: 15d759f7a85a1084aadd8efeb6ff8426, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9923aaa5a4eb54549b6bac9a37ee37e7, type: 2}
+  m_sharedMaterial: {fileID: 2998283957888007816, guid: 9923aaa5a4eb54549b6bac9a37ee37e7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7878859681708964827}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
