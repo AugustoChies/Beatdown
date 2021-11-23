@@ -11,7 +11,11 @@ public class Dialogue : ScriptableObject
         //public string speakerName;
         public string dialogueText;
         public bool isRightSpeaker;
+        public Sprite newSpriteRight;
+        public Sprite newSpriteLeft;
     }
+
+    public Sprite dialogueUpperSprite;
 
     public DialogueStruct[] dialogues;
 }

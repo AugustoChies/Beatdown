@@ -3,11 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
    public static DialogueManager Instance;
    [SerializeField] private GameObject dialoguePanel;
+   [SerializeField] private Image dialogueUpperImage;
+   [SerializeField] private Image playerRightImage; 
+   [SerializeField] private Image playerLeftImage;
+
    [SerializeField] private GameObject dialogueBoxRight;
    [SerializeField] private GameObject dialogueBoxLeft;
    [SerializeField] private TextMeshProUGUI dialogueText;
@@ -25,7 +30,7 @@ public class DialogueManager : MonoBehaviour
       dialoguePanel.SetActive(false);
       
       //debug
-     // PlayDialogue(dialogueToPlay);
+      PlayDialogue(dialogueToPlay);
    }
 
    private void Update()
@@ -40,6 +45,7 @@ public class DialogueManager : MonoBehaviour
       dialogueBoxRight.SetActive(false);
       dialogueText.text = "";
       isPlayingDialogue = true;
+      dialogueUpperImage.sprite = dialogueToPlay.dialogueUpperSprite;
 
       NextDialogueLine();
    }
@@ -73,6 +79,13 @@ public class DialogueManager : MonoBehaviour
       }
 
       dialogueText.text = dialogueToPlay.dialogues[currentIndex].dialogueText;
+      
+      if (dialogueToPlay.dialogues[currentIndex].newSpriteRight)
+         playerRightImage.sprite = dialogueToPlay.dialogues[currentIndex].newSpriteRight;
+      
+      if (dialogueToPlay.dialogues[currentIndex].newSpriteLeft)
+         playerLeftImage.sprite = dialogueToPlay.dialogues[currentIndex].newSpriteLeft;
+      
       currentIndex++;
    }
 }

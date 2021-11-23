@@ -12,12 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c7c1cadbd7c704b92f4e51f3ff5d43, type: 3}
   m_Name: DialogueGang1
   m_EditorClassIdentifier: 
+  dialogueUpperSprite: {fileID: 21300000, guid: d87de49ebf8093c45a77651527f39290, type: 3}
   dialogues:
   - dialogueText: Eae
     isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeft: {fileID: 21300000, guid: 1223c301139811c4ca5aeabec502d20c, type: 3}
   - dialogueText: Opa
     isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteLeft: {fileID: 0}
   - dialogueText: Beleza meu?
     isRightSpeaker: 1
+    newSpriteRight: {fileID: 0}
+    newSpriteLeft: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
   - dialogueText: Tudo de boas
     isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeft: {fileID: 21300000, guid: 1223c301139811c4ca5aeabec502d20c, type: 3}
