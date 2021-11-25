@@ -10,70 +10,61 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
-  m_Name: BaseMove2
+  m_Name: pagode3move
   m_EditorClassIdentifier: 
-  moveName: Fazendo Bolo
-  moveAudioClip: {fileID: 8300000, guid: f6adeedc704619f4190456bc7302b010, type: 3}
-  moveAnimation: baseMove2
-  baseDamage: 19
-  performanceDamage: 32
-  extraDamage: 10
+  moveName: Test Move2
+  moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
+  moveAnimation: TestMove
+  baseDamage: 20
+  performanceDamage: 28
+  extraDamage: 13
   effect: 0
   rythmData:
-  - WaitTimeToNextNote: 0.45
+  - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.45
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 1
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.4
+  - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.45
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.35
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.45
+  - WaitTimeToNextNote: 1
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.45
+  - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.45
+  - WaitTimeToNextNote: 1
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.45
+  - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.35
+  - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.7
+  - WaitTimeToNextNote: 1
     keySpeed: 200
     score: 20

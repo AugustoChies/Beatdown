@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
-  m_Name: Enemy1MoveDefault
+  m_Name: hiphop2move
   m_EditorClassIdentifier: 
-  moveName: Test Move
+  moveName: Test Move1
   moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   moveAnimation: TestMove
-  baseDamage: 15
-  performanceDamage: 0
-  extraDamage: 0
-  effect: 0
+  baseDamage: 28
+  performanceDamage: 9
+  extraDamage: 10
+  effect: 2
   rythmData:
   - WaitTimeToNextNote: 2.5
     keySpeed: 100
@@ -50,7 +50,7 @@ MonoBehaviour:
   - WaitTimeToNextNote: 0.75
     keySpeed: 100
     score: 1
-  - WaitTimeToNextNote: 1
+  - WaitTimeToNextNote: 3.75
     keySpeed: 100
     score: 1
   - WaitTimeToNextNote: 0.25
