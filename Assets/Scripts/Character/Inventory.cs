@@ -25,13 +25,20 @@ public class Inventory : MonoBehaviour
     private int _gold = 100;
     public Action OnUpdateTime;
     public DamageModificationsStatus modificationsStatus = null;
+    [SerializeField]
+    private bool isMale;
+    [SerializeField]
+    private bool gameInitialized;
 
+    public bool IsMale => isMale;
+    public bool GameInitialized => gameInitialized;
+    
     [SerializeField] private CharacterDataClass _playerData;
     public CharacterDataClass PlayerData => _playerData;
 
     public static Inventory Instance = null;
 
-    public bool _isInitialized;
+    public bool isInitialized;
 
     public int Gold
     {
@@ -59,17 +66,23 @@ public class Inventory : MonoBehaviour
         else PlayerDataManager.Instance.InitializeData();
     }
 
+    public void SetGender(bool chooseMale)
+    {
+        isMale = chooseMale;
+        gameInitialized = true;
+    }
+
     public void ResetData()
     {
-        _isInitialized = false;
+        isInitialized = false;
         InitializeDataDefault();
     }
 
     public void InitializeDataDefault()
     {
-        if (_isInitialized) return;
+        if (isInitialized) return;
        
-        _isInitialized = true;
+        isInitialized = true;
         //print("Initializing Default");
         
         _playerData.EquippedItems.Clear();
@@ -122,16 +135,18 @@ public class Inventory : MonoBehaviour
         EquipmentManager.Instance.RecalculateBonusStats();
     }
 
-    public void InitializeData(CharacterDataClass characterData, int hour, int day, int gold, int bosses)
+    public void InitializeData(CharacterDataClass characterData, int hour, int day, int gold, int bosses, bool male, bool initialized)
     {
-        if (_isInitialized) return;
-        _isInitialized = true;
+        if (isInitialized) return;
+        isInitialized = true;
 
         _playerData = characterData;
         _hour = hour;
         _day = day;
         _gold = gold;
         ChampionVictories = bosses;
+        isMale = male;
+        gameInitialized = initialized;
         characterData.modificationStatuses = modificationsStatus;
 
         characterData.EquippedItems.Clear();

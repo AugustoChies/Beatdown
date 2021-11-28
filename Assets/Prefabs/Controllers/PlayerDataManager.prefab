@@ -183,6 +183,9 @@ MonoBehaviour:
     Day: 0
     Hour: 0
     Gold: 0
+    Victories: 0
+    isMale: 0
+    gameInitialized: 0
     GeneralData:
       Health: 0
       Attack: 0
@@ -344,7 +347,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5000
   m_TargetDisplay: 0
 --- !u!114 &6041662971798614002
 MonoBehaviour:

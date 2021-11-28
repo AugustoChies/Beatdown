@@ -11,14 +11,18 @@ public class SaveData
     public int Hour;
     public int Gold;
     public int Victories;
+    public bool isMale;
+    public bool gameInitialized;
     public CharacterDataClass GeneralData;
 
-    public SaveData(int day, int hour, int gold, int victories, CharacterDataClass data)
+    public SaveData(int day, int hour, int gold, int victories, CharacterDataClass data, bool male, bool initialized)
     {
         Day = day;
         Hour = hour;
         Gold = gold;
         Victories = victories;
+        isMale = male;
+        gameInitialized = initialized;
         GeneralData = data;
     }
 
@@ -28,6 +32,8 @@ public class SaveData
         Hour = 0;
         Gold = 0;
         Victories = 0;
+        isMale = false;
+        gameInitialized = false;
         GeneralData = new CharacterDataClass();
     }
 }
@@ -81,7 +87,7 @@ public class PlayerDataManager : MonoBehaviour
             print("Save Found, Game Loaded");
             jsonString = File.ReadAllText(JsonPath);
             PlayerData = JsonUtility.FromJson<SaveData>(jsonString);
-            Inventory.Instance.InitializeData(PlayerData.GeneralData, PlayerData.Hour, PlayerData.Day, PlayerData.Gold, PlayerData.Victories);
+            Inventory.Instance.InitializeData(PlayerData.GeneralData, PlayerData.Hour, PlayerData.Day, PlayerData.Gold, PlayerData.Victories, PlayerData.isMale, PlayerData.gameInitialized);
         }
         else
         {
@@ -110,7 +116,7 @@ public class PlayerDataManager : MonoBehaviour
             isBusy = true;
 
             var inventory = Inventory.Instance;
-            PlayerData = new SaveData(inventory.Day, inventory.Hour, inventory.Gold, inventory.ChampionVictories, inventory.PlayerData);
+            PlayerData = new SaveData(inventory.Day, inventory.Hour, inventory.Gold, inventory.ChampionVictories, inventory.PlayerData, inventory.IsMale, inventory.GameInitialized);
 
             //print(JsonPath);
             string jsonString = "";
