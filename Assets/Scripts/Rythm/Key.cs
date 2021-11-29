@@ -54,17 +54,20 @@ public class Key : MonoBehaviour
         canPlayKeyThisFrame = false;
 
         RythmKey rightSide = RythmManager.Instance.KeysQueue.Peek().rythmKey;
-        
-        if (canPlayKey && wasPressed && (rightSide == side))
+
+        if (BattleController.Instance != null)
         {
-            //print("Acertou");
-            BattleController.Instance.UpdateHype(true);
-            BattleController.Instance.currentmoveScore++;
-        }
-        else
-        {
-            //print("Errou");
-            BattleController.Instance.UpdateHype(false);
+            if (canPlayKey && wasPressed && (rightSide == side))
+            {
+                //print("Acertou");
+                BattleController.Instance.UpdateHype(true);
+                BattleController.Instance.currentmoveScore++;
+            }
+            else
+            {
+                //print("Errou");
+                BattleController.Instance.UpdateHype(false);
+            }
         }
         
         switch(side)
@@ -87,7 +90,14 @@ public class Key : MonoBehaviour
         RythmManager.Instance.CurrentMoveCount++;
         if (RythmManager.Instance.CurrentMoveCount == RythmManager.Instance.RythmToPlay.rythmData.Length)
         {
-            BattleController.Instance.SetBattleStage(EBattleStage.DamageStep);
+            if (BattleController.Instance != null)
+            {
+                BattleController.Instance.SetBattleStage(EBattleStage.DamageStep);
+            }
+            else
+            {
+                RythmManager.Instance.MoveDone = true;
+            }
         }
         Destroy(this.gameObject);
     }

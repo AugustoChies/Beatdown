@@ -24,7 +24,10 @@ public class RythmManager : MonoBehaviour
     public Queue<Key> KeysQueue = new Queue<Key>();
 
     public int CurrentMoveCount = 0;
-    
+
+    //only used for training
+    public bool MoveDone = false;
+
     private void Awake()
     {
         Instance = this;
@@ -42,7 +45,7 @@ public class RythmManager : MonoBehaviour
         RythmToPlay = move;
         CurrentMoveCount = 0;
         _speedModifier = 1.0f;
-        
+
 
         if (isPlayer)
         {
@@ -56,13 +59,22 @@ public class RythmManager : MonoBehaviour
         StartCoroutine(PlayRythm(isPlayer, move, _modifiers.StartMoveDelay));
     }
 
+    public void PlayTrainingMove(RythmMove move)
+    {
+        RythmToPlay = move;
+        CurrentMoveCount = 0;
+        _speedModifier = 1.0f;
+
+        StartCoroutine(PlayTrainingRythm(move));
+    }
+
     public void CreateKey(int index)
     {
         int side = Random.Range(0, 4);
 
         Key temp = null;
 
-        switch(side)
+        switch (side)
         {
             case 0:
                 temp = Instantiate(RythmKeyPrefab, UpPoint.transform.position, Quaternion.Euler(0, 0, 180), RythmPanel.transform).GetComponent<Key>();
@@ -89,7 +101,7 @@ public class RythmManager : MonoBehaviour
                 break;
         }
 
-        if(temp)
+        if (temp)
         {
             temp.speed = RythmToPlay.rythmData[index].keySpeed * _speedModifier;
             temp.score = RythmToPlay.rythmData[index].score;
@@ -112,7 +124,7 @@ public class RythmManager : MonoBehaviour
             if (BattleController.Instance.playerEffect == EMoveEffect.TempoDown)
             {
                 _speedModifier = 0.8f;
-               
+
             }
         }
         else
@@ -133,13 +145,25 @@ public class RythmManager : MonoBehaviour
 
         int currentIndex = 0;
 
-        while(currentIndex < RythmToPlay.rythmData.Length)
+        while (currentIndex < RythmToPlay.rythmData.Length)
         {
             CreateKey(currentIndex);
             yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote * (2 - _speedModifier));
             currentIndex++;
-        }        
+        }
 
         yield return null;
+    }
+
+    public IEnumerator PlayTrainingRythm(RythmMove move)
+    {
+        int currentIndex = 0;
+
+        while (currentIndex < RythmToPlay.rythmData.Length)
+        {
+            CreateKey(currentIndex);
+            yield return new WaitForSeconds(RythmToPlay.rythmData[currentIndex].WaitTimeToNextNote * (2 - _speedModifier));
+            currentIndex++;
+        }
     }
 }
