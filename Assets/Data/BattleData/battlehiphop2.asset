@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4610f77cc058f49a42d3c8ba17777a, type: 3}
+  m_Name: battlehiphop2
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: c7d0a0e59496bb242ab9437be9486230, type: 2}
+  CharacterModel: {fileID: 5549566323404669473, guid: a3e4fa6c2db81314983b38fd424f06d2, type: 3}
+  RewardMoney: 100
+  RewardMove: {fileID: 11400000, guid: 264e087c35905a943ab18cd230f25f1f, type: 2}

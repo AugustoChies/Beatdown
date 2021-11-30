@@ -11751,7 +11751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd99c0639db8b084bb177e98243e5225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyBehaviour: {fileID: 11400000, guid: 95d8282630e948d45b85bba8318e4b6f, type: 2}
+  _enemyBehaviour: {fileID: 11400000, guid: 0c6165e051881654c930858ea81277c8, type: 2}
   moveToPerform: {fileID: 0}
   _enemyBehaviourParameters: []
 --- !u!1 &5592396030633749177

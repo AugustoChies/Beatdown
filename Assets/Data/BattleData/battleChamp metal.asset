@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4610f77cc058f49a42d3c8ba17777a, type: 3}
+  m_Name: battleChamp metal
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 09f5607f1db70fd4d92a3faa79acce4b, type: 2}
+  CharacterModel: {fileID: 5549566323404669473, guid: 49af7b940e7be81418f6b2acca2042da, type: 3}
+  RewardMoney: 1000
+  RewardMove: {fileID: 0}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4610f77cc058f49a42d3c8ba17777a, type: 3}
+  m_Name: battlepagode1
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: d91cb2862cbc0cd42bf300040c64cfdc, type: 2}
+  CharacterModel: {fileID: 5549566323404669473, guid: f28a3e86b162f0e44b76e742adb72618, type: 3}
+  RewardMoney: 100
+  RewardMove: {fileID: 11400000, guid: c813b3492f8bddc4faa0c20cd94069a0, type: 2}

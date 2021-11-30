@@ -5506,6 +5506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GangMemberPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2602606889811587500, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
@@ -5525,11 +5529,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: 49a73a3ed674c6440adc5ad42df12ab2, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 7242142319094ff40b33f47438b3825b, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

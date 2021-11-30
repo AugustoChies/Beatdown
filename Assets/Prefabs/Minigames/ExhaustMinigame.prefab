@@ -797,12 +797,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statGain:
-    Health: 5
-    Attack: 5
-    Performance: 5
-    Defense: 5
-    Rythm: 5
-  hourDuration: 5
+    Health: 25
+    Attack: 0
+    Performance: 0
+    Defense: 0
+    Rythm: 0
+  hourDuration: 0
   parentCanvas: {fileID: 0}
   _repeatedMove: {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
   _audio: {fileID: 8021353293838207207}

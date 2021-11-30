@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4610f77cc058f49a42d3c8ba17777a, type: 3}
+  m_Name: battleChamp chachacha
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 784652fea6a42144483a9293fcbf6c3e, type: 2}
+  CharacterModel: {fileID: 5549566323404669473, guid: 7cd37f6f0dc30c843bce9866e5eb93c8, type: 3}
+  RewardMoney: 1000
+  RewardMove: {fileID: 0}

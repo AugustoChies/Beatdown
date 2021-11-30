@@ -91,17 +91,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statGain:
-    Health: 5
-    Attack: 5
-    Performance: 5
-    Defense: 5
-    Rythm: 5
+    Health: 0
+    Attack: 0
+    Performance: 10
+    Defense: 10
+    Rythm: 0
   hourDuration: 5
   parentCanvas: {fileID: 0}
   lowestInputAmount: 4
   highestInputAmount: 7
   text: {fileID: 1166883955413046534}
   arrow: {fileID: 3943053482948211193}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _wrongColor: {r: 1, g: 0, b: 0, a: 1}
+  _rightColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &7172528406773355996
 GameObject:
   m_ObjectHideFlags: 0

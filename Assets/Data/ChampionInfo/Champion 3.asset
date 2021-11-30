@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd0e17fa1643f644ab5562393d556c6, type: 3}
   m_Name: Champion 3
   m_EditorClassIdentifier: 
-  Name: Carinha 3
+  Name: "Bernardo que n\xE3o \xE9 o nosso Bernardo (wink)"
   Info: "Informa\xE7\xE3o do carinha 3"
   Portarit: {fileID: 21300000, guid: 4080b68c7c910cf41b940df52ca6cd51, type: 3}
   DayLimit: 15

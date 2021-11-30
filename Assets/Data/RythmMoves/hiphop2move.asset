@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
   m_Name: hiphop2move
   m_EditorClassIdentifier: 
-  moveName: Test Move1
+  moveName: hiphop2
   moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   moveAnimation: TestMove
   baseDamage: 28
@@ -21,38 +21,38 @@ MonoBehaviour:
   effect: 2
   rythmData:
   - WaitTimeToNextNote: 2.5
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.5
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 1.75
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 1.75
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.75
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 3.75
-    keySpeed: 100
+    keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.25
-    keySpeed: 100
+    keySpeed: 200
     score: 1

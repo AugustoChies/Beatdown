@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
   m_Name: hiphop3move
   m_EditorClassIdentifier: 
-  moveName: Test Move2
+  moveName: hiphop3
   moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   moveAnimation: TestMove
   baseDamage: 23

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa623d5a0207f734f9163782438a6f96, type: 3}
+  m_Name: hiphop1
+  m_EditorClassIdentifier: 
+  Name: MamaMama
+  Portarit: {fileID: 21300000, guid: b60083fffde81644b971a2606643389d, type: 3}
+  StrenghtLevel: 1
+  BattleInfo: {fileID: 11400000, guid: 49a73a3ed674c6440adc5ad42df12ab2, type: 2}

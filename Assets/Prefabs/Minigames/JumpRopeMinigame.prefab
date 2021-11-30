@@ -90,11 +90,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statGain:
-    Health: 5
-    Attack: 5
-    Performance: 5
-    Defense: 5
-    Rythm: 5
+    Health: 0
+    Attack: 10
+    Performance: 0
+    Defense: 0
+    Rythm: 10
   hourDuration: 4
   parentCanvas: {fileID: 0}
   safeAreaSize: 0.5
