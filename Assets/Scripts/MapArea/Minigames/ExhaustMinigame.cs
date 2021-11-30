@@ -77,7 +77,6 @@ public class ExhaustMinigame : Minigame
             }
             else
             {
-                _audio.Play();
                 manager.MoveDone = false;
                 manager.PlayTrainingMove(_repeatedMove);
             }

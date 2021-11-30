@@ -110,7 +110,7 @@ public class BlindMinigame : Minigame
 
             if (Inputs.Count >= highestInputAmount)
             {
-                performance = (float)Inputs.Count / (float)highestInputAmount;
+                performance = 1;
                 ApplyGains();
             }
             else
@@ -122,7 +122,7 @@ public class BlindMinigame : Minigame
         else
         {
             yield return new WaitForSeconds(1);
-            performance = (float)Inputs.Count / (float)highestInputAmount;
+            performance = (float)(Inputs.Count - lowestInputAmount)/ (float)(highestInputAmount - lowestInputAmount);
             ApplyGains();
         }
     }

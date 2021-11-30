@@ -13,11 +13,21 @@ public class MinigameCanvas : MonoBehaviour
     private TextMeshProUGUI _textOldHP, _textOldAttack, _textOldPerformance, _textOldDefense, _textOldRythm;
     [SerializeField]
     private TextMeshProUGUI _textNewHP, _textNewAttack, _textNewPerformance, _textNewDefense, _textNewRythm;
+    [SerializeField]
+    private AudioSource minigameSource = null;
+    [SerializeField]
+    private AudioSource mapSource = null;
+
     private void Start()
     {
         _inventory = Inventory.Instance;
     }
 
+    private AudioClip song;
+    public void SetMinigameSong(AudioClip s = null)
+    {
+        song = s;
+    }
     public void ShowMinigame(GameObject game)
     {
         _currentMinigame = Instantiate(game, this.transform);
@@ -28,6 +38,13 @@ public class MinigameCanvas : MonoBehaviour
         oldPerf = (int)_inventory.PlayerData.Performance;
         oldDef = (int)_inventory.PlayerData.Defense;
         oldRtm = (int)_inventory.PlayerData.Rythm;
+
+        mapSource.Stop();
+        if (song != null)
+        {            
+            minigameSource.clip = song;
+            minigameSource.Play();
+        }
     }
 
     public void HideMinigame()
@@ -58,6 +75,12 @@ public class MinigameCanvas : MonoBehaviour
 
     public void HideGains()
     {
+        if(minigameSource.isPlaying)
+        {
+            minigameSource.Stop();
+        }
+        mapSource.Play();
+        minigameSource.clip = null;
         statGainPanel.SetActive(false);
     }
 }
