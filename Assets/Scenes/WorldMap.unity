@@ -813,9 +813,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 1390176894, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390176894, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390176894, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3334413207291939280, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
       propertyPath: m_Name
       value: ShopCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334413207291939280, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3334413207291939292, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
       propertyPath: m_Pivot.x
@@ -919,9 +935,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 245290351, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641258131, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 713836275, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241858029, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241858029, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241858029, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995097445, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024456121, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130880834, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3865764941708881815, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
       propertyPath: m_Name
       value: StatsCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865764941708881815, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3865764941708881816, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
       propertyPath: m_Camera
@@ -1018,6 +1074,18 @@ PrefabInstance:
     - target: {fileID: 7449386501625630543, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884690057076650453, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884690057076650453, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884690057076650453, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
