@@ -16,4 +16,4 @@ MonoBehaviour:
   Info: "Informa\xE7\xE3o do carinha 2"
   Portarit: {fileID: 21300000, guid: 4080b68c7c910cf41b940df52ca6cd51, type: 3}
   DayLimit: 10
-  BattleInfo: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+  BattleInfo: {fileID: 11400000, guid: 5e86969afe831b145800f18cd8d1fdfb, type: 2}

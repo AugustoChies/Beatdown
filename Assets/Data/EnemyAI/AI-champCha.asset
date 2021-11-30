@@ -13,28 +13,22 @@ MonoBehaviour:
   m_Name: AI-champCha
   m_EditorClassIdentifier: 
   enemyBehaviourParameters:
-  - moveToPerform: {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
-    cooldown: 0
-    currentCooldown: 1
-    onlyUseOnce: 0
-    conditions:
-    - condition: 0
-      threshold: 0
   - moveToPerform: {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
     cooldown: 3
     currentCooldown: -6
     onlyUseOnce: 0
-    conditions:
-    - condition: 1
-      threshold: 50
-    - condition: 3
-      threshold: 50
-    - condition: 7
-      threshold: 0
+    conditions: []
   - moveToPerform: {fileID: 11400000, guid: 5b9b32fc59f128d448c11c4c9ec92d17, type: 2}
-    cooldown: 0
+    cooldown: 1
     currentCooldown: -6
     onlyUseOnce: 0
     conditions:
-    - condition: 0
+    - condition: 1
+      threshold: 60
+    - condition: 7
       threshold: 0
+  - moveToPerform: {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
+    cooldown: 0
+    currentCooldown: 1
+    onlyUseOnce: 0
+    conditions: []

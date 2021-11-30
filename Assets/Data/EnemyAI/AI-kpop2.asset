@@ -17,9 +17,7 @@ MonoBehaviour:
     cooldown: 0
     currentCooldown: 1
     onlyUseOnce: 0
-    conditions:
-    - condition: 0
-      threshold: 0
+    conditions: []
   - moveToPerform: {fileID: 11400000, guid: 965d7dcce549c7b41a72f88f6320d11c, type: 2}
     cooldown: 3
     currentCooldown: -6
@@ -27,14 +25,8 @@ MonoBehaviour:
     conditions:
     - condition: 1
       threshold: 50
-    - condition: 3
-      threshold: 50
-    - condition: 7
-      threshold: 0
   - moveToPerform: {fileID: 11400000, guid: 15d538e7487c33d409fca2a60a5f480e, type: 2}
     cooldown: 0
     currentCooldown: -6
     onlyUseOnce: 0
-    conditions:
-    - condition: 0
-      threshold: 0
+    conditions: []
