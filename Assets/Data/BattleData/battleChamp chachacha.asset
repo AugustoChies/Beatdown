@@ -15,4 +15,4 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: 784652fea6a42144483a9293fcbf6c3e, type: 2}
   CharacterModel: {fileID: 5549566323404669473, guid: 7cd37f6f0dc30c843bce9866e5eb93c8, type: 3}
   RewardMoney: 1000
-  RewardMove: {fileID: 0}
+  RewardMove: {fileID: 11400000, guid: 5b9b32fc59f128d448c11c4c9ec92d17, type: 2}

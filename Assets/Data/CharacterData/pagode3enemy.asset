@@ -43,9 +43,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   EquippedMoves:
-  - {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
-  - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
-  - {fileID: 11400000, guid: 0d862147199fb1d42837065ede6a54c3, type: 2}
+  - {fileID: 11400000, guid: 19fb0ad160cc80948ab480794cc8c115, type: 2}
+  - {fileID: 11400000, guid: 6385ff4b08fa97047bd08b4fb45fa8f5, type: 2}
+  - {fileID: 11400000, guid: f30eed4981902f7458905b653d12a6df, type: 2}
   ObtainedMoves: []
   equippedItems: []
   obtainedEquippedItems: []

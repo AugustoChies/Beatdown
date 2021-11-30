@@ -4643,11 +4643,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: fc56cf9da8787af48a4710d8bb02e183, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: ad875a1b134cea341aa5faddb764a971, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4769,11 +4773,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: 95f94f02d31f88b4ba50e9bfb470a6b0, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: a93047fae2237b84cb4a4a55a646e104, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4895,11 +4903,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: e15c6de3a7fc3e94e97ab7941c2301c5, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 385967f5fb370844cbeed76aaccf0574, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5021,11 +5033,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: b7c2ea562e8718d49b5218a45bfb59ec, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: d22fc83ac0863624793d6b98e7ecec2b, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5147,11 +5163,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: 8b62fd4a933eb644aa5af682a659348c, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: f7b87f172c65765418b52216b6a14670, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5399,11 +5419,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: 81487bae13b6a3c438681a47fca8f1b8, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: ae164ef59e0e55d459c0c73f66b6ae41, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5659,11 +5683,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: ed492de1ba8cb5f40882fc49230d51cf, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 88aad7194d41a2b469e940041089855b, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5785,11 +5813,15 @@ PrefabInstance:
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
+      objectReference: {fileID: 11400000, guid: f2a23f6ac17288a4cbb1dff12a038550, type: 2}
     - target: {fileID: 2677689650181948601, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: BattleData, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3723590083109479687, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
+      propertyPath: _infoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 05bb91e97c94e6349a20bdf623d3e278, type: 2}
     - target: {fileID: 9140845807175302331, guid: cf0724ee95dcfbd4e8dffe599e3a1d6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

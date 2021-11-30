@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 09f5607f1db70fd4d92a3faa79acce4b, type: 2}
   CharacterModel: {fileID: 5549566323404669473, guid: 49af7b940e7be81418f6b2acca2042da, type: 3}
-  RewardMoney: 1000
-  RewardMove: {fileID: 0}
+  RewardMoney: 2000
+  RewardMove: {fileID: 11400000, guid: 4dc17d041b0cd014294a85c1ba8232fc, type: 2}

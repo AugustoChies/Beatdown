@@ -11718,7 +11718,7 @@ GameObject:
   - component: {fileID: 5549566323404669472}
   - component: {fileID: 4280815719262814587}
   m_Layer: 0
-  m_Name: hiphop1enemy
+  m_Name: hiphop3enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11751,7 +11751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd99c0639db8b084bb177e98243e5225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyBehaviour: {fileID: 11400000, guid: 95d8282630e948d45b85bba8318e4b6f, type: 2}
+  _enemyBehaviour: {fileID: 11400000, guid: 7bb982a136f78fd4cb44aa1596b1cc98, type: 2}
   moveToPerform: {fileID: 0}
   _enemyBehaviourParameters: []
 --- !u!1 &5592396030633749177

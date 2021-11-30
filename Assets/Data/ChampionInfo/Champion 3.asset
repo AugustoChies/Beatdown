@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Champion 3
   m_EditorClassIdentifier: 
   Name: "Bernardo que n\xE3o \xE9 o nosso Bernardo (wink)"
-  Info: "Informa\xE7\xE3o do carinha 3"
-  Portarit: {fileID: 21300000, guid: 4080b68c7c910cf41b940df52ca6cd51, type: 3}
+  Info: "O que deveria ser um meme acabou se tornando mais poderoso do que deveria.
+    Bernardo, o enraivecido, utilizou o poder do \xF3dio para derrotar o \xFAltimo
+    campe\xE3o e tomar o seu lugar. Boa sorte ao enfrent\xE1-lo"
+  Portarit: {fileID: 21300000, guid: b4087bb1b9a8b51499b2bee5a9f36a40, type: 3}
   DayLimit: 15
   BattleInfo: {fileID: 11400000, guid: 31b1c1095f0cefe4094f62fb8b0300f7, type: 2}
