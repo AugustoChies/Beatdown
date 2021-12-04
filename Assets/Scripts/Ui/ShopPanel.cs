@@ -25,7 +25,13 @@ public class ShopPanel : MonoBehaviour
     {
         Instance = this;
     }
-
+    
+    private void OnEnable()
+    {
+        scrollView.normalizedPosition = new Vector2(0, 1);
+        RefreshShop();
+    }
+    
     public void RefreshSize()
     {
         buttonsParent.GetComponent<RectTransform>().sizeDelta =
@@ -39,17 +45,11 @@ public class ShopPanel : MonoBehaviour
 
         goldText.text = "Gold: " + Inventory.Instance.Gold.ToString();
     }
-
-    private void OnEnable()
-    {
-        RefreshShop();
-    }
+    
     public void RefreshShop()
     {
         RefreshSize();
         
-        scrollView.normalizedPosition = new Vector2(0, 1);
-
         foreach (GameObject g in ButtonsList)
         {
             Destroy(g.gameObject);

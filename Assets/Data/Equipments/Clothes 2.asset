@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: GogglesTest
+  m_Name: Clothes 2
   m_EditorClassIdentifier: 
-  equipmentName: Goggle0
-  equipmentStatsBonusText: RTH +10
+  equipmentName: Clothes 2
+  equipmentStatsBonusText: DEF +5
   goldCost: 50
   addedAtk: 0
-  addedDef: 0
+  addedDef: 5
   addedHype: 0
   addedHP: 0
-  addedRhy: 10
-  equipmentType: 1
-  equipmentSprite: {fileID: 21300018, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
+  addedRhy: 0
+  equipmentType: 2
+  equipmentSprite: {fileID: 21300000, guid: 5c8e729c1cdb43c4ca8e8934283eefe9, type: 3}

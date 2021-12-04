@@ -11,7 +11,7 @@ public class CosmeticController : MonoBehaviour
     public GameObject maleHair;
     public GameObject femaleHair;
 
-    public void Awake()
+    public void OnEnable()
     {
         Instance = this;
     }

@@ -96,6 +96,6 @@ public class EquipmentManager : MonoBehaviour
             HPBonusTotal += equip.addedHP;
         }
         
-        CosmeticController.Instance.UpdateList();
+        if(CosmeticController.Instance) CosmeticController.Instance.UpdateList();
     }
 }

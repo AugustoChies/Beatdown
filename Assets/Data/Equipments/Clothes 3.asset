@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: HatTest
+  m_Name: Clothes 3
   m_EditorClassIdentifier: 
-  equipmentName: LOL
-  equipmentStatsBonusText: lol
+  equipmentName: Clothes 3
+  equipmentStatsBonusText: DEF +5
+  goldCost: 50
   addedAtk: 0
-  addedDef: 0
+  addedDef: 5
   addedHype: 0
   addedHP: 0
   addedRhy: 0
-  equipmentType: 0
-  equipmentSprite: {fileID: -547665329950711206, guid: acb194335b504bb4e820e66766f1048c, type: 3}
+  equipmentType: 2
+  equipmentSprite: {fileID: 21300000, guid: 5c8e729c1cdb43c4ca8e8934283eefe9, type: 3}

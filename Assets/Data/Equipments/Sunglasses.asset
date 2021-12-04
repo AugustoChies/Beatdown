@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: ArmsTest
+  m_Name: Sunglasses
   m_EditorClassIdentifier: 
-  equipmentName: ArmsTest0
-  equipmentStatsBonusText: DEF +5
+  equipmentName: Sunglasses
+  equipmentStatsBonusText: ATK + 10
   goldCost: 50
-  addedAtk: 0
-  addedDef: 5
+  addedAtk: 10
+  addedDef: 0
   addedHype: 0
   addedHP: 0
   addedRhy: 0
-  equipmentType: 4
-  equipmentSprite: {fileID: 21300000, guid: 5c8e729c1cdb43c4ca8e8934283eefe9, type: 3}
+  equipmentType: 1
+  equipmentSprite: {fileID: -547665329950711206, guid: acb194335b504bb4e820e66766f1048c, type: 3}

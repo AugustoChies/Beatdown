@@ -24,6 +24,7 @@ public class StylesPanel : MonoBehaviour
 
     private void OnEnable()
     {
+        scrollView.normalizedPosition = new Vector2(0, 1);
         RefreshEquipmentList();
     }
 
@@ -41,10 +42,7 @@ public class StylesPanel : MonoBehaviour
     {
         buttonsParent.GetComponent<RectTransform>().sizeDelta =
             new Vector2(0, Inventory.Instance.PlayerData.ListOfObtainedEquipments.Count * heightMultiplier);
-        
-        scrollView.normalizedPosition = new Vector2(0, 1);
 
-        
         foreach (GameObject g in ButtonsList)
         {
             Destroy(g.gameObject);
