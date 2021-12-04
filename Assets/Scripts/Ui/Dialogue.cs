@@ -12,7 +12,8 @@ public class Dialogue : ScriptableObject
         public string dialogueText;
         public bool isRightSpeaker;
         public Sprite newSpriteRight;
-        public Sprite newSpriteLeft;
+        public Sprite newSpriteLeftBoy;
+        public Sprite newSpriteLeftGirl;
     }
 
     public Sprite dialogueUpperSprite;

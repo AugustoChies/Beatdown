@@ -31,7 +31,7 @@ public class MapButtonMethods : MonoBehaviour
     {
         BattleDataHolder.Instance.CurrentBattleData = BattleDataHolder.Instance.championInfos[Inventory.Instance.ChampionVictories].BattleInfo;
         BattleDataHolder.Instance.IsChampionBattle = true;
-        SceneManager.LoadScene("BattleScene");
+        DialogueManager.Instance.PlayDialogue(BattleDataHolder.Instance.championInfos[Inventory.Instance.ChampionVictories].championDialogue);
     }
 
     public void UpdateTime()

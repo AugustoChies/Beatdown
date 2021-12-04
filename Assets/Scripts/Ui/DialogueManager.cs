@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -30,7 +31,7 @@ public class DialogueManager : MonoBehaviour
       dialoguePanel.SetActive(false);
       
       //debug
-      PlayDialogue(dialogueToPlay);
+      //PlayDialogue(dialogueToPlay);
    }
 
    private void Update()
@@ -40,6 +41,7 @@ public class DialogueManager : MonoBehaviour
 
    public void PlayDialogue(Dialogue newDialogue)
    {
+      dialoguePanel.SetActive(true);
       dialogueToPlay = newDialogue;
       dialogueBoxLeft.SetActive(false);
       dialogueBoxRight.SetActive(false);
@@ -62,8 +64,9 @@ public class DialogueManager : MonoBehaviour
    {
       if (currentIndex >= dialogueToPlay.dialogues.Length)
       {
-         dialoguePanel.SetActive(false);
+         //dialoguePanel.SetActive(false);
          isPlayingDialogue = false;
+         SceneManager.LoadScene("BattleScene");
          return;
       }
 
@@ -83,8 +86,11 @@ public class DialogueManager : MonoBehaviour
       if (dialogueToPlay.dialogues[currentIndex].newSpriteRight)
          playerRightImage.sprite = dialogueToPlay.dialogues[currentIndex].newSpriteRight;
       
-      if (dialogueToPlay.dialogues[currentIndex].newSpriteLeft)
-         playerLeftImage.sprite = dialogueToPlay.dialogues[currentIndex].newSpriteLeft;
+      if (dialogueToPlay.dialogues[currentIndex].newSpriteLeftBoy && Inventory.Instance.IsMale)
+         playerLeftImage.sprite = dialogueToPlay.dialogues[currentIndex].newSpriteLeftBoy;
+      
+      if (dialogueToPlay.dialogues[currentIndex].newSpriteLeftGirl && !Inventory.Instance.IsMale)
+         playerLeftImage.sprite = dialogueToPlay.dialogues[currentIndex].newSpriteLeftGirl;
       
       currentIndex++;
    }

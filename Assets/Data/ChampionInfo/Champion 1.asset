@@ -18,3 +18,4 @@ MonoBehaviour:
   Portarit: {fileID: 21300000, guid: e5f9b76993b1d7f42bc3d6dec36a092b, type: 3}
   DayLimit: 5
   BattleInfo: {fileID: 11400000, guid: 9241f64769aea9240b7ea8a4fa3e5857, type: 2}
+  championDialogue: {fileID: 11400000, guid: 105cc08cd41fec64fac08e693ac327b6, type: 2}
