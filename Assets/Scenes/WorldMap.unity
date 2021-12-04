@@ -11157,7 +11157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &4591935271342841859
 GameObject:
   m_ObjectHideFlags: 0
@@ -17251,8 +17251,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cosmeticsList:
   - {fileID: 8577764548157280119}
-  - {fileID: 5342161734343743342}
-  - {fileID: 4591393293533235198}
   - {fileID: 9127184425364718168}
   - {fileID: 8617009314048223475}
   - {fileID: 1407384420311837728}
@@ -17265,6 +17263,9 @@ MonoBehaviour:
   - {fileID: 3362445865632904811}
   maleHair: {fileID: 4610658758866426557}
   femaleHair: {fileID: 7096216705990530847}
+  defaultShirtMale: {fileID: 4591393293533235198}
+  defaultShirtFemale: {fileID: 5342161734343743342}
+  shirtID: 1
 --- !u!1 &7638735260301125832
 GameObject:
   m_ObjectHideFlags: 0
@@ -20296,7 +20297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &9129221066238660446
 GameObject:
   m_ObjectHideFlags: 0

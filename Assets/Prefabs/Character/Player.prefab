@@ -7196,8 +7196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cosmeticsList:
   - {fileID: 8577764547601618802}
-  - {fileID: 5342161735973277547}
-  - {fileID: 4591393292981739515}
   - {fileID: 9127184426956413533}
   - {fileID: 8617009312460632310}
   - {fileID: 1407384418690692133}
@@ -7210,6 +7208,9 @@ MonoBehaviour:
   - {fileID: 3362445866159238766}
   maleHair: {fileID: 4610658757270536888}
   femaleHair: {fileID: 7096216706508607258}
+  defaultShirtMale: {fileID: 0}
+  defaultShirtFemale: {fileID: 0}
+  shirtID: 1
 --- !u!1 &3578478901149268661
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: Clothes 1
+  m_Name: Shirt
   m_EditorClassIdentifier: 
-  equipmentName: Clothes 1
+  equipmentName: Shirt
   equipmentStatsBonusText: DEF +5
   goldCost: 50
   addedAtk: 0

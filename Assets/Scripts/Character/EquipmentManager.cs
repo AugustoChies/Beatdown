@@ -83,6 +83,8 @@ public class EquipmentManager : MonoBehaviour
         HypeBonusTotal = 0;
         HPBonusTotal = 0;
         RhyBonusTotal = 0;
+        
+        if(CosmeticController.Instance) CosmeticController.Instance.UpdateList();
 
         if(StylesPanel.Instance) StylesPanel.Instance.RefreshStatus();
         if (Inventory.Instance.PlayerData.EquippedItems.Count == 0) return;
@@ -95,7 +97,5 @@ public class EquipmentManager : MonoBehaviour
             RhyBonusTotal += equip.addedRhy;
             HPBonusTotal += equip.addedHP;
         }
-        
-        if(CosmeticController.Instance) CosmeticController.Instance.UpdateList();
     }
 }

@@ -98,8 +98,6 @@ MonoBehaviour:
   RhyBonusTotal: 0
   ListOfAllEquipments:
   - {fileID: 11400000, guid: 6becac86c8487c942aa2ec45a68ea3c9, type: 2}
-  - {fileID: 11400000, guid: 14b853a0682ecd040b543257ce108c30, type: 2}
-  - {fileID: 11400000, guid: a6f75def98755fa48a354fed02805375, type: 2}
   - {fileID: 11400000, guid: 2859d2255ea6e0e4aa1d105638047505, type: 2}
   - {fileID: 11400000, guid: a70d18126b068e14391d15e6fe2310df, type: 2}
   - {fileID: 11400000, guid: d5530eae35827c34a99d07f4a94a32d9, type: 2}

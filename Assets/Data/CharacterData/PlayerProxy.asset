@@ -49,11 +49,9 @@ MonoBehaviour:
   ObtainedMoves:
   - {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
   - {fileID: 11400000, guid: 6477edcd32c6af84bab56876ac776684, type: 2}
-  - {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
-  equippedItems:
-  - {fileID: 11400000, guid: 2859d2255ea6e0e4aa1d105638047505, type: 2}
-  obtainedEquippedItems:
-  - {fileID: 11400000, guid: 2859d2255ea6e0e4aa1d105638047505, type: 2}
+  - {fileID: 11400000, guid: 0d862147199fb1d42837065ede6a54c3, type: 2}
+  equippedItems: []
+  obtainedEquippedItems: []
   defaultDay: 1
   defaultHour: 6
   defaultGold: 100
