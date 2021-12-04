@@ -95,5 +95,7 @@ public class EquipmentManager : MonoBehaviour
             RhyBonusTotal += equip.addedRhy;
             HPBonusTotal += equip.addedHP;
         }
+        
+        CosmeticController.Instance.UpdateList();
     }
 }

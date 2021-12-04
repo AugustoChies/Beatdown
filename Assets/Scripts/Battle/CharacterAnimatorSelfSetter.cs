@@ -9,6 +9,6 @@ public class CharacterAnimatorSelfSetter : MonoBehaviour
 
     private void Start()
     {
-        BattleController.Instance.SetAnimatorReference(IsPlayer, anim);
+       if(BattleController.Instance) BattleController.Instance.SetAnimatorReference(IsPlayer, anim);
     }
 }
