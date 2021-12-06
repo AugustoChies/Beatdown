@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyBehaviourParameters:
   - moveToPerform: {fileID: 11400000, guid: 0d862147199fb1d42837065ede6a54c3, type: 2}
-    cooldown: 1
+    cooldown: 2
     currentCooldown: 1
     onlyUseOnce: 0
     conditions: []
@@ -24,7 +24,7 @@ MonoBehaviour:
     onlyUseOnce: 0
     conditions:
     - condition: 1
-      threshold: 70
+      threshold: 60
   - moveToPerform: {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
     cooldown: 0
     currentCooldown: 0

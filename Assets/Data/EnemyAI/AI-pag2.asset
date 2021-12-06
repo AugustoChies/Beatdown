@@ -13,11 +13,6 @@ MonoBehaviour:
   m_Name: AI-pag2
   m_EditorClassIdentifier: 
   enemyBehaviourParameters:
-  - moveToPerform: {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
-    cooldown: 0
-    currentCooldown: 1
-    onlyUseOnce: 0
-    conditions: []
   - moveToPerform: {fileID: 11400000, guid: 6385ff4b08fa97047bd08b4fb45fa8f5, type: 2}
     cooldown: 3
     currentCooldown: -6
@@ -25,6 +20,13 @@ MonoBehaviour:
     conditions:
     - condition: 1
       threshold: 50
+    - condition: 7
+      threshold: 0
+  - moveToPerform: {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
+    cooldown: 2
+    currentCooldown: 1
+    onlyUseOnce: 0
+    conditions: []
   - moveToPerform: {fileID: 11400000, guid: 19fb0ad160cc80948ab480794cc8c115, type: 2}
     cooldown: 0
     currentCooldown: -6

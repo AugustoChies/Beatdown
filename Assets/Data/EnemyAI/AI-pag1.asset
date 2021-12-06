@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyBehaviourParameters:
   - moveToPerform: {fileID: 11400000, guid: 4d0a8582a153b9d43b2ed34c7c0ed62f, type: 2}
-    cooldown: 0
+    cooldown: 3
     currentCooldown: 1
     onlyUseOnce: 0
     conditions: []
   - moveToPerform: {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
-    cooldown: 3
+    cooldown: 2
     currentCooldown: -6
     onlyUseOnce: 0
     conditions:
