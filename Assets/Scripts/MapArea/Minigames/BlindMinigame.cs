@@ -14,6 +14,7 @@ public class BlindMinigame : Minigame
 
     public TextMeshProUGUI text = null;
     public Image arrow = null;
+    public GameObject spotLight = null;
 
     [SerializeField]
     private Color _defaultColor = Color.white;
@@ -60,6 +61,7 @@ public class BlindMinigame : Minigame
     {
         if (!inputActive) return;
 
+        spotLight.SetActive(true);
         arrow.enabled = true;
         switch (Inputs[currentInputIndex])
         {
@@ -130,6 +132,7 @@ public class BlindMinigame : Minigame
     public void ShowInputs()
     {
         text.text = "Watch!";
+        spotLight.SetActive(false);
         arrow.enabled = false;
         StartCoroutine(ShowCoroutine());
     }
@@ -140,6 +143,7 @@ public class BlindMinigame : Minigame
         for (int i = 0; i < Inputs.Count; i++)
         {
             yield return new WaitForSeconds(0.25f);
+            spotLight.SetActive(true);
             arrow.enabled = true;
             switch (Inputs[i])
             {
@@ -159,6 +163,7 @@ public class BlindMinigame : Minigame
                     break;
             }
             yield return new WaitForSeconds(0.75f);
+            spotLight.SetActive(false);
             arrow.enabled = false;
         }
         text.text = "Repeat!";

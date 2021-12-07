@@ -80,7 +80,7 @@ public class MinigameCanvas : MonoBehaviour
             minigameSource.Stop();
         }
         mapSource.Play();
-        minigameSource.clip = null;
+        song = null;
         statGainPanel.SetActive(false);
     }
 }
