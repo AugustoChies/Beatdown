@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c7c1cadbd7c704b92f4e51f3ff5d43, type: 3}
+  m_Name: DIALOGKpop
+  m_EditorClassIdentifier: 
+  dialogueUpperSprite: {fileID: 21300000, guid: 8e714d05b75239243bd9dcea5dd48782, type: 3}
+  dialogues:
+  - dialogueText: Opa, tudo bem?
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: 329dead9a553a524f9693ddac8a56078, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
+  - dialogueText: Konichiwa
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: O que que foi isso agora?
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: ed8f8a61d8442ca43bb964e2568380fb, type: 3}
+  - dialogueText: O kawaii koto
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: bd5a2cbce6837fd48a0823bd5c5a845e, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: "Fala portugu\xEAs o caralho"
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 1223c301139811c4ca5aeabec502d20c, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: 9108393b886e6dc4ba74d524847445ee, type: 3}
+  - dialogueText: Baka
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: a753a45405c57a1429ce83ce827e0cb0, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}

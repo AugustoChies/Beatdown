@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c7c1cadbd7c704b92f4e51f3ff5d43, type: 3}
+  m_Name: DIALOGBernardo
+  m_EditorClassIdentifier: 
+  dialogueUpperSprite: {fileID: 21300000, guid: d87de49ebf8093c45a77651527f39290, type: 3}
+  dialogues:
+  - dialogueText: Fala Bernardo, tudo certo?
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: 964ea5a8f708ead45b0487e2d53b5c7b, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
+  - dialogueText: "Opa, e a\xED cara."
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: "Tu j\xE1 foi ver o novo filme do Homem-Aranha?"
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: ed8f8a61d8442ca43bb964e2568380fb, type: 3}
+  - dialogueText: "Ainda n\xE3o, eu estava virando Castlevania pela d\xE9cima quinta
+      vez e n\xE3o tive tempo de ver ainda."
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: 9a9278518f903254db07c79ae6a3329b, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: "Ent\xE3o, por favor, sem spoi..."
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: O Toby Maguire e o Andrew Garfield aparecem no filme.
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: 964ea5a8f708ead45b0487e2d53b5c7b, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
+  - dialogueText: ...
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: ...
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: 9a9278518f903254db07c79ae6a3329b, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: ...
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: "Vem na m\xE3o ent\xE3o filha da p..."
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: ebf3e533eb1bbf5418701ed968adecf3, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}

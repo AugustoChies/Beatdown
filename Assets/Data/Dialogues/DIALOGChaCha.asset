@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c7c1cadbd7c704b92f4e51f3ff5d43, type: 3}
+  m_Name: DIALOGChaCha
+  m_EditorClassIdentifier: 
+  dialogueUpperSprite: {fileID: 21300000, guid: d87de49ebf8093c45a77651527f39290, type: 3}
+  dialogues:
+  - dialogueText: "E a\xED, tudo bem?"
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: f3420ac283b17f84da109b910c183068, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: Oie, que bom que tu apareceu.
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: c765176acb8c8e84aacc69c800e19841, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: "Tu sabe que a gente vai ter que se enfrentar, n\xE9?"
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: ed8f8a61d8442ca43bb964e2568380fb, type: 3}
+  - dialogueText: "Claro. Mas ainda assim \xE9 melhor dan\xE7ar com algu\xE9m do
+      que sozinho."
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: 156adb8a1a58aa44b9ef360d70465adc, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
