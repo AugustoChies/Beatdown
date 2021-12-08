@@ -8,6 +8,7 @@ public class DamageModificationsStatus : ScriptableObject
 {   
     public float ExtraHypeDamage = 10;
     public float PerfectionEffectMultiplier = 2f;
+    public float GangGrowthMultiplier = 0.05f;
     public float SpeedEffectMultiplier = 0.2f;
     public float PerformanceBasedEffectMultiplier = 2;
     public float StartMoveDelay = 1.5f;

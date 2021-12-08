@@ -35,6 +35,12 @@ public class CharacterData : ScriptableObject
     public List<Equipment> equippedItems = null;
     public List<Equipment> obtainedEquippedItems = null;
 
+    [Space()]
+    public bool IsGangMember = false;
+    public int GangMemberID = 0;
+    public DamageModificationsStatus DamageModifier = null;
+    [Space()]
+
     public int defaultDay = 1;
     public int defaultHour = 6;
     public int defaultGold = 100;
@@ -58,21 +64,41 @@ public class CharacterData : ScriptableObject
 
     public float GetCurveAttack()
     {
+        if(IsGangMember)
+        {
+            return _statCurve.Evaluate(_attack / 100) * (1 + Inventory.Instance.GangDefeatedIDs.Count * DamageModifier.GangGrowthMultiplier);
+        }
+
         return _statCurve.Evaluate(_attack / 100);
     }
 
     public float GetCurveAPerformance()
     {
+        if (IsGangMember)
+        {
+            return _statCurve.Evaluate(_performance / 100) * (1 + Inventory.Instance.GangDefeatedIDs.Count * DamageModifier.GangGrowthMultiplier);
+        }
+
         return _statCurve.Evaluate(_performance / 100);
     }
 
     public float GetCurveDefense()
     {
+        if (IsGangMember)
+        {
+            return _statCurve.Evaluate(_defense / 100) * (1 + Inventory.Instance.GangDefeatedIDs.Count * DamageModifier.GangGrowthMultiplier);
+        }
+
         return _statCurve.Evaluate(_defense / 100);
     }
 
     public float GetCurveRythm()
     {
+        if (IsGangMember)
+        {
+            return _statCurve.Evaluate(_rythm / 100) * (1 + Inventory.Instance.GangDefeatedIDs.Count * DamageModifier.GangGrowthMultiplier);
+        }
+
         return _statCurve.Evaluate(_rythm / 100);
     }
 }

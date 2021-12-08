@@ -49,6 +49,9 @@ MonoBehaviour:
   ObtainedMoves: []
   equippedItems: []
   obtainedEquippedItems: []
+  IsGangMember: 1
+  GangMemberID: 4
+  DamageModifier: {fileID: 11400000, guid: a2adc788f36da4e49bec1b5adaf907a3, type: 2}
   defaultDay: 0
   defaultHour: 0
   defaultGold: 0

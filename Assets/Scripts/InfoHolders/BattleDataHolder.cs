@@ -22,4 +22,21 @@ public class BattleDataHolder : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public bool IsGangBattle()
+    {
+        return CurrentBattleData.enemyData.IsGangMember;
+    }
+
+    public void CheckForGangID()
+    {
+        if (!IsGangBattle()) return;
+
+        int id = CurrentBattleData.enemyData.GangMemberID;
+
+        if(!Inventory.Instance.GangDefeatedIDs.Contains(id))
+        {
+            Inventory.Instance.GangDefeatedIDs.Add(id);
+        }
+    }
 }

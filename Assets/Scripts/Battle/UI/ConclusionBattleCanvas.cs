@@ -62,6 +62,7 @@ public class ConclusionBattleCanvas : UIElementScript
         }
         else
         {
+            BattleDataHolder.Instance.CheckForGangID();
             Inventory.Instance.PassTime(BattleDataHolder.Instance.RegularBattleDuration);
         }
         

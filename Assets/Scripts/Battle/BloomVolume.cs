@@ -26,7 +26,6 @@ public class BloomVolume : MonoBehaviour
     {
         if (pullingUp)
         {
-            print("UP");
             bloom.intensity.value = Mathf.PingPong(Time.time * 2, 8);
         }
         else

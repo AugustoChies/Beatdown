@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: pagode3
   moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
-  moveAnimation: TestMove
+  moveAnimation: Default
   baseDamage: 20
   performanceDamage: 28
   extraDamage: 13
