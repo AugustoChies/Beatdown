@@ -251,15 +251,8 @@ public class BattleController : MonoBehaviour
             damage -= damage * statsModifiers.DefenseModifier(defendingChar.GetCurveDefense());
             enemycurrenthealth -= damage;
             
-            correctInputCombo = 0;            
-            if (enemycurrenthealth <= 0)
-            {
-                BattleEnd(true);
-            }
-            else
-            {                
-                SetBattleStage(EBattleStage.EnemyTurn);
-            }
+            correctInputCombo = 0;
+            StartCoroutine(DelayedNextTurn(true));
         }
         else
         {
@@ -302,14 +295,7 @@ public class BattleController : MonoBehaviour
             playercurrenthealth -= damage;
 
             correctInputCombo = 0;
-            if (playercurrenthealth <= 0)
-            {
-                BattleEnd(false);
-            }
-            else
-            {
-                SetBattleStage(EBattleStage.PlayerTurn);
-            }
+            StartCoroutine(DelayedNextTurn(false));            
         }
 
         if (_lastToMoveIsPlayer)
@@ -356,6 +342,33 @@ public class BattleController : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         ApplyDamage();
+    }
+
+    IEnumerator DelayedNextTurn(bool isPlayerTurn, float time = 0.75f)
+    {
+        yield return new WaitForSeconds(time);
+        if (isPlayerTurn)
+        {
+            if (enemycurrenthealth <= 0)
+            {
+                BattleEnd(true);
+            }
+            else
+            {
+                SetBattleStage(EBattleStage.EnemyTurn);
+            }
+        }
+        else
+        {
+            if (playercurrenthealth <= 0)
+            {
+                BattleEnd(false);
+            }
+            else
+            {
+                SetBattleStage(EBattleStage.PlayerTurn);
+            }
+        }
     }
 
 
