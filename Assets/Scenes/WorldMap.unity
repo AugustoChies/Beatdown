@@ -5472,25 +5472,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 543092819, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 608188413635646872, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -850
-      objectReference: {fileID: 0}
-    - target: {fileID: 608188413635646872, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -66
-      objectReference: {fileID: 0}
     - target: {fileID: 3865764941708881815, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
       propertyPath: m_Name
       value: StatsCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3865764941708881815, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3865764941708881819, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
       propertyPath: m_Pivot.x
@@ -8553,17 +8537,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1004774223}
-    - target: {fileID: 3717826595644634556, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 3717826595817647968, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
       propertyPath: m_Name
       value: MapCanvasNew
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717826595817647968, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3717826595817647980, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
       propertyPath: m_Pivot.x
@@ -8648,30 +8624,6 @@ PrefabInstance:
     - target: {fileID: 3717826595817647980, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717826595817647983, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717826595817647983, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461961204112730118, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461961204112730118, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartChampionBattleButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461961204112730118, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461961204112730118, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
