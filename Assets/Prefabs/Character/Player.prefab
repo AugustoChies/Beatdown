@@ -7208,8 +7208,8 @@ MonoBehaviour:
   - {fileID: 3362445866159238766}
   maleHair: {fileID: 4610658757270536888}
   femaleHair: {fileID: 7096216706508607258}
-  defaultShirtMale: {fileID: 0}
-  defaultShirtFemale: {fileID: 0}
+  defaultShirtMale: {fileID: 4591393292981739515}
+  defaultShirtFemale: {fileID: 5342161735973277547}
   shirtID: 1
 --- !u!1 &3578478901149268661
 GameObject:
