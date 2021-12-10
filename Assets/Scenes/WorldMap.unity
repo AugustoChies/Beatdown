@@ -11228,10 +11228,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4718828734770294838, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4718828736126178690, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
@@ -11318,14 +11314,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718828736126178718, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4718828736126178719, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4718828736126178719, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
-      propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

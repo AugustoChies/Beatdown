@@ -24,14 +24,21 @@ public class MapButtonMethods : MonoBehaviour
     {
         BattleDataHolder.Instance.CurrentBattleData = battleData;
         BattleDataHolder.Instance.IsChampionBattle = false;
-        SceneManager.LoadScene("BattleScene");
+        if(BattleDataHolder.Instance.CurrentBattleData.dialogue != null)
+        {
+            DialogueManager.Instance.PlayDialogue(BattleDataHolder.Instance.CurrentBattleData.dialogue);
+        }
+        else
+        {
+            SceneManager.LoadScene("BattleScene");
+        }
     }
 
     public void StartChampionBattleButton()
     {
         BattleDataHolder.Instance.CurrentBattleData = BattleDataHolder.Instance.championInfos[Inventory.Instance.ChampionVictories].BattleInfo;
         BattleDataHolder.Instance.IsChampionBattle = true;
-        DialogueManager.Instance.PlayDialogue(BattleDataHolder.Instance.championInfos[Inventory.Instance.ChampionVictories].championDialogue);
+        DialogueManager.Instance.PlayDialogue(BattleDataHolder.Instance.CurrentBattleData.dialogue);
     }
 
     public void UpdateTime()

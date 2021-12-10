@@ -9,4 +9,5 @@ public class BattleData : ScriptableObject
     public GameObject CharacterModel = null;
     public int RewardMoney = 0;
     public RythmMove RewardMove = null;
+    public Dialogue dialogue;
 }

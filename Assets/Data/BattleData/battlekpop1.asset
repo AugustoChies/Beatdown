@@ -16,3 +16,4 @@ MonoBehaviour:
   CharacterModel: {fileID: 5549566323404669473, guid: 51673741fbe370348aa1c7e6f0042251, type: 3}
   RewardMoney: 100
   RewardMove: {fileID: 11400000, guid: 15d538e7487c33d409fca2a60a5f480e, type: 2}
+  dialogue: {fileID: 11400000, guid: 0555692b6f941d24c8819a54b0399b36, type: 2}

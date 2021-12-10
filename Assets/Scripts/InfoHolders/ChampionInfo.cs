@@ -10,5 +10,4 @@ public class ChampionInfo : ScriptableObject
     public Sprite Portarit = null;
     public int DayLimit = 1;
     public BattleData BattleInfo = null;
-    public Dialogue championDialogue;
 }
