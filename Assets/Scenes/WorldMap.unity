@@ -2035,41 +2035,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 197755376, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 95.90991
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338642880, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2622305047254592213}
-    - target: {fileID: 1338642880, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 1390176894, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1390176894, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.15327297
-      objectReference: {fileID: 0}
-    - target: {fileID: 1390176894, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.0000016165195
-      objectReference: {fileID: 0}
-    - target: {fileID: 2009664945726741095, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3334413207291939280, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
       propertyPath: m_Name
       value: ShopCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334413207291939280, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3334413207291939292, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
       propertyPath: m_Pivot.x
@@ -2158,11 +2126,7 @@ PrefabInstance:
     - target: {fileID: 3334413207291939295, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334413207291939295, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 963483964}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c22b3c1a93628469b9d01a3a358be3, type: 3}
 --- !u!1 &742233279783722961
@@ -5476,6 +5440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatsCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3865764941708881816, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 963483964}
     - target: {fileID: 3865764941708881819, guid: 28bd0fd598b62c64a8c7b5713ba313ec, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8624,6 +8592,14 @@ PrefabInstance:
     - target: {fileID: 3717826595817647980, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717826595817647983, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 963483964}
+    - target: {fileID: 3717826595817647983, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e60446f7d74b2c44b76aba7d8ecc8fb, type: 3}
