@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogues:
   - dialogueText: uh uh uh...
     isRightSpeaker: 1
-    newSpriteRight: {fileID: 21300000, guid: a415f5ac4d5329d4689c1d81d2d7a99f, type: 3}
+    newSpriteRight: {fileID: 21300000, guid: a9e81f6ce3bb0cd4cb212cf8c13ae01c, type: 3}
     newSpriteLeftBoy: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
   - dialogueText: "H\xE3, que barulho \xE9 esse?"
@@ -26,7 +26,7 @@ MonoBehaviour:
     newSpriteLeftGirl: {fileID: 0}
   - dialogueText: Uh uuh uuh uuh...
     isRightSpeaker: 1
-    newSpriteRight: {fileID: 21300000, guid: 801a90432db3c2840b866fcb110e348e, type: 3}
+    newSpriteRight: {fileID: 21300000, guid: f9934798b96add8408744bd47be89185, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
   - dialogueText: "Parece algu\xE9m cantando."
@@ -46,7 +46,7 @@ MonoBehaviour:
     newSpriteLeftGirl: {fileID: 21300000, guid: 9108393b886e6dc4ba74d524847445ee, type: 3}
   - dialogueText: Uh uuh
     isRightSpeaker: 1
-    newSpriteRight: {fileID: 21300000, guid: c308e817f5779d64690051d511a7bc1c, type: 3}
+    newSpriteRight: {fileID: 21300000, guid: 155e815a45efd0e4aadbeb61ca665676, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
   - dialogueText: Gangue do pagode

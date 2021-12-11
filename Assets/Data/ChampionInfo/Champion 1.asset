@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd0e17fa1643f644ab5562393d556c6, type: 3}
   m_Name: Champion 1
   m_EditorClassIdentifier: 
-  Name: augusto rei do conga
-  Info: "locutor nas horas vagas, gosta de dublar ele mesmo e falar come ononon e
-    groselha (informa\xE7\xE3o de \xFAltima hora)"
+  Name: Augusto rei do conga
+  Info: "Locutor nas horas vagas, gosta de dublar a si mesmo e falar come ononon
+    e groselha (informa\xE7\xE3o de \xFAltima hora)"
   Portarit: {fileID: 21300000, guid: e5f9b76993b1d7f42bc3d6dec36a092b, type: 3}
   DayLimit: 5
-  BattleInfo: {fileID: 11400000, guid: 9241f64769aea9240b7ea8a4fa3e5857, type: 2}
+  BattleInfo: {fileID: 11400000, guid: 5e86969afe831b145800f18cd8d1fdfb, type: 2}
   championDialogue: {fileID: 11400000, guid: 105cc08cd41fec64fac08e693ac327b6, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c7c1cadbd7c704b92f4e51f3ff5d43, type: 3}
   m_Name: DIALOGBernardo
   m_EditorClassIdentifier: 
-  dialogueUpperSprite: {fileID: 21300000, guid: d87de49ebf8093c45a77651527f39290, type: 3}
+  dialogueUpperSprite: {fileID: 21300000, guid: 11875bc031a285547818dc6b9995072e, type: 3}
   dialogues:
   - dialogueText: Fala Bernardo, tudo certo?
     isRightSpeaker: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
   - dialogueText: "Ent\xE3o, por favor, sem spoi..."
-    isRightSpeaker: 0
+    isRightSpeaker: 1
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
     newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
   - dialogueText: ...
     isRightSpeaker: 1
-    newSpriteRight: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
   - dialogueText: ...

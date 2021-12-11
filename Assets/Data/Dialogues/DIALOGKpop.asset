@@ -44,3 +44,18 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: a753a45405c57a1429ce83ce827e0cb0, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: "Cai dentro ent\xE3o"
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: a753a45405c57a1429ce83ce827e0cb0, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: Omae wa mou shideiru
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: a753a45405c57a1429ce83ce827e0cb0, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: N-nani?
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 21300000, guid: a753a45405c57a1429ce83ce827e0cb0, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 57827b8bc3de56a44857f621da8ec096, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: 47de08c74f468ae4e87ae9fdb9b57be0, type: 3}

@@ -10,27 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31c7c1cadbd7c704b92f4e51f3ff5d43, type: 3}
-  m_Name: DialogHipHop
+  m_Name: DIALOGHipHop
   m_EditorClassIdentifier: 
   dialogueUpperSprite: {fileID: 21300000, guid: d87de49ebf8093c45a77651527f39290, type: 3}
   dialogues:
-  - dialogueText: Eae
+  - dialogueText: Fala mano.
     isRightSpeaker: 1
-    newSpriteRight: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
-    newSpriteLeftBoy: {fileID: 0}
-    newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: Opa
+    newSpriteRight: {fileID: 21300000, guid: fa835361d4334604e8f5c82cfb43c23c, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
+  - dialogueText: "Opa, e a\xED?"
     isRightSpeaker: 0
-    newSpriteRight: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: Beleza meu?
+  - dialogueText: "\xC9 tu que quer ser o melhor dan\xE7arino dessas bandas?"
     isRightSpeaker: 1
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: Tudo de boas
+  - dialogueText: "Se n\xE3o for um problema..."
     isRightSpeaker: 0
-    newSpriteRight: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: ed8f8a61d8442ca43bb964e2568380fb, type: 3}
+  - dialogueText: "Mas \xE9."
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: 7fbe29f469349c24ca987b7c89f86e4c, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: "Vai ter que come\xE7ar batendo de frente comigo. E eu n\xE3o vou
+      pegar leve n\xE3o."
+    isRightSpeaker: 1
+    newSpriteRight: {fileID: 21300000, guid: ae4b681291f0ef941aea4f3a6db689b2, type: 3}
+    newSpriteLeftBoy: {fileID: 0}
+    newSpriteLeftGirl: {fileID: 0}
+  - dialogueText: "Beleza ent\xE3o. Pode vir."
+    isRightSpeaker: 0
+    newSpriteRight: {fileID: 0}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 1223c301139811c4ca5aeabec502d20c, type: 3}
+    newSpriteLeftGirl: {fileID: 21300000, guid: 9108393b886e6dc4ba74d524847445ee, type: 3}
