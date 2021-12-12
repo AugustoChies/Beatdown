@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: Hat 3
+  m_Name: Cinto
   m_EditorClassIdentifier: 
-  equipmentName: Orelha de gato
-  equipmentStatsBonusText: HP +50 / PRF -5
-  goldCost: 50
+  equipmentName: cinto
+  equipmentStatsBonusText: RTH + 20 / PRF - 5
+  goldCost: 3
   addedAtk: 0
   addedDef: 0
   addedHype: -5
-  addedHP: 50
-  addedRhy: 0
-  equipmentType: 0
-  equipmentSprite: {fileID: 21300000, guid: 990482ce538c16045b81cf38a4bc03ea, type: 3}
+  addedHP: 0
+  addedRhy: 20
+  equipmentType: 3
+  equipmentSprite: {fileID: 21300000, guid: 82417fbccc1848f48befa0d4098ea275, type: 3}

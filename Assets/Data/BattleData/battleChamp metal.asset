@@ -15,6 +15,6 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: 09f5607f1db70fd4d92a3faa79acce4b, type: 2}
   CharacterModel: {fileID: 5549566323404669473, guid: 49af7b940e7be81418f6b2acca2042da, type: 3}
   RewardMoney: 2000
-  Music: {fileID: 8300000, guid: f6adeedc704619f4190456bc7302b010, type: 3}
+  Music: {fileID: 8300000, guid: ed00ca826177dfa41bdd4c247d4d69ef, type: 3}
   RewardMove: {fileID: 11400000, guid: 4dc17d041b0cd014294a85c1ba8232fc, type: 2}
   dialogue: {fileID: 11400000, guid: 5ce20f74ad9f9c24b8349a16c5bfc70e, type: 2}

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: Gloves 1
+  m_Name: chapeu chifre diabo
   m_EditorClassIdentifier: 
-  equipmentName: Luva de gato
-  equipmentStatsBonusText: PRF +20 / HP -15
-  goldCost: 50
-  addedAtk: 0
+  equipmentName: chifre de diabo
+  equipmentStatsBonusText: ATK +20 / PRF -5
+  goldCost: 3
+  addedAtk: 20
   addedDef: 0
-  addedHype: 20
-  addedHP: -15
+  addedHype: -5
+  addedHP: 0
   addedRhy: 0
-  equipmentType: 4
-  equipmentSprite: {fileID: 21300000, guid: 5bb66a4289f164f47828205aaa27b975, type: 3}
+  equipmentType: 0
+  equipmentSprite: {fileID: 21300000, guid: a3860e1ac3873844dbb770ac8902d7ac, type: 3}

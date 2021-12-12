@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: Hat 2
+  m_Name: colar diamante
   m_EditorClassIdentifier: 
-  equipmentName: "bon\xE9"
-  equipmentStatsBonusText: HP +50 / RTH -5
-  goldCost: 50
-  addedAtk: 0
-  addedDef: 0
+  equipmentName: Colar de diamante
+  equipmentStatsBonusText: ATK + 20 / DEF -5
+  goldCost: 3
+  addedAtk: 20
+  addedDef: -5
   addedHype: 0
-  addedHP: 50
-  addedRhy: -5
-  equipmentType: 0
-  equipmentSprite: {fileID: 21300000, guid: 7591d0547501e5d46bbea3c049a61353, type: 3}
+  addedHP: 0
+  addedRhy: 0
+  equipmentType: 1
+  equipmentSprite: {fileID: 21300000, guid: 668fa9b70fd5dce42a63dc4b53895197, type: 3}
