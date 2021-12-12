@@ -49,4 +49,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4006e1575cc3c024d8c4eb61b91b8f16, type: 2}
   - {fileID: 11400000, guid: 03d80eeb87a1aa844aaa8df07d649c0b, type: 2}
   IsChampionBattle: 0
-  RegularBattleDuration: 4
+  RegularBattleDuration: 8
