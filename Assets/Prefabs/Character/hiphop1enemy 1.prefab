@@ -1069,7 +1069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1669322715186988698
 Transform:
   m_ObjectHideFlags: 0
@@ -4927,7 +4927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7297884872199519653
 Transform:
   m_ObjectHideFlags: 0
@@ -6147,7 +6147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4418551990418385296
 Transform:
   m_ObjectHideFlags: 0
@@ -7097,7 +7097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2058419657343741649}
   m_Layer: 0
-  m_Name: Champchaenemy
+  m_Name: hiphop1enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8544,7 +8544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5643465486045031708
 Transform:
   m_ObjectHideFlags: 0
@@ -9000,7 +9000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1227832121706098880
 Transform:
   m_ObjectHideFlags: 0
@@ -9925,7 +9925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7320464577089750757
 Transform:
   m_ObjectHideFlags: 0
@@ -22500,7 +22500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4635075523779989761
 Transform:
   m_ObjectHideFlags: 0
@@ -25629,7 +25629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6506008906057465509
 Transform:
   m_ObjectHideFlags: 0
@@ -26076,7 +26076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3700291405913469169
 Transform:
   m_ObjectHideFlags: 0
