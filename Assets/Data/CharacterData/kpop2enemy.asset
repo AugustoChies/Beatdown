@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: kpop2enemy
   m_EditorClassIdentifier: 
   _health: 130
-  _attack: 14
-  _performance: 16
-  _defense: 8
-  _rythm: 11
+  _attack: 13
+  _performance: 22
+  _defense: 10
+  _rythm: 13
   _idleAnimation: Default
   _statCurve:
     serializedVersion: 2

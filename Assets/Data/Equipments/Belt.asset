@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
   m_Name: Belt
   m_EditorClassIdentifier: 
-  equipmentName: Belt
-  equipmentStatsBonusText: ATK + 10
-  goldCost: 50
-  addedAtk: 10
+  equipmentName: cinto
+  equipmentStatsBonusText: RTH + 20 / PRF - 5
+  goldCost: 10
+  addedAtk: 0
   addedDef: 0
-  addedHype: 0
+  addedHype: -5
   addedHP: 0
-  addedRhy: 0
+  addedRhy: 20
   equipmentType: 3
-  equipmentSprite: {fileID: -547665329950711206, guid: acb194335b504bb4e820e66766f1048c, type: 3}
+  equipmentSprite: {fileID: 21300000, guid: 82417fbccc1848f48befa0d4098ea275, type: 3}

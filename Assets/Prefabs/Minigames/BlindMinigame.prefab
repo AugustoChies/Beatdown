@@ -173,7 +173,7 @@ MonoBehaviour:
     Performance: 10
     Defense: 10
     Rythm: 0
-  hourDuration: 5
+  hourDuration: 8
   parentCanvas: {fileID: 0}
   lowestInputAmount: 4
   highestInputAmount: 7

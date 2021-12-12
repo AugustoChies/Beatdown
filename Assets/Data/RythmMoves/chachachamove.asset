@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: chachachamove
   m_EditorClassIdentifier: 
   moveName: chachacha
-  moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
+  moveAudioClip: {fileID: 8300000, guid: 6d3899d3121a4b8449080c93ce008f6e, type: 3}
   moveAnimation: Default
   baseDamage: 35
   performanceDamage: 20

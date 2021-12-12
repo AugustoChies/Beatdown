@@ -171,7 +171,7 @@ MonoBehaviour:
     Performance: 0
     Defense: 0
     Rythm: 10
-  hourDuration: 4
+  hourDuration: 7
   parentCanvas: {fileID: 0}
   safeAreaSize: 0.5
   descentSpeed: 0.3

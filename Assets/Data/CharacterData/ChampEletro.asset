@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ChampEletro
   m_EditorClassIdentifier: 
   _health: 250
-  _attack: 30
-  _performance: 40
+  _attack: 20
+  _performance: 45
   _defense: 20
   _rythm: 12
   _idleAnimation: Default
