@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd0e17fa1643f644ab5562393d556c6, type: 3}
   m_Name: Champion 1
   m_EditorClassIdentifier: 
-  Name: Augusto rei do conga
-  Info: "Locutor nas horas vagas, gosta de dublar a si mesmo e falar come ononon
-    e groselha (informa\xE7\xE3o de \xFAltima hora)"
-  Portarit: {fileID: 21300000, guid: e5f9b76993b1d7f42bc3d6dec36a092b, type: 3}
+  Name: "Nathan sem \xF3culos"
+  Info: "Mestre dan\xE7arino \xE0s escondidas, nem percebeu que era um campe\xE3o.
+    Trabalha na aquiris e vive tentando entrar para a gangue do pagode junto com
+    o Bernardo"
+  Portarit: {fileID: 21300000, guid: 60de1d213ffe3594f87082c7b2daf5d6, type: 3}
   DayLimit: 5
   BattleInfo: {fileID: 11400000, guid: 5e86969afe831b145800f18cd8d1fdfb, type: 2}
-  championDialogue: {fileID: 11400000, guid: 105cc08cd41fec64fac08e693ac327b6, type: 2}
