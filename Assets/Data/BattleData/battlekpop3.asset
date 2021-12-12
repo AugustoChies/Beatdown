@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: battlekpop3
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: b16302492b5376f428fa7335e041dbd0, type: 2}
-  CharacterModel: {fileID: 5549566323404669473, guid: 79a0657bcb07d2d489dda1e5734adf85, type: 3}
+  CharacterModel: {fileID: 712916564143656237, guid: ba8ba614962ccfb4bb9aa77e3eb8c9f2, type: 3}
   RewardMoney: 100
   Music: {fileID: 8300000, guid: dd8935d0a01009b4c98d79ac1db8641c, type: 3}
   RewardMove: {fileID: 11400000, guid: c558e70afe569c7488b5b5335b4349b3, type: 2}

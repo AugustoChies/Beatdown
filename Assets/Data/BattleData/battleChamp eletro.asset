@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: battleChamp eletro
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 554bc9d139757dc4594f959ab9efd6ca, type: 2}
-  CharacterModel: {fileID: 5549566323404669473, guid: a3d8a72409fe23748a7d5ec94188bcd6, type: 3}
-  RewardMoney: 1500
+  CharacterModel: {fileID: 712916564143656237, guid: 8d231baa7b3475b408eab41e969e0c81, type: 3}
+  RewardMoney: 500
   Music: {fileID: 8300000, guid: 83f26fd4c9d624844aa656b6c81ef57d, type: 3}
   RewardMove: {fileID: 11400000, guid: b423e2dfe6dc3c54cab33dbfe248661d, type: 2}
   dialogue: {fileID: 11400000, guid: 3333602994566274f924e8ab6edfb779, type: 2}

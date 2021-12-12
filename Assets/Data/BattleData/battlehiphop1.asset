@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: battlehiphop1
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 942122cfd62b53a4daefa45d4cf95f2e, type: 2}
-  CharacterModel: {fileID: 5549566323404669473, guid: 14ef06d8c1c9339429ddd09b3aad3c14, type: 3}
+  CharacterModel: {fileID: 712916564143656237, guid: f383ba630a5bf5d49bdd6d9f7e9c7776, type: 3}
   RewardMoney: 100
   Music: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   RewardMove: {fileID: 11400000, guid: 0d862147199fb1d42837065ede6a54c3, type: 2}
