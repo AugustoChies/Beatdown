@@ -18,8 +18,10 @@ public class BattleAudioController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        MainTrack.clip = BattleDataHolder.Instance.CurrentBattleData.Music;
         mainVolume = MainTrack.volume;
         moveVolume = MoveTrack.volume;
+        MainTrack.Play();
     }
 
     public void PlayMoveTrack(AudioClip audioClip, float speed)
@@ -28,17 +30,32 @@ public class BattleAudioController : MonoBehaviour
         {
             MoveTrack.Stop();
         }
-        MoveTrack.clip = audioClip;
-        MoveTrack.pitch = speed;
-        MoveTrack.Play();
-        StopAllCoroutines();
-        StartCoroutine(FadeTracks(true));
+        if (audioClip == MainTrack.clip)
+        {
+            MoveTrack.clip = audioClip;
+            MainTrack.pitch = speed;
+        }
+        else
+        {
+            MoveTrack.clip = audioClip;
+            MoveTrack.pitch = speed;
+            MoveTrack.Play();
+            StopAllCoroutines();
+            StartCoroutine(FadeTracks(true));
+        }
     }
 
     public void FadeBackToMain()
     {
         StopAllCoroutines();
-        StartCoroutine(FadeTracks(false));
+        if (MoveTrack.clip == MainTrack.clip)
+        {
+            MainTrack.pitch = 1.0f;
+        }
+        else
+        {
+            StartCoroutine(FadeTracks(false));
+        }
     }
 
     IEnumerator FadeTracks(bool mainToMove)
