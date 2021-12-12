@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: calca rabo diabo
   m_EditorClassIdentifier: 
   equipmentName: rabo de diabo
-  equipmentStatsBonusText: HP +50 / RTH -5
-  goldCost: 50
+  equipmentStatsBonusText: PRF +20 / RTH -5
+  goldCost: 3
   addedAtk: 0
   addedDef: 0
-  addedHype: 0
-  addedHP: 50
+  addedHype: 20
+  addedHP: 0
   addedRhy: -5
   equipmentType: 3
   equipmentSprite: {fileID: 21300000, guid: b749c9ae6c43ddc43b351a3251d85ac5, type: 3}

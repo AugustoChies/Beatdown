@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: "Colar cifr\xE3o "
   equipmentStatsBonusText: PRF +10
-  goldCost: 50
+  goldCost: 1
   addedAtk: 0
   addedDef: 0
   addedHype: 10

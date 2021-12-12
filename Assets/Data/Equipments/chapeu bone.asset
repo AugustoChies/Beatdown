@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: "bon\xE9"
   equipmentStatsBonusText: HP +50 / RTH -5
-  goldCost: 50
+  goldCost: 3
   addedAtk: 0
   addedDef: 0
   addedHype: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: moletom
   equipmentStatsBonusText: DEF +20 / ATK -5
-  goldCost: 50
+  goldCost: 3
   addedAtk: -5
   addedDef: 20
   addedHype: 0

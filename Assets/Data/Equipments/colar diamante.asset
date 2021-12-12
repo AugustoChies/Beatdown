@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: Colar de diamante
   equipmentStatsBonusText: ATK + 20 / DEF -5
-  goldCost: 50
+  goldCost: 3
   addedAtk: 20
   addedDef: -5
   addedHype: 0

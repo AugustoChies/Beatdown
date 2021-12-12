@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: cinto
   equipmentStatsBonusText: RTH + 20 / PRF - 5
-  goldCost: 10
+  goldCost: 3
   addedAtk: 0
   addedDef: 0
   addedHype: -5

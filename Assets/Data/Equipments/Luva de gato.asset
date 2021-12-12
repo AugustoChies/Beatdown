@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: Luva de gato
   equipmentStatsBonusText: PRF +20 / HP -15
-  goldCost: 50
+  goldCost: 3
   addedAtk: 0
   addedDef: 0
   addedHype: 20

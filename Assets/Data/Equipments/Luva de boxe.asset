@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: Luva de boxe
   equipmentStatsBonusText: PRF +20 / RTH -5
-  goldCost: 50
+  goldCost: 3
   addedAtk: 0
   addedDef: 0
   addedHype: 20

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: colar cruz
   equipmentStatsBonusText: ATK + 20 / RTH -5
-  goldCost: 50
+  goldCost: 3
   addedAtk: 20
   addedDef: 0
   addedHype: 0

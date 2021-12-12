@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: sunglasses nose
   m_EditorClassIdentifier: 
   equipmentName: "\xF3culos com nariz"
-  equipmentStatsBonusText: ver
-  goldCost: 50
+  equipmentStatsBonusText: DEF +20 / PRF -5
+  goldCost: 3
   addedAtk: 0
-  addedDef: 0
-  addedHype: 0
-  addedHP: 50
-  addedRhy: -5
+  addedDef: 20
+  addedHype: -5
+  addedHP: 0
+  addedRhy: 0
   equipmentType: 1
   equipmentSprite: {fileID: 21300000, guid: ea959c34787d3a14bace4de344de9da6, type: 3}
