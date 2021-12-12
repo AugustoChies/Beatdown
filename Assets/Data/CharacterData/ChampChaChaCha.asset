@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ChampChaChaCha
   m_EditorClassIdentifier: 
   _health: 200
-  _attack: 30
-  _performance: 20
+  _attack: 20
+  _performance: 65
   _defense: 30
   _rythm: 10
   _idleAnimation: Default

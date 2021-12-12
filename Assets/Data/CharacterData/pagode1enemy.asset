@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: pagode1enemy
   m_EditorClassIdentifier: 
   _health: 120
-  _attack: 11
-  _performance: 9
-  _defense: 17
-  _rythm: 12
+  _attack: 13
+  _performance: 17
+  _defense: 21
+  _rythm: 16
   _idleAnimation: Default
   _statCurve:
     serializedVersion: 2

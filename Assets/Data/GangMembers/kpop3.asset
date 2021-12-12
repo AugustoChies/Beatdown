@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: kpop3
   m_EditorClassIdentifier: 
   Name: Sakura-chan
-  Portarit: {fileID: 21300000, guid: b60083fffde81644b971a2606643389d, type: 3}
+  Portarit: {fileID: 21300000, guid: bd5a2cbce6837fd48a0823bd5c5a845e, type: 3}
   StrenghtLevel: 2
   BattleInfo: {fileID: 11400000, guid: e15c6de3a7fc3e94e97ab7941c2301c5, type: 2}

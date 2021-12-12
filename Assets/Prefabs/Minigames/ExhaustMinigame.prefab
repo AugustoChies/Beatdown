@@ -802,7 +802,7 @@ MonoBehaviour:
     Performance: 0
     Defense: 0
     Rythm: 0
-  hourDuration: 0
+  hourDuration: 5
   parentCanvas: {fileID: 0}
   _repeatedMove: {fileID: 11400000, guid: 1b96481cb40b54844802429672a7150c, type: 2}
   _audio: {fileID: 8021353293838207207}

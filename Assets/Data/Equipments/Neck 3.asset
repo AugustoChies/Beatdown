@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
   m_Name: Neck 3
   m_EditorClassIdentifier: 
-  equipmentName: Neck 3
-  equipmentStatsBonusText: ATK + 10
+  equipmentName: colar cruz
+  equipmentStatsBonusText: ATK + 20 / RTH -5
   goldCost: 50
-  addedAtk: 10
+  addedAtk: 20
   addedDef: 0
   addedHype: 0
   addedHP: 0
-  addedRhy: 0
+  addedRhy: -5
   equipmentType: 1
-  equipmentSprite: {fileID: -547665329950711206, guid: acb194335b504bb4e820e66766f1048c, type: 3}
+  equipmentSprite: {fileID: 21300000, guid: a071b0c06e732cf43b6b5775c474a3bb, type: 3}

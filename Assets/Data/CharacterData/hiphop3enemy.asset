@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: hiphop3enemy
   m_EditorClassIdentifier: 
   _health: 150
-  _attack: 15
-  _performance: 18
+  _attack: 12
+  _performance: 22
   _defense: 11
   _rythm: 12
   _idleAnimation: Default

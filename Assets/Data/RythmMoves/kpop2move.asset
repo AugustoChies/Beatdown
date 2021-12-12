@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: kpop2move
   m_EditorClassIdentifier: 
   moveName: kpop2
-  moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
+  moveAudioClip: {fileID: 8300000, guid: dd8935d0a01009b4c98d79ac1db8641c, type: 3}
   moveAnimation: Default
   baseDamage: 15
   performanceDamage: 30
