@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: Hat 3
+  m_Name: chapeu orelha de gato
   m_EditorClassIdentifier: 
   equipmentName: Orelha de gato
   equipmentStatsBonusText: HP +50 / PRF -5

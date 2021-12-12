@@ -17,4 +17,4 @@ MonoBehaviour:
   RewardMoney: 100
   Music: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   RewardMove: {fileID: 11400000, guid: 0d862147199fb1d42837065ede6a54c3, type: 2}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 23f5ab1154f6ec9428b0496b47c5ce3f, type: 2}

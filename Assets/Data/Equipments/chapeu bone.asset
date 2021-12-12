@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
-  m_Name: Gloves 2
+  m_Name: chapeu bone
   m_EditorClassIdentifier: 
-  equipmentName: Luva de boxe
-  equipmentStatsBonusText: PRF +20 / RTH -5
+  equipmentName: "bon\xE9"
+  equipmentStatsBonusText: HP +50 / RTH -5
   goldCost: 50
   addedAtk: 0
   addedDef: 0
-  addedHype: 20
-  addedHP: 0
+  addedHype: 0
+  addedHP: 50
   addedRhy: -5
-  equipmentType: 4
-  equipmentSprite: {fileID: 21300000, guid: b032a8f0e50f1e64a824d8abe91b5903, type: 3}
+  equipmentType: 0
+  equipmentSprite: {fileID: 21300000, guid: 7591d0547501e5d46bbea3c049a61353, type: 3}
