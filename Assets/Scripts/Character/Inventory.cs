@@ -65,6 +65,9 @@ public class Inventory : MonoBehaviour
     {
         if (!PlayerDataManager.Instance) InitializeDataDefault();
         else PlayerDataManager.Instance.InitializeData();
+
+        /*Application.targetFrameRate = 10000;
+        QualitySettings.vSyncCount = 0;*/
     }
 
     public void SetGender(bool chooseMale)
