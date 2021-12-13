@@ -3695,6 +3695,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4718828734770294838, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718828735157821444, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
+      propertyPath: m_margin.w
+      value: 11.569748
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718828735157821444, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
+      propertyPath: m_margin.y
+      value: 20.741394
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718828735157821444, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 9923aaa5a4eb54549b6bac9a37ee37e7, type: 2}
+    - target: {fileID: 4718828735157821444, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2998283957888007816, guid: 9923aaa5a4eb54549b6bac9a37ee37e7, type: 2}
+    - target: {fileID: 4718828735157821444, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4718828736126178690, guid: 6591d6d1c926e4f41b1311e1304518c0, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
