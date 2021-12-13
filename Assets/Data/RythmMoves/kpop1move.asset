@@ -16,8 +16,8 @@ MonoBehaviour:
   moveAudioClip: {fileID: 8300000, guid: dd8935d0a01009b4c98d79ac1db8641c, type: 3}
   moveAnimation: Default
   baseDamage: 25
-  performanceDamage: 18
-  extraDamage: 10
+  performanceDamage: 20
+  extraDamage: 5
   effect: 3
   rythmData:
   - WaitTimeToNextNote: 0.5

@@ -15,9 +15,9 @@ MonoBehaviour:
   moveName: kpop3
   moveAudioClip: {fileID: 8300000, guid: dd8935d0a01009b4c98d79ac1db8641c, type: 3}
   moveAnimation: Default
-  baseDamage: 42
-  performanceDamage: 0
-  extraDamage: 0
+  baseDamage: 40
+  performanceDamage: 5
+  extraDamage: 3
   effect: 0
   rythmData:
   - WaitTimeToNextNote: 0.5

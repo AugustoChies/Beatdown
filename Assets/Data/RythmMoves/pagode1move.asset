@@ -15,8 +15,8 @@ MonoBehaviour:
   moveName: pagode1
   moveAudioClip: {fileID: 8300000, guid: 0005316389e79554fb533c58dbeea9da, type: 3}
   moveAnimation: Default
-  baseDamage: 33
-  performanceDamage: 0
+  baseDamage: 31
+  performanceDamage: 5
   extraDamage: 11
   effect: 4
   rythmData:

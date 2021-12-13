@@ -15,9 +15,9 @@ MonoBehaviour:
   moveName: EletroSwing
   moveAudioClip: {fileID: 8300000, guid: 83f26fd4c9d624844aa656b6c81ef57d, type: 3}
   moveAnimation: Default
-  baseDamage: 30
-  performanceDamage: 35
-  extraDamage: 9
+  baseDamage: 25
+  performanceDamage: 36
+  extraDamage: 5
   effect: 0
   rythmData:
   - WaitTimeToNextNote: 2.5
