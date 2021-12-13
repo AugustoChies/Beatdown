@@ -19,7 +19,7 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: a9e81f6ce3bb0cd4cb212cf8c13ae01c, type: 3}
     newSpriteLeftBoy: {fileID: 21300000, guid: 9a9becc2a23a7ee42a0ff5b34928bb45, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
-  - dialogueText: "H\xE3, que barulho \xE9 esse?"
+  - dialogueText: "H\xC3, que barulho \xC9 esse?"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
@@ -29,7 +29,7 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: f9934798b96add8408744bd47be89185, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Parece algu\xE9m cantando."
+  - dialogueText: "Parece algu\xC9m cantando."
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 21300000, guid: 03cd257b3fbfc1f43a7f65d008b70ce8, type: 3}
@@ -39,7 +39,7 @@ MonoBehaviour:
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Quem vem l\xE1? Se apresente agora."
+  - dialogueText: "Quem vem l\xC1? Se apresente agora."
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 21300000, guid: 5c4a345964ff1d346b88e262f380ff7f, type: 3}

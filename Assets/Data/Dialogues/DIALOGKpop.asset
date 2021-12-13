@@ -34,7 +34,7 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: bd5a2cbce6837fd48a0823bd5c5a845e, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Fala portugu\xEAs o caralho"
+  - dialogueText: "Fala portugu\xCAs o caralho"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 21300000, guid: 5c4a345964ff1d346b88e262f380ff7f, type: 3}
@@ -44,7 +44,7 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: a753a45405c57a1429ce83ce827e0cb0, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Cai dentro ent\xE3o"
+  - dialogueText: "Cai dentro ent\xC3o"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 21300000, guid: a753a45405c57a1429ce83ce827e0cb0, type: 3}
     newSpriteLeftBoy: {fileID: 0}

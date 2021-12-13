@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueUpperSprite: {fileID: 21300000, guid: 11875bc031a285547818dc6b9995072e, type: 3}
   dialogues:
-  - dialogueText: "E a\xED, tudo bem?"
+  - dialogueText: "E a\xCD, tudo bem?"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 21300000, guid: f3420ac283b17f84da109b910c183068, type: 3}
     newSpriteLeftBoy: {fileID: 21300000, guid: 9a9becc2a23a7ee42a0ff5b34928bb45, type: 3}
@@ -24,12 +24,12 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: c765176acb8c8e84aacc69c800e19841, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Tu sabe que a gente vai ter que se enfrentar, n\xE9?"
+  - dialogueText: "Tu sabe que a gente vai ter que se enfrentar, n\xC9?"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 21300000, guid: 03cd257b3fbfc1f43a7f65d008b70ce8, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: ed8f8a61d8442ca43bb964e2568380fb, type: 3}
-  - dialogueText: "Claro. Mas ainda assim \xE9 melhor dan\xE7ar com algu\xE9m do
+  - dialogueText: "Claro. Mas ainda assim \xC9 melhor dan\xE7ar com algu\xC9m do
       que sozinho."
     isRightSpeaker: 1
     newSpriteRight: {fileID: 21300000, guid: 156adb8a1a58aa44b9ef360d70465adc, type: 3}

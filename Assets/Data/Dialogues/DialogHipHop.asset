@@ -19,7 +19,7 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: fa835361d4334604e8f5c82cfb43c23c, type: 3}
     newSpriteLeftBoy: {fileID: 21300000, guid: 9a9becc2a23a7ee42a0ff5b34928bb45, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
-  - dialogueText: "Opa, e a\xED?"
+  - dialogueText: "Opa, e a\xCD?"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
@@ -29,23 +29,23 @@ MonoBehaviour:
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Se n\xE3o for um problema..."
+  - dialogueText: "Se n\xC3o for um problema..."
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 21300000, guid: 03cd257b3fbfc1f43a7f65d008b70ce8, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: ed8f8a61d8442ca43bb964e2568380fb, type: 3}
-  - dialogueText: "Mas \xE9."
+  - dialogueText: "Mas \xC9."
     isRightSpeaker: 1
     newSpriteRight: {fileID: 21300000, guid: 7fbe29f469349c24ca987b7c89f86e4c, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Vai ter que come\xE7ar batendo de frente comigo. E eu n\xE3o vou
-      pegar leve n\xE3o."
+  - dialogueText: "Vai ter que come\xE7ar batendo de frente comigo. E eu n\xC3o vou
+      pegar leve n\xC3o."
     isRightSpeaker: 1
     newSpriteRight: {fileID: 21300000, guid: ae4b681291f0ef941aea4f3a6db689b2, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Beleza ent\xE3o. Pode vir."
+  - dialogueText: "Beleza ent\xC3o. Pode vir."
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 21300000, guid: 5c4a345964ff1d346b88e262f380ff7f, type: 3}

@@ -19,23 +19,23 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: 964ea5a8f708ead45b0487e2d53b5c7b, type: 3}
     newSpriteLeftBoy: {fileID: 21300000, guid: 9a9becc2a23a7ee42a0ff5b34928bb45, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
-  - dialogueText: "Opa, e a\xED cara."
+  - dialogueText: "Opa, e a\xCD cara."
     isRightSpeaker: 1
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Tu j\xE1 foi ver o novo filme do Homem-Aranha?"
+  - dialogueText: "Tu j\xC1 foi ver o novo filme do Homem-Aranha?"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 21300000, guid: 03cd257b3fbfc1f43a7f65d008b70ce8, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: ed8f8a61d8442ca43bb964e2568380fb, type: 3}
-  - dialogueText: "Ainda n\xE3o, eu estava virando Castlevania pela d\xE9cima quinta
-      vez e n\xE3o tive tempo de ver ainda."
+  - dialogueText: "Ainda n\xC3o, eu estava virando Castlevania pela d\xC9cima quinta
+      vez e n\xC3o tive tempo de ver ainda."
     isRightSpeaker: 1
     newSpriteRight: {fileID: 21300000, guid: 9a9278518f903254db07c79ae6a3329b, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Ent\xE3o, por favor, sem spoi..."
+  - dialogueText: "Ent\xC3o, por favor, sem spoi..."
     isRightSpeaker: 1
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Vem na m\xE3o ent\xE3o filha da p..."
+  - dialogueText: "Vem na m\xC3o ent\xE3o filha da p..."
     isRightSpeaker: 1
     newSpriteRight: {fileID: 21300000, guid: ebf3e533eb1bbf5418701ed968adecf3, type: 3}
     newSpriteLeftBoy: {fileID: 0}

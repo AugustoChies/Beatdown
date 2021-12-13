@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec95ab0bc89fdd4438d7d3db24172955, type: 3}
   m_Name: kpop3enemy
   m_EditorClassIdentifier: 
-  _health: 150
+  _health: 170
   _attack: 14
   _performance: 24
-  _defense: 13
+  _defense: 16
   _rythm: 14
   _idleAnimation: Default
   _statCurve:

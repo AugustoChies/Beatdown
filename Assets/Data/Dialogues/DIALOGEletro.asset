@@ -19,22 +19,22 @@ MonoBehaviour:
     newSpriteRight: {fileID: 21300000, guid: 60de1d213ffe3594f87082c7b2daf5d6, type: 3}
     newSpriteLeftBoy: {fileID: 21300000, guid: 9a9becc2a23a7ee42a0ff5b34928bb45, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
-  - dialogueText: "Valeu, mas a troco de qu\xEA?"
+  - dialogueText: "Valeu, mas a troco de qu\xCA?"
     isRightSpeaker: 1
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Ah, tu \xE9 o meu oponente?"
+  - dialogueText: "Ah, tu \xC9 o meu oponente?"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Claro, quem voc\xEA achou que eu era?"
+  - dialogueText: "Claro, quem voc\xCA achou que eu era?"
     isRightSpeaker: 1
     newSpriteRight: {fileID: 21300000, guid: bc3fbab485d2c154d8d45bb3bd6eaa64, type: 3}
     newSpriteLeftBoy: {fileID: 0}
     newSpriteLeftGirl: {fileID: 0}
-  - dialogueText: "Nada n\xE3o, me enganei."
+  - dialogueText: "Nada n\xC3o, me enganei."
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
     newSpriteLeftBoy: {fileID: 21300000, guid: 03cd257b3fbfc1f43a7f65d008b70ce8, type: 3}
