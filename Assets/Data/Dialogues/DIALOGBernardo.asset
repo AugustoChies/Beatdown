@@ -17,7 +17,7 @@ MonoBehaviour:
   - dialogueText: Fala Bernardo, tudo certo?
     isRightSpeaker: 0
     newSpriteRight: {fileID: 21300000, guid: 964ea5a8f708ead45b0487e2d53b5c7b, type: 3}
-    newSpriteLeftBoy: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 9a9becc2a23a7ee42a0ff5b34928bb45, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
   - dialogueText: "Opa, e a\xED cara."
     isRightSpeaker: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
   - dialogueText: "Tu j\xE1 foi ver o novo filme do Homem-Aranha?"
     isRightSpeaker: 0
     newSpriteRight: {fileID: 0}
-    newSpriteLeftBoy: {fileID: 21300000, guid: 4f4c1d1c938d1d4499b4dddafc977dc2, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 03cd257b3fbfc1f43a7f65d008b70ce8, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: ed8f8a61d8442ca43bb964e2568380fb, type: 3}
   - dialogueText: "Ainda n\xE3o, eu estava virando Castlevania pela d\xE9cima quinta
       vez e n\xE3o tive tempo de ver ainda."
@@ -43,7 +43,7 @@ MonoBehaviour:
   - dialogueText: O Toby Maguire e o Andrew Garfield aparecem no filme.
     isRightSpeaker: 0
     newSpriteRight: {fileID: 21300000, guid: 964ea5a8f708ead45b0487e2d53b5c7b, type: 3}
-    newSpriteLeftBoy: {fileID: 21300000, guid: dc59d2ffc3f4a114aab87f9c75f48a3f, type: 3}
+    newSpriteLeftBoy: {fileID: 21300000, guid: 9a9becc2a23a7ee42a0ff5b34928bb45, type: 3}
     newSpriteLeftGirl: {fileID: 21300000, guid: cc24a27e160eef8488342803fd90c48b, type: 3}
   - dialogueText: ...
     isRightSpeaker: 1
