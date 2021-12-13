@@ -34,6 +34,7 @@ public class ExhaustMinigame : Minigame
     {
         maxScore = _repeatedMove.rythmData.Length * (_repeatAmount + 1);
         manager = RythmManager.Instance;
+        PlayerAnimator.SetTrigger(_repeatedMove.moveAnimation);
         _audio.clip = _repeatedMove.moveAudioClip;
         _audio.Play();
         manager.PlayTrainingMove(_repeatedMove);

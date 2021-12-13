@@ -21,6 +21,7 @@ public class Minigame : MonoBehaviour
     protected int hourDuration = 0;
     protected float performance = 1f;
     public MinigameCanvas parentCanvas = null;
+    public Animator PlayerAnimator = null;
 
     protected void ApplyGains()
     {

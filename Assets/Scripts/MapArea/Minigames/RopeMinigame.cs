@@ -33,6 +33,7 @@ public class RopeMinigame : Minigame
         jumpVector = new Vector2(0, limitsDistance * inputBoost);
         topSafe = Mathf.Lerp(0, limitsDistance / 2, safeAreaSize);
         bottomSafe = topSafe * -1;
+        PlayerAnimator.SetTrigger("jumprope");
     }
 
     // Update is called once per frame
