@@ -7,9 +7,9 @@ public class EnemyAI : MonoBehaviour
     public static EnemyAI Instance;
 
     [SerializeField] private EnemyBehaviour _enemyBehaviour;
-    [SerializeField] private RythmMove moveToPerform;
+    private RythmMove moveToPerform;
 
-    [SerializeField] private List<EnemyBehaviourParameters> _enemyBehaviourParameters = new List<EnemyBehaviourParameters>();
+    private List<EnemyBehaviourParameters> _enemyBehaviourParameters = new List<EnemyBehaviourParameters>();
 
     private void Awake()
     {

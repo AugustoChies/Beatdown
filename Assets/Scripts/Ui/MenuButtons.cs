@@ -22,8 +22,8 @@ public class MenuButtons : MonoBehaviour
 
     public void NewGame()
     {
-        Inventory.Instance.ResetData();
         Inventory.Instance.SetGender(chooseMale);
+        Inventory.Instance.ResetData();
         SceneManager.LoadScene("WorldMap");
     }
     

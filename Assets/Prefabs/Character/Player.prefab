@@ -13464,7 +13464,9 @@ MonoBehaviour:
   femaleHair: {fileID: 8092822118719422587}
   defaultShirtMale: {fileID: 791941462705832456}
   defaultShirtFemale: {fileID: 1501416582205466640}
+  defaultPants: {fileID: 931166091198206189}
   shirtID: 1
+  pantsID: 12
 --- !u!1 &3917082268304777054
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,6 +50,7 @@ MonoBehaviour:
   _hour: 6
   _day: 1
   ChampionVictories: 0
+  GangDefeatedIDs: 
   _gold: 100
   modificationsStatus: {fileID: 11400000, guid: a2adc788f36da4e49bec1b5adaf907a3, type: 2}
   isMale: 0
@@ -108,6 +109,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80ba7e7cbdde1034b9fad493dc6a61f9, type: 2}
   - {fileID: 11400000, guid: 6cec793f57a31314e9dfacf23f2ec170, type: 2}
   - {fileID: 11400000, guid: 96fffbb5c5cf90d4594e6f9f25422876, type: 2}
+  - {fileID: 11400000, guid: f635c5a3f5293c343abd7390ffb4f935, type: 2}
+  - {fileID: 11400000, guid: 288613cb0d2928941bb550b160b860b3, type: 2}
+  - {fileID: 11400000, guid: 1959cfa26b2b6de4abc8ffe30edcade3, type: 2}
+  - {fileID: 11400000, guid: b1c3c15e1283c88469ed12cba14b8e1d, type: 2}
+  - {fileID: 11400000, guid: 1e07aa78eda230f46a9fbd20a922e939, type: 2}
   ListOfAllRythms:
   - {fileID: 11400000, guid: 0d862147199fb1d42837065ede6a54c3, type: 2}
   - {fileID: 11400000, guid: 264e087c35905a943ab18cd230f25f1f, type: 2}

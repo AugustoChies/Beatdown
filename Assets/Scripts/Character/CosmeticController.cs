@@ -14,7 +14,11 @@ public class CosmeticController : MonoBehaviour
     public GameObject defaultShirtMale;
     public GameObject defaultShirtFemale;
 
+    public GameObject defaultPants;
+
     public int shirtID;
+    public int pantsID;
+
     public void OnEnable()
     {
         Instance = this;
@@ -67,6 +71,15 @@ public class CosmeticController : MonoBehaviour
                 defaultShirtMale.SetActive(false);
                 defaultShirtFemale.SetActive(true);
             }
+        }
+
+        if (cosmeticsList[pantsID].activeInHierarchy)
+        {
+            defaultPants.SetActive(false);
+        }
+        else
+        {
+            defaultPants.SetActive(true);
         }
     }
 }
