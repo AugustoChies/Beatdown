@@ -169,12 +169,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statGain:
     Health: 0
-    Attack: 10
+    Attack: 7
     Performance: 0
     Defense: 0
-    Rythm: 10
+    Rythm: 7
   hourDuration: 7
   parentCanvas: {fileID: 0}
+  PlayerAnimator: {fileID: 0}
   safeAreaSize: 0.5
   descentSpeed: 0.3
   inputBoost: 0.25

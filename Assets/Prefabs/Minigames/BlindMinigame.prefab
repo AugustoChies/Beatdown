@@ -320,8 +320,8 @@ MonoBehaviour:
   statGain:
     Health: 0
     Attack: 0
-    Performance: 10
-    Defense: 10
+    Performance: 7
+    Defense: 7
     Rythm: 0
   hourDuration: 8
   parentCanvas: {fileID: 0}

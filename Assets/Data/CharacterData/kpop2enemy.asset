@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: kpop2enemy
   m_EditorClassIdentifier: 
   _health: 150
-  _attack: 13
+  _attack: 16
   _performance: 22
   _defense: 13
   _rythm: 13

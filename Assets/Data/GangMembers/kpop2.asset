@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: kpop2
   m_EditorClassIdentifier: 
   Name: Gabriel senpai
-  Portarit: {fileID: 21300000, guid: b60083fffde81644b971a2606643389d, type: 3}
+  Portarit: {fileID: 0}
   StrenghtLevel: 1
   BattleInfo: {fileID: 11400000, guid: ed492de1ba8cb5f40882fc49230d51cf, type: 2}

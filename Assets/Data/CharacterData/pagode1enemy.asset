@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: pagode1enemy
   m_EditorClassIdentifier: 
   _health: 160
-  _attack: 13
+  _attack: 17
   _performance: 17
   _defense: 26
   _rythm: 16
