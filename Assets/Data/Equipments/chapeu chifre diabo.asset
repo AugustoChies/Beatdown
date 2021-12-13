@@ -22,3 +22,4 @@ MonoBehaviour:
   addedRhy: 0
   equipmentType: 0
   equipmentSprite: {fileID: 21300000, guid: a3860e1ac3873844dbb770ac8902d7ac, type: 3}
+  hideMaleHair: 1

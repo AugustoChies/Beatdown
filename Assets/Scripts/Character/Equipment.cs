@@ -26,4 +26,5 @@ public class Equipment : ScriptableObject
     public float addedRhy;
     public EquipmentType equipmentType;
     public Sprite equipmentSprite;
+    public bool hideMaleHair = false;
 }

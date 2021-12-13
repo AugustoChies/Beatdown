@@ -34,10 +34,25 @@ public class CosmeticController : MonoBehaviour
             g.SetActive(false);
         }
         
+            if (Inventory.Instance.IsMale)
+                {
+                    maleHair.SetActive(true);
+                    femaleHair.SetActive(false);
+                }
+                else
+                {
+                    maleHair.SetActive(false);
+                    femaleHair.SetActive(true);
+                }
+        
         foreach (int i in Inventory.Instance.PlayerData.EquippedItemsID)
         {
             if (i >= cosmeticsList.Count) return;
             cosmeticsList[i].SetActive(true);
+            if (EquipmentManager.Instance.ListOfAllEquipments[i].hideMaleHair && maleHair.activeInHierarchy)
+            {
+                maleHair.SetActive(false);
+            }
         }
 
         if (!cosmeticsList[shirtID].activeInHierarchy)
@@ -52,17 +67,6 @@ public class CosmeticController : MonoBehaviour
                 defaultShirtMale.SetActive(false);
                 defaultShirtFemale.SetActive(true);
             }
-        }
-
-        if (Inventory.Instance.IsMale)
-        {
-            maleHair.SetActive(true);
-            femaleHair.SetActive(false);
-        }
-        else
-        {
-            maleHair.SetActive(false);
-            femaleHair.SetActive(true);
         }
     }
 }
