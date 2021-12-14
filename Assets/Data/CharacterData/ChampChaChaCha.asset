@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec95ab0bc89fdd4438d7d3db24172955, type: 3}
   m_Name: ChampChaChaCha
   m_EditorClassIdentifier: 
-  _health: 200
-  _attack: 20
+  _health: 250
+  _attack: 30
   _performance: 65
   _defense: 30
   _rythm: 10

@@ -249,8 +249,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 0}
-  inactiveColor: {r: 0.20392157, g: 0.627451, b: 0.78431374, a: 1}
-  activeColor: {r: 0.9254902, g: 0.42352942, b: 0.11764706, a: 1}
+  inactiveColor: {r: 0.5660378, g: 0.10893555, b: 0.10893555, a: 1}
+  activeColor: {r: 0.1764706, g: 0.1764706, b: 0.1764706, a: 1}
+  source: {fileID: 0}
 --- !u!61 &5441074665934217137
 BoxCollider2D:
   m_ObjectHideFlags: 0
