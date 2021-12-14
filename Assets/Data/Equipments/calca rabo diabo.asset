@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
   m_Name: calca rabo diabo
   m_EditorClassIdentifier: 
-  equipmentName: rabo de diabo
+  equipmentName: rabo diabo
   equipmentStatsBonusText: PRF +20 / RTH -5
   goldCost: 300
   addedAtk: 0

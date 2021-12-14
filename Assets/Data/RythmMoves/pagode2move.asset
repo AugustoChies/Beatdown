@@ -12,45 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
   m_Name: pagode2move
   m_EditorClassIdentifier: 
-  moveName: pagode2
+  moveName: DESFILE
   moveAudioClip: {fileID: 8300000, guid: 0005316389e79554fb533c58dbeea9da, type: 3}
   moveAnimation: pagode2move
-  baseDamage: 10
-  performanceDamage: 25
-  extraDamage: 24
+  baseDamage: 15
+  performanceDamage: 30
+  extraDamage: 12
   effect: 2
   rythmData:
-  - WaitTimeToNextNote: 0.5
+  - WaitTimeToNextNote: 0.4
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.5
+  - WaitTimeToNextNote: 0.4
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.5
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.7
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 20
+  - WaitTimeToNextNote: 0.4
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 1
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.5
+  - WaitTimeToNextNote: 0.4
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 1
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.5
+  - WaitTimeToNextNote: 0.3
     keySpeed: 200
     score: 20
   - WaitTimeToNextNote: 1

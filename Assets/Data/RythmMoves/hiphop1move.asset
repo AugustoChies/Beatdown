@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
-  m_Name: hiphop1move
+  m_Name: HIPHOP1MOVE
   m_EditorClassIdentifier: 
-  moveName: hiphop1
+  moveName: "Passo da m\xDAmia"
   moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   moveAnimation: hiphop1move
   baseDamage: 14
@@ -51,6 +51,27 @@ MonoBehaviour:
     keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 1
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.25
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.25
     keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 0.25

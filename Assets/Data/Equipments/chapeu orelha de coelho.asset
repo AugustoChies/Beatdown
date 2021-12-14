@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
   m_Name: chapeu orelha de coelho
   m_EditorClassIdentifier: 
-  equipmentName: orelha de coelho
+  equipmentName: orelha coelho
   equipmentStatsBonusText: ATK +20 / DEF -5
   goldCost: 300
   addedAtk: 20

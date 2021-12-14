@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
-  m_Name: chachachamove
+  m_Name: CHACHACHAMOVE
   m_EditorClassIdentifier: 
   moveName: cha-cha-cha
   moveAudioClip: {fileID: 8300000, guid: 6d3899d3121a4b8449080c93ce008f6e, type: 3}

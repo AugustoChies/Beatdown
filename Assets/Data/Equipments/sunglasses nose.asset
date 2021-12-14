@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
   m_Name: sunglasses nose
   m_EditorClassIdentifier: 
-  equipmentName: "\xF3culos com nariz"
+  equipmentName: DISFARCE
   equipmentStatsBonusText: DEF +20 / PRF -5
   goldCost: 300
   addedAtk: 0

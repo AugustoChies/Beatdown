@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
   m_Name: Luva de gato
   m_EditorClassIdentifier: 
-  equipmentName: Luva de gato
+  equipmentName: Luva gato
   equipmentStatsBonusText: PRF +20 / HP -15
   goldCost: 300
   addedAtk: 0

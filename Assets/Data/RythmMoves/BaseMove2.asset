@@ -17,7 +17,7 @@ MonoBehaviour:
   moveAnimation: baseMove2
   baseDamage: 19
   performanceDamage: 34
-  extraDamage: 5
+  extraDamage: 7
   effect: 0
   rythmData:
   - WaitTimeToNextNote: 0.45

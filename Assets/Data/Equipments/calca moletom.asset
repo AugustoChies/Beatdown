@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
   m_Name: calca moletom
   m_EditorClassIdentifier: 
-  equipmentName: "cal\xE7a de moletom"
+  equipmentName: "cal\xE7a moletom"
   equipmentStatsBonusText: RTH +20 / ATK -5
   goldCost: 300
   addedAtk: -5

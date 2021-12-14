@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b2bc0b057157429525545eea0ea38, type: 3}
   m_Name: Sunglasses
   m_EditorClassIdentifier: 
-  equipmentName: "\xF3culos de sol"
+  equipmentName: "\xD3culos de sol"
   equipmentStatsBonusText: PRF + 10
   goldCost: 100
   addedAtk: 0

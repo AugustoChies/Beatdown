@@ -10,61 +10,70 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
-  m_Name: kpop1move
+  m_Name: KPOP1MOVE
   m_EditorClassIdentifier: 
-  moveName: kpop1
+  moveName: TORTURE DANCE
   moveAudioClip: {fileID: 8300000, guid: dd8935d0a01009b4c98d79ac1db8641c, type: 3}
   moveAnimation: kpop1move
   baseDamage: 25
-  performanceDamage: 20
-  extraDamage: 5
+  performanceDamage: 19
+  extraDamage: 4
   effect: 3
   rythmData:
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 240
     score: 20
   - WaitTimeToNextNote: 0.5
-    keySpeed: 200
+    keySpeed: 240
     score: 20
   - WaitTimeToNextNote: 0.5
-    keySpeed: 200
+    keySpeed: 240
+    score: 20
+  - WaitTimeToNextNote: 0.8
+    keySpeed: 240
+    score: 20
+  - WaitTimeToNextNote: 0.8
+    keySpeed: 240
+    score: 20
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 240
+    score: 20
+  - WaitTimeToNextNote: 0.3
+    keySpeed: 240
     score: 20
   - WaitTimeToNextNote: 1
-    keySpeed: 200
+    keySpeed: 240
+    score: 20
+  - WaitTimeToNextNote: 0.75
+    keySpeed: 240
+    score: 20
+  - WaitTimeToNextNote: 0.75
+    keySpeed: 240
     score: 20
   - WaitTimeToNextNote: 0.5
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
+    keySpeed: 240
     score: 20
   - WaitTimeToNextNote: 1
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
-    score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
+    keySpeed: 240
     score: 20
   - WaitTimeToNextNote: 1
-    keySpeed: 200
+    keySpeed: 240
     score: 20
   - WaitTimeToNextNote: 0.5
     keySpeed: 200
     score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
+  - WaitTimeToNextNote: 0.2
+    keySpeed: 240
     score: 20
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
+  - WaitTimeToNextNote: 0.2
+    keySpeed: 240
+    score: 20
+  - WaitTimeToNextNote: 0.2
+    keySpeed: 240
     score: 20
   - WaitTimeToNextNote: 1
-    keySpeed: 200
+    keySpeed: 240
+    score: 20
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 240
     score: 20

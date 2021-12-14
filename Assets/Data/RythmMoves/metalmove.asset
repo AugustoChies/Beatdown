@@ -20,93 +20,102 @@ MonoBehaviour:
   extraDamage: 12
   effect: 0
   rythmData:
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.2
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.15
+    keySpeed: 300
+    score: 1
+  - WaitTimeToNextNote: 0.15
+    keySpeed: 300
+    score: 1
+  - WaitTimeToNextNote: 0.15
+    keySpeed: 300
+    score: 1
+  - WaitTimeToNextNote: 0.15
     keySpeed: 300
     score: 1

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
-  m_Name: hiphop3move
+  m_Name: HIPHOP3MOVE
   m_EditorClassIdentifier: 
-  moveName: hiphop3
+  moveName: LEVANTANDO A MORAL
   moveAudioClip: {fileID: 8300000, guid: d35197cce6edcf343a6fdbbd02094284, type: 3}
   moveAnimation: hiphop3move
   baseDamage: 23
-  performanceDamage: 17
-  extraDamage: 9
+  performanceDamage: 19
+  extraDamage: 8
   effect: 4
   rythmData:
   - WaitTimeToNextNote: 0.5
