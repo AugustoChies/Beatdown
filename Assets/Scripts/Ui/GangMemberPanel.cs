@@ -23,6 +23,8 @@ public class GangMemberPanel : MonoBehaviour
     [SerializeField]
     private GangMemberInfo _infoObject;
 
+    public GameObject checkMark;
+
     private void Awake()
     {
         _name.text = _infoObject.Name;
@@ -38,7 +40,9 @@ public class GangMemberPanel : MonoBehaviour
 
         _portrait.sprite = _infoObject.Portarit;
         _rank.sprite = rankSprites[_infoObject.StrenghtLevel];
-        //Rank Puxa uma imagem especifica de uma lista baseando o índice no numero do StrenghtLevel do infoobject - 1;
+
+        checkMark.SetActive(Inventory.Instance.CheckIfHasMove(_infoObject.BattleInfo.RewardMove)); 
+        //Rank Puxa uma imagem especifica de uma lista baseando o ï¿½ndice no numero do StrenghtLevel do infoobject - 1;
 
     }
 }

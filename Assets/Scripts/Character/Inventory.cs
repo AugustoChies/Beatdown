@@ -70,6 +70,11 @@ public class Inventory : MonoBehaviour
         QualitySettings.vSyncCount = 0;*/
     }
 
+    public bool CheckIfHasMove(RythmMove move)
+    {
+        return PlayerData.ObtainedMoves.Contains(move);
+    }
+
     public void SetGender(bool chooseMale)
     {
         isMale = chooseMale;
