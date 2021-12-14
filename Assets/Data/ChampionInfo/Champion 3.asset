@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd0e17fa1643f644ab5562393d556c6, type: 3}
   m_Name: Champion 3
   m_EditorClassIdentifier: 
-  Name: "Bernardo que n\xE3o \xE9 o nosso Bernardo (wink)"
+  Name: "Bernardo que n\xC3o \xC9 o nosso Bernardo (wink)"
   Info: "O que deveria ser um meme acabou se tornando mais poderoso do que deveria.
-    Bernardo, o enraivecido, utilizou o poder do \xF3dio para derrotar o \xFAltimo
-    campe\xE3o e tomar o seu lugar. Boa sorte ao enfrent\xE1-lo."
+    Bernardo, o enraivecido, utilizou o poder do \xD3dio para derrotar o \xDAltimo
+    campe\xC3o e tomar o seu lugar. Boa sorte ao enfrent\xC1-lo."
   Portarit: {fileID: 21300000, guid: b4087bb1b9a8b51499b2bee5a9f36a40, type: 3}
   DayLimit: 15
   BattleInfo: {fileID: 11400000, guid: 7c5077a933eb44c47b3f2c3a42f7f2a6, type: 2}
-  championDialogue: {fileID: 11400000, guid: 5ce20f74ad9f9c24b8349a16c5bfc70e, type: 2}

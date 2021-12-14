@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: Orelha de gato
   equipmentStatsBonusText: HP +50 / PRF -5
-  goldCost: 3
+  goldCost: 300
   addedAtk: 0
   addedDef: 0
   addedHype: -5

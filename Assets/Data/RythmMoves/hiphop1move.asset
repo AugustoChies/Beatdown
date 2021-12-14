@@ -17,7 +17,7 @@ MonoBehaviour:
   moveAnimation: hiphop1move
   baseDamage: 14
   performanceDamage: 29
-  extraDamage: 21
+  extraDamage: 15
   effect: 3
   rythmData:
   - WaitTimeToNextNote: 2.5

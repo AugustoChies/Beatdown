@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa623d5a0207f734f9163782438a6f96, type: 3}
   m_Name: kpop1
   m_EditorClassIdentifier: 
-  Name: Kimburly
+  Name: Gabriel senpai
   Portarit: {fileID: 21300000, guid: 30338c57a09e3614e9fc0a42f08a207e, type: 3}
   StrenghtLevel: 1
   BattleInfo: {fileID: 11400000, guid: fc56cf9da8787af48a4710d8bb02e183, type: 2}

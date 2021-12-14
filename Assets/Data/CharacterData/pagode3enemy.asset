@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec95ab0bc89fdd4438d7d3db24172955, type: 3}
   m_Name: pagode3enemy
   m_EditorClassIdentifier: 
-  _health: 190
-  _attack: 20
-  _performance: 26
-  _defense: 20
-  _rythm: 16
+  _health: 290
+  _attack: 40
+  _performance: 46
+  _defense: 40
+  _rythm: 36
   _idleAnimation: Default
   _statCurve:
     serializedVersion: 2

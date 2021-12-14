@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: moletom
   equipmentStatsBonusText: DEF +20 / ATK -5
-  goldCost: 3
+  goldCost: 300
   addedAtk: -5
   addedDef: 20
   addedHype: 0
@@ -22,3 +22,4 @@ MonoBehaviour:
   addedRhy: 0
   equipmentType: 2
   equipmentSprite: {fileID: 21300000, guid: 15fa0f1dca2ece642b0982ff8f7ecfd6, type: 3}
+  hideMaleHair: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: "Colar cifr\xE3o "
   equipmentStatsBonusText: PRF +10
-  goldCost: 1
+  goldCost: 100
   addedAtk: 0
   addedDef: 0
   addedHype: 10
@@ -22,3 +22,4 @@ MonoBehaviour:
   addedRhy: 0
   equipmentType: 1
   equipmentSprite: {fileID: 21300000, guid: 86441127700d4374294a8df1f294921e, type: 3}
+  hideMaleHair: 0
