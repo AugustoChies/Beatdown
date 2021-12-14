@@ -7,6 +7,7 @@ public class RythmButton : MonoBehaviour
     public RythmMove move;
     public Color inactiveColor = new Color32(52, 160, 200, 255);
     public Color activeColor = new Color32(236, 108, 30, 255);
+    public AudioSource source = null;
 
     private void Start()
     {
@@ -15,7 +16,8 @@ public class RythmButton : MonoBehaviour
 
     public void OnClick()
     {
-        RythmManager.Instance.PlayMove(move, true);
+        source.Play();
+        RythmManager.Instance.PlayMove(move, true);        
     }
 
     public void OnMouseOver()

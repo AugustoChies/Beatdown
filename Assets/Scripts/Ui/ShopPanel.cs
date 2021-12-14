@@ -17,6 +17,7 @@ public class ShopPanel : MonoBehaviour
     [SerializeField] private ScrollRect scrollView;
     [SerializeField] private Color buyableColor = Color.white;
     [SerializeField] private Color unBuyableColor = Color.red;
+    public AudioSource BuySound = null;
 
     public List<GameObject> ButtonsList = new List<GameObject>();
 

@@ -66,9 +66,23 @@ public class Key : MonoBehaviour
             else
             {
                 //print("Errou");
+                BattleController.Instance.SchratchSource.Play();
                 BattleController.Instance.UpdateHype(false);
             }
         }
+        else
+        {
+            if (canPlayKey && wasPressed && (rightSide == side))
+            {
+                RythmManager.Instance.CurrentMoveRight++;
+            }
+            else
+            {
+                RythmManager.Instance.Scratch.Play();
+            }
+        }
+
+
         
         switch(side)
         {

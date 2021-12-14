@@ -23,6 +23,13 @@ public class BlindMinigame : Minigame
     [SerializeField]
     private Color _rightColor = Color.green;
 
+    [SerializeField]
+    private AudioSource source = null;
+    [SerializeField]
+    private AudioClip right = null;
+    [SerializeField]
+    private AudioClip wrong = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,6 +92,8 @@ public class BlindMinigame : Minigame
         {
             currentInputIndex++;            
             arrow.color = _rightColor;
+            source.clip = right;
+            source.Play();
             if (currentInputIndex >= Inputs.Count)
             {                
                 StartCoroutine(NextRound(true));
@@ -93,6 +102,8 @@ public class BlindMinigame : Minigame
         else
         {
             arrow.color = _wrongColor;
+            source.clip = wrong;
+            source.Play();
             StartCoroutine(NextRound(false));
         }
     }

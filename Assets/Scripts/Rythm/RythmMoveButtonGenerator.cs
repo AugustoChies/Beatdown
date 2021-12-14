@@ -7,6 +7,8 @@ public class RythmMoveButtonGenerator : MonoBehaviour
     public Transform firstPos;
 
     private RythmButton tempMove;
+    [SerializeField]
+    private AudioSource mySource;
     private void Start()
     {
         RythmList.Instance.Generator = this;
@@ -18,6 +20,7 @@ public class RythmMoveButtonGenerator : MonoBehaviour
         {
             tempMove = Instantiate(rythmMoveButtonPrefab, firstPos.position, Quaternion.identity, moveSelectPanel.transform).GetComponent<RythmButton>();
             tempMove.move = i;
+            tempMove.source = mySource;
             tempMove.gameObject.GetComponentInChildren<Text>().text = tempMove.move.moveName;
         }
     }

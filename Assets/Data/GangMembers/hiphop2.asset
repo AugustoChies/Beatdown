@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: hiphop2
   m_EditorClassIdentifier: 
   Name: Karina Figueiroa
-  Portarit: {fileID: 0}
+  Portarit: {fileID: 21300000, guid: 30338c57a09e3614e9fc0a42f08a207e, type: 3}
   StrenghtLevel: 0
   BattleInfo: {fileID: 11400000, guid: 81487bae13b6a3c438681a47fca8f1b8, type: 2}

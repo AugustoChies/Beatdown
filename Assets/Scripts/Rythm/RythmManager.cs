@@ -24,9 +24,11 @@ public class RythmManager : MonoBehaviour
     public Queue<Key> KeysQueue = new Queue<Key>();
 
     public int CurrentMoveCount = 0;
+    public int CurrentMoveRight = 0;
 
     //only used for training
     public bool MoveDone = false;
+    public AudioSource Scratch = null;
 
     private void Awake()
     {
@@ -63,6 +65,7 @@ public class RythmManager : MonoBehaviour
     {
         RythmToPlay = move;
         CurrentMoveCount = 0;
+        CurrentMoveRight = 0;
         _speedModifier = 1.0f;
 
         StartCoroutine(PlayTrainingRythm(move));

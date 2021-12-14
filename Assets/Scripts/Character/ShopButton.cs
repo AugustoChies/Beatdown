@@ -35,6 +35,7 @@ public class ShopButton : MonoBehaviour
         ShopPanel.Instance.ButtonsList.Remove(this.gameObject);
         
         ShopPanel.Instance.RefreshSize();
+        ShopPanel.Instance.BuySound.Play();
         
         Destroy(this.gameObject);
     }

@@ -11,6 +11,7 @@ public class StepsPanel : MonoBehaviour
     [SerializeField] private ScrollRect scrollView;
     public Color equippedColor;
     public Color unequippedColor;
+    public AudioSource MovesSource = null;
     
     public List<GameObject> ButtonsList = new List<GameObject>();
     private void Awake()

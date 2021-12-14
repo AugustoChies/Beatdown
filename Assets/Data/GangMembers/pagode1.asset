@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: pagode1
   m_EditorClassIdentifier: 
   Name: Samuel da turma
-  Portarit: {fileID: 0}
+  Portarit: {fileID: 21300000, guid: 30338c57a09e3614e9fc0a42f08a207e, type: 3}
   StrenghtLevel: 1
   BattleInfo: {fileID: 11400000, guid: 95f94f02d31f88b4ba50e9bfb470a6b0, type: 2}

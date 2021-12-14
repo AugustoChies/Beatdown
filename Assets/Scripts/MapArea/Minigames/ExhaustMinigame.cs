@@ -69,7 +69,7 @@ public class ExhaustMinigame : Minigame
 
         if (manager.MoveDone)
         {
-            currentScore += manager.CurrentMoveCount;
+            currentScore += manager.CurrentMoveRight;
             currentIteration++;
             if(currentIteration > _repeatAmount)
             {

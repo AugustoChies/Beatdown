@@ -120,6 +120,102 @@ MonoBehaviour:
   _uiSkillNames: {fileID: 2732137893791682010}
   _uiBattleInfo: {fileID: 2802788185101735805}
   _conclusionBattleInfo: {fileID: 863224314252935814}
+--- !u!82 &2173650218316368064
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7460756932091195296}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1b1894c057591c44b94bc58093cff7de, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &811722606918973100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5400788392877181722, guid: af75a78313709e34985abe8a979cb19f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8199777652049131761, guid: af75a78313709e34985abe8a979cb19f, type: 3}
       propertyPath: m_Enabled
@@ -465,6 +561,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5435438375889509065, guid: 4bd668d1612fa3e4fbbe2f70134d23b0, type: 3}
+      propertyPath: mySource
+      value: 
+      objectReference: {fileID: 2173650218316368064}
     - target: {fileID: 6159341054673096133, guid: 4bd668d1612fa3e4fbbe2f70134d23b0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -531,12 +631,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6fa24dab8f1094792ebd9faa050af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7460756932091195296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 104374348394549240, guid: 4bd668d1612fa3e4fbbe2f70134d23b0, type: 3}
+  m_PrefabInstance: {fileID: 7420561146772217944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3284724379648785041 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5435438375889509065, guid: 4bd668d1612fa3e4fbbe2f70134d23b0, type: 3}
   m_PrefabInstance: {fileID: 7420561146772217944}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7460756932091195296}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 727ca7d2a0c7e7d47b3cdddeea61220b, type: 3}
@@ -549,6 +654,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2809714213987318236}
     m_Modifications:
+    - target: {fileID: 897007782621259696, guid: d200eeeb770d78d4d9046d029718f6e4, type: 3}
+      propertyPath: m_TagString
+      value: InnerCenter
+      objectReference: {fileID: 0}
     - target: {fileID: 1322398134350445401, guid: d200eeeb770d78d4d9046d029718f6e4, type: 3}
       propertyPath: m_Name
       value: TechNameCanvas

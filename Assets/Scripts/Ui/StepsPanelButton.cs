@@ -41,6 +41,7 @@ public class StepsPanelButton : MonoBehaviour
             UnequipItem();
             return;
         }
+        StepsPanel.Instance.MovesSource.Play();
         EquipmentManager.Instance.EquipMove(myMove);
     }
 

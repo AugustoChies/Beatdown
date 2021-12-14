@@ -15,6 +15,7 @@ public class StylesPanel : MonoBehaviour
     [SerializeField] private ScrollRect scrollView;
     public Color equippedColor;
     public Color unequippedColor;
+    public AudioSource EquipSource = null;
     
     public List<GameObject> ButtonsList = new List<GameObject>();
     private void Awake()

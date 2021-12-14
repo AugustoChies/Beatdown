@@ -54,6 +54,8 @@ public class BattleController : MonoBehaviour
     public float enemyHpPercentage => enemycurrenthealth / MaxEnemyhealth * 100;
     public float hypeGaugePercentage => hypeBarValue * 100;
 
+    public AudioSource SchratchSource = null;
+
     private void Awake()
     {
         if (Instance != null) Destroy(this.gameObject);

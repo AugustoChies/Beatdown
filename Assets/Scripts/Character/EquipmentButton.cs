@@ -43,6 +43,7 @@ public class EquipmentButton : MonoBehaviour
             UnequipItem();
             return;
         }
+        StylesPanel.Instance.EquipSource.Play();
         EquipmentManager.Instance.ReplaceEquipment(myEquipment);
     }
 
