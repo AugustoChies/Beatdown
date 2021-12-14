@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: Metal
   moveAudioClip: {fileID: 8300000, guid: ed00ca826177dfa41bdd4c247d4d69ef, type: 3}
-  moveAnimation: Default
+  moveAnimation: metalmove
   baseDamage: 27
   performanceDamage: 45
   extraDamage: 12

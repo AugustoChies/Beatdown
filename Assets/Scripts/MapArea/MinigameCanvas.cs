@@ -18,6 +18,7 @@ public class MinigameCanvas : MonoBehaviour
     [SerializeField]
     private AudioSource mapSource = null;
     public Animator PlayerAnimator = null;
+    public GameObject rope = null;
 
     private void Start()
     {
@@ -33,8 +34,10 @@ public class MinigameCanvas : MonoBehaviour
     public void ShowMinigame(GameObject game)
     {
         _currentMinigame = Instantiate(game, this.transform);
-        _currentMinigame.GetComponent<Minigame>().parentCanvas = this;
-        _currentMinigame.GetComponent<Minigame>().PlayerAnimator = PlayerAnimator;
+        Minigame mini = _currentMinigame.GetComponent<Minigame>();
+        mini.parentCanvas = this;
+        mini.PlayerAnimator = PlayerAnimator;
+        mini.rope = rope;
 
         oldHP = (int)_inventory.PlayerData.Health;
         oldAtk = (int)_inventory.PlayerData.Attack;
@@ -58,6 +61,7 @@ public class MinigameCanvas : MonoBehaviour
             ShowGains();
         }
         PlayerAnimator.SetTrigger("Default");
+        rope.SetActive(false);
     }
 
     public void ShowGains()

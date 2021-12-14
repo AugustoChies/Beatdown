@@ -14,17 +14,12 @@ public class TooltipsPanel : MonoBehaviour
     public GameObject staticBaseText; 
     public GameObject staticPerformanceText;
     public GameObject staticPerfectText;
-    public GameObject blackSquare;
-
-    public bool useBlackSquare = true;
-
     public Color tooltipColor = new Color32(236, 108, 30, 255);
 
     private void Awake()
     {
         Instance = this;
         ResetTooltipText();
-        if (useBlackSquare) blackSquare.SetActive(true);
         //SetColor();
     }
 
@@ -47,8 +42,6 @@ public class TooltipsPanel : MonoBehaviour
         staticPerfectText.SetActive(false);
         staticPerformanceText.SetActive(false);
         tooltipsTextEffect.text = "";
-        if (useBlackSquare) blackSquare.SetActive(true);
-
     }
 
     public void ChangeTooltipText(RythmMove move)
@@ -62,7 +55,6 @@ public class TooltipsPanel : MonoBehaviour
         staticPerfectText.SetActive(true);
         staticPerformanceText.SetActive(true);
         tooltipsTextEffect.text = ConvertMoveEffectToString(move.effect);
-        if (useBlackSquare) blackSquare.SetActive(false);
     }
 
     public string ConvertMoveEffectToString(EMoveEffect effect)

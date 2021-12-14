@@ -14,7 +14,6 @@ public class RopeMinigame : Minigame
     public RectTransform meter = null;
     public RectTransform topLimit = null;
     public RectTransform bottomLimit = null;
-    
 
     private float limitsDistance = 0;
     private float topSafe = 0;
@@ -25,7 +24,7 @@ public class RopeMinigame : Minigame
     private bool done = false;
     // Start is called before the first frame update
     void Start()
-    {        
+    {
         bar.localScale = new Vector3(1,safeAreaSize,1);
         limitsDistance = topLimit.anchoredPosition.y - bottomLimit.anchoredPosition.y;
         currentTime = timer;
@@ -34,6 +33,7 @@ public class RopeMinigame : Minigame
         topSafe = Mathf.Lerp(0, limitsDistance / 2, safeAreaSize);
         bottomSafe = topSafe * -1;
         PlayerAnimator.SetTrigger("jumprope");
+        rope.SetActive(true);
     }
 
     // Update is called once per frame

@@ -22,6 +22,7 @@ public class Minigame : MonoBehaviour
     protected float performance = 1f;
     public MinigameCanvas parentCanvas = null;
     public Animator PlayerAnimator = null;
+    public GameObject rope = null;
 
     protected void ApplyGains()
     {

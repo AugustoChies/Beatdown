@@ -8,6 +8,13 @@ public class MapButtonMethods : MonoBehaviour
     private TextMeshProUGUI _dateText = null;
     [SerializeField]
     private GameObject _gameover = null;
+    [SerializeField]
+    private AudioSource buttonSource = null;
+    [SerializeField]
+    private AudioClip buttonSound = null;
+    [SerializeField]
+    private AudioClip championBattleStart = null;
+
 
     private void Start()
     {
@@ -19,9 +26,16 @@ public class MapButtonMethods : MonoBehaviour
     {
         Inventory.Instance.OnUpdateTime -= UpdateTime;
     }
+    
+    public void ButtonSound()
+    {
+        buttonSource.clip = buttonSound;
+        buttonSource.Play();
+    }
 
     public void StartBattleButton(BattleData battleData)
     {
+        ButtonSound();
         BattleDataHolder.Instance.CurrentBattleData = battleData;
         BattleDataHolder.Instance.IsChampionBattle = false;
         if(BattleDataHolder.Instance.CurrentBattleData.dialogue != null)
@@ -30,12 +44,14 @@ public class MapButtonMethods : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("BattleScene");
+            SceneManager.LoadSceneAsync("BattleScene",LoadSceneMode.Single);
         }
     }
 
     public void StartChampionBattleButton()
     {
+        buttonSource.clip = championBattleStart;
+        buttonSource.Play();
         BattleDataHolder.Instance.CurrentBattleData = BattleDataHolder.Instance.championInfos[Inventory.Instance.ChampionVictories].BattleInfo;
         BattleDataHolder.Instance.IsChampionBattle = true;
         DialogueManager.Instance.PlayDialogue(BattleDataHolder.Instance.CurrentBattleData.dialogue);

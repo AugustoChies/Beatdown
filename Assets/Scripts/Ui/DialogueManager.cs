@@ -66,7 +66,7 @@ public class DialogueManager : MonoBehaviour
       {
          //dialoguePanel.SetActive(false);
          isPlayingDialogue = false;
-         SceneManager.LoadScene("BattleScene");
+         SceneManager.LoadSceneAsync("BattleScene",LoadSceneMode.Single);
          return;
       }
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: kpop1
   moveAudioClip: {fileID: 8300000, guid: dd8935d0a01009b4c98d79ac1db8641c, type: 3}
-  moveAnimation: Default
+  moveAnimation: kpop1move
   baseDamage: 25
   performanceDamage: 20
   extraDamage: 5

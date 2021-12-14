@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: EletroSwing
   moveAudioClip: {fileID: 8300000, guid: 83f26fd4c9d624844aa656b6c81ef57d, type: 3}
-  moveAnimation: Default
+  moveAnimation: eletromove
   baseDamage: 25
   performanceDamage: 36
   extraDamage: 5

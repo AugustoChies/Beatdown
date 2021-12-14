@@ -25699,6 +25699,25 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00004678406, y: 0.0020441688, z: 0.05358186}
     m_Extent: {x: 0.00474465, y: 0.00576088, z: 0.005986035}
   m_DirtyAABB: 0
+--- !u!95 &70922052077013074
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402556328863830697}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c97d7a9c9c28bcd4e97c5d5a63fbf23b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8442033094876909655
 GameObject:
   m_ObjectHideFlags: 0
@@ -27614,14 +27633,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cefacc59c09a28b4f8b3e7d753371d9a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cefacc59c09a28b4f8b3e7d753371d9a, type: 3}
       propertyPath: m_Name
       value: Rope - Animations
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cefacc59c09a28b4f8b3e7d753371d9a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cefacc59c09a28b4f8b3e7d753371d9a, type: 3}
 --- !u!4 &9209914955020879891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cefacc59c09a28b4f8b3e7d753371d9a, type: 3}
+  m_PrefabInstance: {fileID: 8672395385075838968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8402556328863830697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cefacc59c09a28b4f8b3e7d753371d9a, type: 3}
   m_PrefabInstance: {fileID: 8672395385075838968}
   m_PrefabAsset: {fileID: 0}
