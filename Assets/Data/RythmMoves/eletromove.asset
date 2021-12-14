@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c819ac8ab9902d04b9d649dbf49d5e45, type: 3}
-  m_Name: eletromove
+  m_Name: ELETROMOVE
   m_EditorClassIdentifier: 
   moveName: EletroSwing
   moveAudioClip: {fileID: 8300000, guid: 83f26fd4c9d624844aa656b6c81ef57d, type: 3}
@@ -20,39 +20,60 @@ MonoBehaviour:
   extraDamage: 5
   effect: 0
   rythmData:
-  - WaitTimeToNextNote: 2.5
+  - WaitTimeToNextNote: 0.4
     keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 200
-    score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 200
-    score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 200
-    score: 1
-  - WaitTimeToNextNote: 0.5
-    keySpeed: 200
-    score: 1
-  - WaitTimeToNextNote: 1.75
-    keySpeed: 200
-    score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 200
-    score: 1
-  - WaitTimeToNextNote: 1.75
-    keySpeed: 200
-    score: 1
-  - WaitTimeToNextNote: 0.25
-    keySpeed: 200
-    score: 1
-  - WaitTimeToNextNote: 0.75
+  - WaitTimeToNextNote: 0.4
     keySpeed: 200
     score: 1
   - WaitTimeToNextNote: 1
     keySpeed: 200
     score: 1
-  - WaitTimeToNextNote: 0.25
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 1.2
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 1
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 1.2
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.5
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.6
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 1
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 0.4
+    keySpeed: 200
+    score: 1
+  - WaitTimeToNextNote: 1.2
     keySpeed: 200
     score: 1
