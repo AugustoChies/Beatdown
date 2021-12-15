@@ -9,13 +9,18 @@ public class MenuButtons : MonoBehaviour
 {
     public bool isLoadButton;
     public bool chooseMale;
-    private void Start()
+    private void Update()
     {
         if (isLoadButton)
         {
             if (!Inventory.Instance.GameInitialized)
             {
                 GetComponent<Button>().interactable = false;
+            }
+            else
+            {
+                                GetComponent<Button>().interactable = true;
+
             }
         }
     }
